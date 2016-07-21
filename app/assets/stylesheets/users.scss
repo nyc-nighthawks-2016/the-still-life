@@ -1,0 +1,81 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#form {
+	text-align: center;
+}
+
+.field {
+	width: 20%;
+
+}
+
+#styled-heading {
+	text-align: center;
+}
+
+#errors {
+	text-align: center;
+	border: 2x solid #E9E9E9;
+	border-radius: 15px;
+	background-color: #90EE90;
+	opacity: 0.85;
+}
+
+.regular-list {
+	float: none;
+	text-align: center;
+	opacity: 1;
+	background: none;
+	border-style: none;
+}
+
+.each-user {
+	width: 200px;
+	height: 200px;
+	margin: 30px;
+	display: inline-block;
+	border: 2px solid #E9E9E9;
+	border-radius: 100px;
+}
+
+.user-box {
+	margin: 0 auto;
+	margin-top: 75px;
+	display: table;
+}
+
+.user-box p {
+	display: table; 
+	vertical-align: middle; 
+	text-align: center;
+}
+
+#halfsize {
+	width: 45%;
+}
+
+.all-users-header {
+	text-align: center;
+}
+
+.user-header {
+	margin-left: 50px;
+}
+
+.users-info {
+	margin-left: 50px;
+	width: 100%;
+}
+
+#main-info {
+	width: 35%;
+	float: left;
+}
+
+#about-me {
+	width: 65%;
+	float: right;
+}
+

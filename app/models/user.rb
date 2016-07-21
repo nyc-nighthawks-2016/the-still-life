@@ -6,7 +6,8 @@ class User < ActiveRecord::Base
   validates :username, :email, uniqueness: true
   validates :email,  format: { with: VALID_EMAIL_REGEX }
   validates :password, length: { minimum: 6 }
-
+  validates :gender, presence: true
+  validates_inclusion_of :age, :in => 5..150
   has_secure_password
 
   belongs_to :practice

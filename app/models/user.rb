@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
   has_secure_password
 
   belongs_to :practice
-  has_many :regimens, through: :practice
+  has_many :regimes, through: :practice
   has_many :bookmarks
   has_many :resources, through: :bookmarks
 

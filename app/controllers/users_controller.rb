@@ -4,12 +4,12 @@ class UsersController < ApplicationController
   before_action :admin_user,     only: :destroy
 
   def index
-    @users = User.where(activated: FILL_IN).paginate(page: params[:page])
+    @users = User.where(activated: true).paginate(page: params[:page])
   end
 
   def show
     @user = User.find(params[:id])
-    redirect_to root_url and return unless FILL_IN
+    redirect_to root_url and return unless true
     not_found if !@user
   end
 
@@ -25,10 +25,10 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         @user.send_activation_email
-        log_in @user
-        UserMailer.account_activation(@user).deliver_now
         flash[:info] = "Please check your email to activate your account."
-        flash[:success] = "User was successfully created."
+        # log_in @user
+        
+        # flash[:success] = "User was successfully created."
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else

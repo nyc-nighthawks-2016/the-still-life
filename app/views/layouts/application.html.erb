@@ -7,6 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<header id="main_navigation" class="clearfix">
+      <%= link_to "The Still Life", root_path, :class => "name"%>
+    <nav>
+      <a href="" class="name">"Practice1"</a>
+      <a href="" class="name">"Practice2"</a>
+      <a href="" class="name">"Practice3"</a>
+      <a href="" class="name">"Practice4"</a>
+      <% if @current_user %>
+        <%= link_to "Sangha", users_path, :class => "name" %>
+        <%= link_to @current_user.username, user_path(@current_user), :class => "name" %>
+        <%= link_to "Logout", '/logout', method: :delete, :class => "name" %>
+      <% else %>
+        <%= link_to "Login", '/login', :class => "name" %>
+        <%= link_to "Register", new_user_path, :class => "name" %>
+      <% end %>
+    </nav>
+  </header>
 
 <%= yield %>
 

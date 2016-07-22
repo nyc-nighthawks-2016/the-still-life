@@ -1,0 +1,17 @@
+// Place all the styles related to the Sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#styled-heading {
+	text-align: center;
+}
+
+#login-errors {
+	width: 30%;
+	margin: 0 auto;
+	text-align: center;
+	border: 2x solid #E9E9E9;
+	border-radius: 15px;
+	background-color: #90EE90;
+	opacity: 0.85;
+}

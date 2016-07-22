@@ -66,6 +66,12 @@
 
 .users-info {
 	margin-left: 50px;
+	width: 95%;
+}
+
+.sub-info {
+	margin-top: 200px;
+	margin-left: 50px;
 	width: 100%;
 }
 
@@ -75,7 +81,24 @@
 }
 
 #about-me {
-	width: 65%;
+	width: 50%;
 	float: right;
+	word-wrap: break-word;
 }
+
+#regimen-info {
+	width: 65%;
+	margin-top: 100px;
+	float: left;
+
+}
+
+#bookmarked-sources {
+	width: 35%;
+	margin-top: 100px;
+	float: right;
+	margin-right: 100px;
+}
+
+
 

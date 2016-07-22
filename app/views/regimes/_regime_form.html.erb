@@ -6,6 +6,7 @@ Set Regimen Time
 <!-- 
 	<%= f.label :start_date %>
 	<%= date_select :regime, :start_date, {}, { :class => 'datepicker' } %><br> -->
+	<%= hidden_field_tag 'practice_id', @practice.id %>
 
 	<%= f.submit "Create Regimen", class: "btn btn-primary" %>
 <% end %>

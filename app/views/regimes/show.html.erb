@@ -1,5 +1,7 @@
-<h1>This is a regimen =D</h1>
+<h1>Here is your regime</h1>
 
-<h2>Form: </h2>
-
-<%= render 'regime_form' %>
+<h2><%= @regime.user.username %></h2>
+<h2><%= @regime.practice.name %></h2>
+<h2><%= @regime.description %></h2>
+<h2><%= display_time(@regime) %></h2>
+<%= link_to "Edit", edit_regime_path(@regime) %>

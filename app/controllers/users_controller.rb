@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all
+    @users = User.paginate(page: params[:page])
   end
 
   def show
@@ -52,9 +52,28 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    User.find(params[:id]).destroy
+    flash[:success] = "User deleted"
+    redirect_to users_url
+  end
+
   private
 
   def user_params
     params.require(:user).permit(:first_name, :last_name, :username, :email, :password, :about_me, :age, :gender)
+  end
+
+  def logged_in_user
+    unless logged_in?
+      store_location
+      flash[:danger] = "Please log in."
+      redirect_to login_url
+    end
+  end
+
+  def correct_user
+    @user = User.find(params[:id])
+    redirect_to(root_url) unless current_user?(@user)
   end
 end

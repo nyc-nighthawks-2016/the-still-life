@@ -1,0 +1,53 @@
+
+
+<div class="users-info">
+<h2><%= @user.username %>'s Profile Page</h2>
+  <div id="main-info">
+      <p>
+      First Name: 
+      <%= @user.first_name %>
+      </p>
+      <p>
+      Last Name: 
+      <%= @user.last_name %>
+      </p>
+      <p>
+      Email: 
+      <a href="mailto:<%= @user.email %>?Subject=Hello%20friend"><%= @user.email%></a>
+      </p>
+      <p>
+      Gender:
+      <%= @user.gender %>
+      </p>
+      <p>
+      Age:
+      <%= @user.age %>
+      </p>
+      <p>
+      <% if @current_user == @user %>
+        <%= link_to "Edit Information", edit_user_path(@user) %>
+      <% end %>
+      </p>
+  </div>
+
+  <div id="about-me">
+    <p>
+    About me:
+    <%= @user.about_me %>
+    </p>
+  </div>
+  
+</div>
+
+<div class="sub-info">
+  <div id="regimen-info">
+    <p>Regimen Info</p>
+  </div>
+
+  <div id="bookmarked-sources">
+    <p>Bookmarked Resources</p>
+  </div>
+</div>
+
+
+<br><br>

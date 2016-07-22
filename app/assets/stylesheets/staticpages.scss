@@ -1,0 +1,57 @@
+// Place all the styles related to the staticpages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+*{
+	box-sizing: border-box;
+}
+
+body {
+	font-weight: 700;
+	font-size: 1.0em;
+	letter-spacing: 2px;
+}
+
+.wrapper {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.wrapper_padding {
+	padding: 4rem 0;
+}
+
+
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after{
+	clear: both;
+}
+
+#main_navigation{
+	padding-bottom: 10px;
+	border-bottom: 1px solid #E9E9E9;
+	text-transform: uppercase;
+}
+
+.name {
+	font-weight: 700;
+	font-size: .8em;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	border: 2px solid #E9E9E9;
+	padding: 1rem;
+	margin: 0.25rem;
+	text-decoration: none;
+	color: #424652;
+	float: left;
+}
+
+nav {
+	float: right;
+}

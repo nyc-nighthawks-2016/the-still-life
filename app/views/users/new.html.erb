@@ -1,0 +1,53 @@
+<% provide(:title, "Register") %>
+<h1 id="styled-heading">Register User</h1><br>
+
+<br>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+  	<div id="errors">
+	  	<% if @user.errors.any? %>
+			<p id="error_explanation">
+			  <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+			  <ul>
+			  <% @user.errors.full_messages.each do |message| %>
+			    <li><%= message %></li>
+			  <% end %>
+			  </ul>
+			</p>
+		<% end %>
+	</div>
+    <%= form_for(@user, :html => {:id => "form"}) do |f| %>
+      
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name, class: 'form-control' %><br>
+      
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name, class: 'form-control' %><br>
+      
+        <%= f.label :username %>
+        <%= f.text_field :username, class: 'form-control' %><br>
+
+        <%= f.label :age %>
+        <%= f.number_field :age, min: 5, class: 'form-control' %><br>
+
+        <%= f.label :gender %>
+        <%= f.text_field :gender, class: 'form-control' %><br>
+      
+        <%= f.label :email %>
+        <%= f.email_field :email, class: 'form-control' %><br>
+      
+        <%= f.label :password %>
+        <%= f.password_field :password, class: 'form-control' %><br>
+      
+        <%= f.label :about_me %>
+        <%= f.text_area :about_me, class: 'form-control', rows: '10' %><br>
+      
+        <%= f.submit "Create User", class: "btn btn-primary" %>
+      
+	<% end %>
+		<%= link_to 'Back', users_path, :html => {id: "styled-heading"} %>
+	</div>
+</div>
+
+

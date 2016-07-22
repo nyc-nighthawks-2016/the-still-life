@@ -6,5 +6,8 @@ Rails.application.routes.draw do
   resources :users
   resources :practices
 
+  resources :account_activations, only: [:edit]
+
+
   root 'staticpages#index'
 end

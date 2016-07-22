@@ -89,6 +89,7 @@ ActiveRecord::Schema.define(version: 20160722173832) do
     t.datetime "avatar_updated_at"
     t.string   "gender"
     t.integer  "age"
+    t.string   "remember_digest"
   end
 
   create_table "videos", force: :cascade do |t|

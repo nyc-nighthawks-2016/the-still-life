@@ -16,6 +16,11 @@ ActiveRecord::Schema.define(version: 20160722173832) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "audios", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "bookmarks", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "resource_id"
@@ -26,6 +31,11 @@ ActiveRecord::Schema.define(version: 20160722173832) do
   add_index "bookmarks", ["resource_id"], name: "index_bookmarks_on_resource_id", using: :btree
   add_index "bookmarks", ["user_id"], name: "index_bookmarks_on_user_id", using: :btree
 
+  create_table "images", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "practices", force: :cascade do |t|
     t.string   "name",        null: false
     t.string   "category",    null: false
@@ -33,6 +43,11 @@ ActiveRecord::Schema.define(version: 20160722173832) do
     t.string   "method",      null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "readings", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "regimes", force: :cascade do |t|
@@ -74,6 +89,11 @@ ActiveRecord::Schema.define(version: 20160722173832) do
     t.datetime "avatar_updated_at"
     t.string   "gender"
     t.integer  "age"
+  end
+
+  create_table "videos", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "bookmarks", "resources"

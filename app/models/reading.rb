@@ -1,0 +1,2 @@
+class Reading < Resource
+end

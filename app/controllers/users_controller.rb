@@ -42,7 +42,7 @@ class UsersController < ApplicationController
     not_found if @user != @current_user
     respond_to do |format|
       if @user.update(user_params)
-        flash[:success] = "User was successfully created."
+        flash[:success] = "Profile successfully updated."
         format.html { redirect_to @user, notice: "User was successfully edited." }
         format.json { render :show, status: :created, location: @user }
       else

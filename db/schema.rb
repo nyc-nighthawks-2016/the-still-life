@@ -11,7 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20160722173832) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,12 +53,15 @@ ActiveRecord::Schema.define(version: 20160722173832) do
   end
 
   create_table "regimes", force: :cascade do |t|
-    t.integer  "duration",                    null: false
-    t.text     "description",                 null: false
-    t.boolean  "completion",  default: false
+    t.integer  "duration",                            null: false
+    t.text     "description",                         null: false
+    t.boolean  "completion",          default: false
     t.integer  "practice_id"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.date     "start_date"
+    t.date     "end_date"
+    t.time     "daily_practice_time"
   end
 
   add_index "regimes", ["practice_id"], name: "index_regimes_on_practice_id", using: :btree

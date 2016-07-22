@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   resources :users
   resources :practices
 
+  resources :regimes
+  
   root 'staticpages#index'
 end

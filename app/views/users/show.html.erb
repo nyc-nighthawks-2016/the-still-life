@@ -1,7 +1,15 @@
+<% provide(:title, @user.username) %>
 
+      <div id="user-avatar">
+        <%= gravatar_for @user %>
+        <div id="profile-header">
+          <h2><%= @user.username %>'s Profile Page</h2>
+        </div>
+      </div>
+    <br>
 
 <div class="users-info">
-<h2><%= @user.username %>'s Profile Page</h2>
+
   <div id="main-info">
       <p>
       First Name: 

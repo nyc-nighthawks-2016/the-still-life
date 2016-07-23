@@ -1,3 +1,4 @@
+
 Practice.create(category:"Chant", name:"Om", description:"A word representing the encapsulating consciousness. It can also be translated as 'Amen' or 'Amin.'" , method:"Spoken/Sung")
 
 Practice.create(category:"Chant" , name:"Shema Yisrael! Yhwh Eloheinu, Yhwh Echad", description:"A version of Deuteronomy 6:4, 'Hear Israel I AM is God, I AM is One.'" , method:"Spoken/Sung" )
@@ -44,34 +45,52 @@ Practice.create(category:"Service", name:"Assistance", description:"Golden Rule"
 
 Practice.create(category:"Service", name:"Environmental Care", description:"Golden Rule", method:"Task")
 
+User.delete_all
+users = []
 
+users << User.create!({
+                         first_name: "Seth",
+                         last_name: "Goldman",
+                         username: "sethdaniel89",
+                         email: "seth.daniel.goldman@gmail.com",
+                         password: "workinghard",
+                         about_me: "In a world, one man must stand to defeat evil, but not through the typical feats of strength. The path to meditation is the strongest route to overcoming the demons that haunt so many.",
+                         gender: "male",
+                         age: 27,
+                         admin: true,
+                         activated: true,
+                         activated_at: Time.zone.now,
+                         practice: Practice.first})
 
-User.create!({
-	first_name: "jonathan", 
-	last_name: "philippou", 
-	username: "jonathan", 
-	email: "jonathan@gmail.com",
-	password: "jonathan",
-	gender: "boy",
-	age: 10,
-	practice: Practice.first
-	})
+users << User.create!({
+                        first_name: "Jonathan", 
+                        last_name: "Philippou", 
+                        username: "jonathan", 
+                        email: "jonathan@gmail.com",
+                        password: "jonathan",
+                        about_me: "Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon "
+                        gender: "boy",
+                        age: 10,
+                        admin: true,
+                        activated: true,
+                        activated_at: Time.zone.now,
+                        practice: Practice.first
+                        })
 
-User.create!({
-	first_name: "tooty", 
-	last_name: "tooty", 
-	username: "tooty", 
-	email: "tooty@gmail.com",
-	password: "password",
-	gender: "girl",
-	practice: Practice.first,
-	age: 10
-	})
-
-
-
-
-
-
+100.times do
+  first_name = Faker::Name.first_name
+  last_name = Faker::Name.last_name
+  users << User.create!({
+                         first_name: first_name,
+                         last_name: last_name,
+                         username: Faker::Internet.user_name("#{first_name} #{last_name[0..2]}", %w(. _ -)),
+                         email: Faker::Internet.free_email("#{first_name}.#{last_name}"),
+                         password: Faker::Internet.password(8, 15),
+                         about_me: Faker::Hipster.paragraph,
+                         gender: ["male", "female"].sample,
+                         age: rand(15..120),
+                         activated: true,
+                         activated_at: Time.zone.now})
+end
 
 

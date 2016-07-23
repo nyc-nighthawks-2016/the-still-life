@@ -4,21 +4,10 @@
 <br>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-  	<div id="errors">
-	  	<% if @user.errors.any? %>
-			<p id="error_explanation">
-			  <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-			  <ul>
-			  <% @user.errors.full_messages.each do |message| %>
-			    <li><%= message %></li>
-			  <% end %>
-			  </ul>
-			</p>
-		<% end %>
-	</div>
+  	
     <%= form_for(@user, :html => {:id => "form"}) do |f| %>
-      
+         <%= render 'shared/error_messages' %>
+
         <%= f.label :first_name %>
         <%= f.text_field :first_name, class: 'form-control' %><br>
       

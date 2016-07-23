@@ -74,12 +74,10 @@ Resource.create(name:"Assistance", type:"Service" , url:"http://www.nychealthand
 
 Resource.create(name:"Assistance" , type:"Service" , url:"https://www.newyorkcares.org/program-areas/special-needs" , description:"New York Cares programs for assisting people with special needs", practice_id: 22)
 
-Resource.create(name:"Environment" , type:"Service" , url:"http://www.lesecologycenter.org/about/jobs-internships/" , description:"Lower East Side Ecology Center", practice_id: 23)
+Resource.create(name:"Environmental Care", type:"Service" , url:"http://www.lesecologycenter.org/about/jobs-internships/" , description:"Lower East Side Ecology Center", practice_id: 23)
 
-Resource.create(name: , type:"Service" , url: , description:, practice_id: 23)
+Resource.create(name:"Environmental Care", type:"Service" , url:"http://portsidenewyork.org/volunteer/", description:"PortSide New York to support better urban waterways", practice_id: 23)
 
-Resource.create(name: , type:"Service" , url: , description:, practice_id: )
+Resource.create(name:"Animals", type:"Service" , url:"http://www.nycacc.org/Volunteer.htm" , description:"Animal Care Centers of NYC always need help as they are legally bound to accept any animal surrendered to them", practice_id: 24)
 
-Resource.create(name: , type:"Service" , url: , description:, practice_id: )
-
-Resource.create(name: , type:"Service" , url: , description:, practice_id: )
+Resource.create(name:"Animals", type:"Service" , url:"http://www.barcshelter.org/", description:"Brooklyn Animal Resource Coalition in Williamsburg lets you drop in and walk a pup", practice_id: 24)

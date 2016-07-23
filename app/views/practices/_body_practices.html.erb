@@ -1,6 +1,6 @@
 <h2> Body Practices </h2>
     <% @body_practices.each do |body_practice| %>
-        <p><%= body_practice.name %></p>
+        <p><%=link_to body_practice.name, practice_path(body_practice) %></p>
         <p><%= body_practice.description %></p>
         <p><%= body_practice.method %></p>
         <% if current_user %>

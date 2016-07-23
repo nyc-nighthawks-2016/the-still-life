@@ -17,3 +17,5 @@
 Thumbs.db
 
 local_env.yml
+
+config/application.yml  

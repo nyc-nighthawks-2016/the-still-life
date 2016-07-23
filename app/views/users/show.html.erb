@@ -49,7 +49,33 @@
 
 <div class="sub-info">
   <div id="regimen-info">
-    <h3>Regimen Info</h3>
+    <h3>Daily Regimen Info</h3><br>
+
+    <% if @user.practice != nil %>
+
+      <p><%= @practice.name %> | <%= @practice.category %></p>
+      <p><%= @practice.description %></p>
+      <% if @completed_regimens.length > 1 %>
+        <p>So far you have completed <%= @completed_regimens.length %>
+        <% else %>
+        <p>So far you have completed 0</p>
+        <% end %>
+      <% if @completed_regimens.length > 1 || @completed_regimens.length == 0 %>
+      regimens 
+      <% else %>
+      regimen
+      <% end %>
+      for this practice.</p>
+      <% if @completed_regimens.length > 0 %>
+        <% @completed_regimens.length.times do %>
+            <div id="single-regimen">
+              <center>
+                <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
+              </center>
+            </div>
+        <% end %>
+      <% end %>
+    <% end %> 
   </div>
 
   <div id="bookmarked-sources">

@@ -4,7 +4,7 @@ class CreateRegimes < ActiveRecord::Migration
       t.integer :duration, null: false
       t.text :description, null: false
       t.boolean :completion, default: false
-      t.references :practice, index: true, foreign_key: true
+      t.references :practice, index: true
 
       t.timestamps null: false
     end

@@ -66,31 +66,33 @@
 }
 
 .user-header {
-	margin-left: 50px;
+	margin-left: 30px;
 }
 
 .users-info {
-	margin-left: 50px;
+	margin-left: 30px;
 	width: 95%;
 }
 
 .sub-info {
 	vertical-align: top;
 	margin-top: 200px;
-	margin-left: 50px;
-	width: 100%;
+	margin-left: 30px;
+	width: 95%;
+	float: clear;
 }
 
 #main-info {
 	width: 35%;
 	float: left;
+	word-wrap: break-word;
 }
 
 #about-me {
 	width: 50%;
 	float: right;
 	word-wrap: break-word;
-	background-color: yellow;
+	
 }
 
 #profile-header {
@@ -100,22 +102,37 @@
 
 #user-avatar {
 	margin-top: 20px;
-	margin-left: 50px;
+	margin-left: 30px;
 	vertical-align: middle;
 }
 
 #regimen-info {
-	width: 65%;
-	background-color: blue;
+	width: 40%;
+	vertical-align: top;
 	float: left;
+	margin-right: 30px;
+}
 
+#single-regimen {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	border: 2px solid #E9E9E9;
+	border-radius: 50px;
+	margin: 2px;
+}
+
+.glyphicon-leaf {
+	margin-top: 10px;
+	width: 25px;
+	height: 25px;
+	font-size: 25px;
+	color: green;
 }
 
 #bookmarked-sources {
-	width: 35%;
-	background-color: red;
+	width: 45%;
 	float: right;
-	
 }
 
 

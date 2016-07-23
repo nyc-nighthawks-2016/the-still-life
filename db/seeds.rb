@@ -121,7 +121,8 @@ users << User.create!({
                          admin: true,
                          activated: true,
                          activated_at: Time.zone.now,
-                         practice: Practice.first})
+                         practice: Practice.first
+                         })
 
 users << User.create!({
                         first_name: "Jonathan",
@@ -151,6 +152,54 @@ users << User.create!({
                          gender: ["male", "female"].sample,
                          age: rand(15..120),
                          activated: true,
-                         activated_at: Time.zone.now})
+                         activated_at: Time.zone.now
+                         })
 end
+
+#-------------------------------------------------------------------------------------------------------------------------------
+# REGIMENS
+#-------------------------------------------------------------------------------------------------------------------------------
+
+regimens = []
+90.times do
+regimens << Regime.create!({
+                        duration: 5,
+                        completion: true,
+                        practice: Practice.first,
+                        user: User.first,
+                        daily_
+                        })
+end 
+
+# 1000.times do
+#       praactice = practice.sample
+# regimens << Regime.create!({
+#                         duration: 5,
+#                         description: "My daily regimewn",
+#                         completion: true,
+#                         practice: practices.sample,
+#                         user: users.sample
+
+#       })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

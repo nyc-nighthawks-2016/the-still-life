@@ -5,7 +5,7 @@ class CreateResources < ActiveRecord::Migration
       t.string :type, null: false
       t.string :url, null: false
       t.string :description, null: false
-      t.references :practice, index: true, foreign_key: true
+      t.references :practice, index: true
       t.timestamps null: false
     end
   end

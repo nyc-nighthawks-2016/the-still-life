@@ -11,10 +11,18 @@ Rails.application.routes.draw do
 
   resources :users
   resources :practices
+
   resources :regimes
   resources :account_activations, only: [:edit]
 
   resources :password_resets, only: [:new, :create, :edit, :update]
+
+  resources :resources
+  resources :audios, controller: 'resources', type: 'Audio'
+  resources :images, controller: 'resources', type: 'Image'
+  resources :readings, controller: 'resources', type: 'Reading'
+  resources :videos, controller: 'resources', type: 'Video'
+
 
   root 'staticpages#index'
 end

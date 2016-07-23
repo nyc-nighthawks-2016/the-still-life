@@ -42,14 +42,19 @@
 
 .user-box {
 	margin: 0 auto;
-	margin-top: 75px;
 	display: table;
+	text-align: center;
+	vertical-align: middle;
 }
 
-.user-box p {
-	display: table; 
-	vertical-align: middle; 
-	text-align: center;
+#profile-image {
+	margin-top: 40px;
+	margin-left: 12.5px;
+
+}
+
+#circle-user-info {
+	
 }
 
 #halfsize {
@@ -84,6 +89,17 @@
 	width: 50%;
 	float: right;
 	word-wrap: break-word;
+}
+
+#profile-header {
+	padding-top: 5px;
+	width: 100%;
+}
+
+#user-avatar {
+	margin-top: 20px;
+	margin-left: 50px;
+	vertical-align: middle;
 }
 
 #regimen-info {

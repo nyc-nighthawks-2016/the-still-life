@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     if @user.practice != nil
       @practice = @user.practice
       if @practice.regimes.length > 0
-        @egimens = @user_practice.regimes
+        @regimens = @practice.regimes.where(completion: true)
       end
     end
     redirect_to root_url and return unless true

@@ -50,15 +50,21 @@
 <div class="sub-info">
   <div id="regimen-info">
     <h3>Daily Regimen Info</h3><br>
-    
-    <% 150.times do %>
-      
+    <p><%= @regimens.first.practice.name %> | <%= @regimens.first.practice.category %></p>
+    <p><%= @regimens.first.practice.description %></p>
+    <p>So far you have completed <%= @regimens.length %> 
+    <% if @regimens.length > 1%>
+    regimens 
+    <% else %>
+    regimen
+    <% end %>
+    for this practice.</p>
+    <% @regimens.length.times do %>
         <div id="single-regimen">
           <center>
             <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
           </center>
         </div>
-      
     <% end %>
   </div>
 

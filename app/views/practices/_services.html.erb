@@ -1,6 +1,6 @@
 <h2> Services </h2>
     <% @services.each do |service| %>
-        <p><%= service.name %></p>
+        <p><%= link_to service.name, practice_path(service)%></p>
         <p><%= service.description %></p>
         <p><%= service.method %></p>
         <% if current_user %>

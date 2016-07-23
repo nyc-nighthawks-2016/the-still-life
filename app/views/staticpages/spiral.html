@@ -3,8 +3,8 @@
 <head>
   <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
   <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-  <script src="../build/d3-radial.js"></script>
-  <script src="main.css"></script>
+  <script src="../../../assets/javascripts/d3-radial.js"></script>
+  
 </head>
 <body>
   <script>
@@ -21,7 +21,7 @@
   }
 
   d3.select('body').append("h1")
-    .text("Vary Coil");
+    .text("Your Progress Tracker");
 
   [60].forEach(function(coil) {
     spiral.coil(coil);

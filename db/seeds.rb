@@ -166,8 +166,8 @@ regimens << Regime.create!({
                         duration: 5,
                         completion: true,
                         practice: Practice.first,
-                        user: User.first,
-                        daily_
+                        user: User.first
+                        
                         })
 end 
 
@@ -175,7 +175,7 @@ end
 #       praactice = practice.sample
 # regimens << Regime.create!({
 #                         duration: 5,
-#                         description: "My daily regimewn",
+#                         description: "My daily regimen",
 #                         completion: true,
 #                         practice: practices.sample,
 #                         user: users.sample

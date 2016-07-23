@@ -1,11 +1,9 @@
 Set Regimen Time
 <%= form_for @regime do |f| %>
-
 	<%= f.label :practice_time %>
 	<%= time_select :regime, :daily_practice_time, { ampm: true, minute_step: 15 }, :class => 'timepicker'  %><br>
-<!-- 
-	<%= f.label :start_date %>
-	<%= date_select :regime, :start_date, {}, { :class => 'datepicker' } %><br> -->
+	<% # f.label :start_date %>
+	<% # = date_select :regime, :start_date, {}, { :class => 'datepicker' } %>
 	<%= hidden_field_tag 'practice_id', @practice.id %>
 
 	<%= f.submit "Create Regimen", class: "btn btn-primary" %>

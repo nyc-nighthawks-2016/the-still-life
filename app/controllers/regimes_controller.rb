@@ -4,18 +4,13 @@ class RegimesController < ApplicationController
 	end
 
 	def new
-
-		# CHANGE THIS!!!
-		# @practice = Practice.find_by_id(params[:practice_id])
-		@practice = Practice.first # this has to be changed to the relevant practice
-
+		@practice = Practice.find(params[:practice_id])
 
 		@regime = Regime.new
 	end
 
 	def show
 		@regime = Regime.find_by_id(params[:id])
-		# binding pry
 	end
 
 
@@ -24,15 +19,10 @@ class RegimesController < ApplicationController
 
 			# Get the practice
 			practice = Practice.find_by_id(params[:practice_id])
-			
+
 			# Get the time
 			time = generate_time(params)
-			# hour = params[:regime]["daily_practice_time(4i)"] # daily_pracitce_time(4i) is what is stored in params.  It looks odd, but I verfied it on pry
-			# minute = params[:regime]["daily_practice_time(5i)"]
-			# t = Time.now + 1.days
-			# time = Time.new(t.year, t.month, t.day, hour, minute, 0)
 
-			
 			# Create Regimen
 			@regime = Regime.new({
 				daily_practice_time: time,
@@ -55,13 +45,13 @@ class RegimesController < ApplicationController
 		 # else (if not logged in)...
 		else
 			# ...take a hike
-			redirect_to new_regime_path  
+			redirect_to new_regime_path
 		end
 	end
 
 	def edit
 		@regime = Regime.find_by_id(params[:id])
-		
+
 		if logged_in? && @regime.user == current_user
 			render 'edit'
 		else
@@ -77,7 +67,7 @@ class RegimesController < ApplicationController
 	end
 
 
-	private 
+	private
 	def params_user
 	  params.require(:user).permit(:phone)
 	end
@@ -86,7 +76,7 @@ class RegimesController < ApplicationController
 		hour = params[:regime]["daily_practice_time(4i)"] # daily_pracitce_time(4i) is what is stored in params.  It looks odd, but I verfied it on pry
 		minute = params[:regime]["daily_practice_time(5i)"]
 		t = Time.now + 1.days
-		time = Time.new(t.year, t.month, t.day, hour, minute, 0) + Time.zone_offset('EDT') 
+		time = Time.new(t.year, t.month, t.day, hour, minute, 0) + Time.zone_offset('EDT')
 	end
 
 end

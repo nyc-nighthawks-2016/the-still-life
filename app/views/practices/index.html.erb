@@ -10,7 +10,12 @@
         <p><%= chant.name %></p>
         <p><%= chant.description %></p>
         <p><%= chant.method %></p>
+        <!-- <a href="/regimes/new"><button>Create A Regiment</button></a> -->
+        <button>
+        <%= link_to "Create A Regiment", new_regime_path(practice_id: chant.id) %>
+        </button>
       </div><br>
+
     <% end %>
     </section>
 
@@ -48,5 +53,5 @@
     </section>
 
     </center>
-    
+
   </div>

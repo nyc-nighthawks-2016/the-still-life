@@ -66,41 +66,41 @@ practices << Practice.create(category:"Service", name:"Environmental Care", desc
 
 resources = []
 
-resources << Resource.create(name:"Sky Ting Yoga", type:"Body", url:"http://www.skytingyoga.com/", description:"Sky Ting Yoga Studio", practice_id: 15)
+resources << Resource.create(name:"Sky Ting Yoga", category:"Body", url:"http://www.skytingyoga.com/", description:"Sky Ting Yoga Studio", practice_id: 15)
 
-resources << Resource.create(name:"Bhakti Center", type:"Body", url:"http://bhakticenter.org/", description:"Bhakti Center", practice_id: 15)
+resources << Resource.create(name:"Bhakti Center", category:"Body", url:"http://bhakticenter.org/", description:"Bhakti Center", practice_id: 15)
 
-resources << Resource.create(name:"Dharma Yoga Center", type:"Body", url:"http://www.dharmayogacenter.com/#6/40.747/-74.015", description:"Dharma Yoga Center", practice_id: 15)
+resources << Resource.create(name:"Dharma Yoga Center", category:"Body", url:"http://www.dharmayogacenter.com/#6/40.747/-74.015", description:"Dharma Yoga Center", practice_id: 15)
 
-resources << Resource.create(name:"The Shala", type:"Body", url:"http://theshala.com/", description:"The Shala Yoga House", practice_id: 15)
+resources << Resource.create(name:"The Shala", category:"Body", url:"http://theshala.com/", description:"The Shala Yoga House", practice_id: 15)
 
-resources << Resource.create(name:"Tao of Healing", type:"Body", url:"http://taoofhealing.com/", description:"Tao of Healing", practice_id: 17)
+resources << Resource.create(name:"Tao of Healing", category:"Body", url:"http://taoofhealing.com/", description:"Tao of Healing", practice_id: 17)
 
-resources << Resource.create(name:"Center for Taiji Studies", type:"Body", url:"http://www.centerfortaiji.com/", description:"Center for Taiji Studies", practice_id: 17)
+resources << Resource.create(name:"Center for Taiji Studies", category:"Body", url:"http://www.centerfortaiji.com/", description:"Center for Taiji Studies", practice_id: 17)
 
-resources << Resource.create(name:"Tai Chi", type:"Body", url:"http://www.nytaichi.com/hwon.htm", description:"Classical Yang Family Tai Chi Chuan", practice_id: 17)
+resources << Resource.create(name:"Tai Chi", category:"Body", url:"http://www.nytaichi.com/hwon.htm", description:"Classical Yang Family Tai Chi Chuan", practice_id: 17)
 
-resources << Resource.create(name:"Wu Tang", type:"Body", url:"http://www.qigongnyc.com/", description:"Wu Tang Physical Culture Association", practice_id: 17)
+resources << Resource.create(name:"Wu Tang", category:"Body", url:"http://www.qigongnyc.com/", description:"Wu Tang Physical Culture Association", practice_id: 17)
 
-resources << Resource.create(name:"Food", type:"Service", url:"http://www.coalitionforthehomeless.org/" , description:"Coalition for the Homeless", practice_id: 20)
+resources << Resource.create(name:"Food", category:"Service", url:"http://www.coalitionforthehomeless.org/" , description:"Coalition for the Homeless", practice_id: 20)
 
-resources << Resource.create(name:"Food", type:"Service", url:"https://www.bowery.org/" , description:"The Bowery Mission", practice_id: 20)
+resources << Resource.create(name:"Food", category:"Service", url:"https://www.bowery.org/" , description:"The Bowery Mission", practice_id: 20)
 
-resources << Resource.create(name:"Companionship", type:"Service" , url:"https://www.newyorkcares.org/program-areas/seniors" , description:"Elder Companionship through New York Care", practice_id: 21)
+resources << Resource.create(name:"Companionship", category:"Service" , url:"https://www.newyorkcares.org/program-areas/seniors" , description:"Elder Companionship through New York Care", practice_id: 21)
 
-resources << Resource.create(name:"Companionship", type:"Service" , url:"http://www.hpcanys.org/community-resources/volunteer-opportunities/" , description:"New York State Hospice opportunities to support the dying and their families", practice_id: 21)
+resources << Resource.create(name:"Companionship", category:"Service" , url:"http://www.hpcanys.org/community-resources/volunteer-opportunities/" , description:"New York State Hospice opportunities to support the dying and their families", practice_id: 21)
 
-resources << Resource.create(name:"Assistance", type:"Service" , url:"http://www.nychealthandhospitals.org/hhc/html/contact/Volunteering.shtml#1" , description:"A variety of opportunities can be found at NYC Hospitals to assist those in need", practice_id: 22)
+resources << Resource.create(name:"Assistance", category:"Service" , url:"http://www.nychealthandhospitals.org/hhc/html/contact/Volunteering.shtml#1" , description:"A variety of opportunities can be found at NYC Hospitals to assist those in need", practice_id: 22)
 
-resources << Resource.create(name:"Assistance" , type:"Service" , url:"https://www.newyorkcares.org/program-areas/special-needs" , description:"New York Cares programs for assisting people with special needs", practice_id: 22)
+resources << Resource.create(name:"Assistance" , category:"Service" , url:"https://www.newyorkcares.org/program-areas/special-needs" , description:"New York Cares programs for assisting people with special needs", practice_id: 22)
 
-resources << Resource.create(name:"Environmental Care", type:"Service" , url:"http://www.lesecologycenter.org/about/jobs-internships/" , description:"Lower East Side Ecology Center", practice_id: 23)
+resources << Resource.create(name:"Environmental Care", category:"Service" , url:"http://www.lesecologycenter.org/about/jobs-internships/" , description:"Lower East Side Ecology Center", practice_id: 23)
 
-resources << Resource.create(name:"Environmental Care", type:"Service" , url:"http://portsidenewyork.org/volunteer/", description:"PortSide New York to support better urban waterways", practice_id: 23)
+resources << Resource.create(name:"Environmental Care", category:"Service" , url:"http://portsidenewyork.org/volunteer/", description:"PortSide New York to support better urban waterways", practice_id: 23)
 
-resources << Resource.create(name:"Animals", type:"Service" , url:"http://www.nycacc.org/Volunteer.htm" , description:"Animal Care Centers of NYC always need help as they are legally bound to accept any animal surrendered to them", practice_id: 24)
+resources << Resource.create(name:"Animals", category:"Service" , url:"http://www.nycacc.org/Volunteer.htm" , description:"Animal Care Centers of NYC always need help as they are legally bound to accept any animal surrendered to them", practice_id: 24)
 
-resources << Resource.create(name:"Animals", type:"Service" , url:"http://www.barcshelter.org/", description:"Brooklyn Animal Resource Coalition in Williamsburg lets you drop in and walk a pup", practice_id: 24)
+resources << Resource.create(name:"Animals", category:"Service" , url:"http://www.barcshelter.org/", description:"Brooklyn Animal Resource Coalition in Williamsburg lets you drop in and walk a pup", practice_id: 24)
 
 
 #-------------------------------------------------------------------------------------------------------------------------------
@@ -124,9 +124,9 @@ users << User.create!({
                          practice: Practice.first})
 
 users << User.create!({
-                        first_name: "Jonathan", 
-                        last_name: "Philippou", 
-                        username: "jonathan", 
+                        first_name: "Jonathan",
+                        last_name: "Philippou",
+                        username: "jonathan",
                         email: "jonathan@gmail.com",
                         password: "jonathan",
                         about_me: "Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon",

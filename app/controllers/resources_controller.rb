@@ -7,7 +7,6 @@ class ResourcesController < ApplicationController
 
   def show
     @resource = media_type_class.find(params[:id])
-    binding.pry
   end
 
 

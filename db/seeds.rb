@@ -36,10 +36,14 @@ Practice.create(category:"Body", name:"QiGong", description:"A set of repetitive
 
 Practice.create(category:"Body", name:"Traditional Aerobic Exercise", description:"Exercises such as running, walking, swimming, etc. during which you can focus on your breath. Refer to resources to perform this practice.", method:"exercise")
 
-Practice.create(category:"Service", name:"Food", description:"Golden Rule", method:"Task")
+Practice.create(category:"Service", name:"Food", description:"If you can’t feed a hundred people, then feed just one. -Mother Teresa", method:"Task")
 
-Practice.create(category:"Service", name:"Companionship", description:"Golden Rule", method:"Task")
+Practice.create(category:"Service", name:"Companionship", description:"The sage has no concern for himself, but makes the concerns of others his own. -Tao Te Ching", method:"Task")
 
-Practice.create(category:"Service", name:"Assistance", description:"Golden Rule", method:"Task")
+Practice.create(category:"Service", name:"Assistance", description:"When I was young, I admired clever people. Now that I am old, I admire kind people. -Abraham Joshua Heschel", method:"Task")
 
-Practice.create(category:"Service", name:"Environmental Care", description:"Golden Rule", method:"Task")
+Practice.create(category:"Service", name:"Environmental Care", description:"Look deep into nature, and then you will understand everything better. —Albert Einstein", method:"Task")
+
+Practice.create(category:"Service", name:"Animals", description:"The good man is the friend of all living things. — Mahatma Gandhi", method:"Task")
+
+Resource.create()

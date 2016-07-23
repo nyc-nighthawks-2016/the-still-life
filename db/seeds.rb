@@ -166,8 +166,7 @@ regimens << Regime.create!({
                         duration: 5,
                         completion: true,
                         practice: Practice.first,
-                        user: User.first
-                        
+                        user: User.first                        
                         })
 end 
 

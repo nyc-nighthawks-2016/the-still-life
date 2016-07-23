@@ -1,52 +1,34 @@
 <h1> Practices </h1>
   <center>
-
   <div class='practice-container'>
 
     <section class='chants-container'>
-    <h2> Chants </h2>
-    <% @chants.each do |chant| %>
       <div class='chants'>
-        <p><%= chant.name %></p>
-        <p><%= chant.description %></p>
-        <p><%= chant.method %></p>
-      </div><br>
-    <% end %>
+        <%= render 'chants' %>
+      </div>
     </section>
 
     <section class='body-practices-container'>
-    <h2> Body Practices </h2>
-    <% @body_practices.each do |body_practice| %>
-      <div class='body_practices'>
-        <p><%= body_practice.name %></p>
-        <p><%= body_practice.description %></p>
-        <p><%= body_practice.method %></p>
+      <div class='body-practices'>
+        <%= render 'body_practices' %>
       </div><br>
-    <% end %>
     </section>
 
     <section class='seated-practices-container'>
-    <h2> Seated Practices </h2>
-    <% @seated_practices.each do |seated_practice| %>
-      <div class='seated_practices'>
-        <p><%= seated_practice.name %></p>
-        <p><%= seated_practice.description %></p>
-        <p><%= seated_practice.method %></p>
+      <div class='seated-practices'>
+        <%= render 'seated_practices' %>
       </div><br>
-    <% end %>
     </section>
 
     <section class='service-container'>
-    <h2> Services </h2>
-    <% @services.each do |service| %>
       <div class='services'>
-        <p><%= service.name %></p>
-        <p><%= service.description %></p>
-        <p><%= service.method %></p>
+        <%= render 'services' %>
       </div><br>
-    <% end %>
     </section>
 
     </center>
-    
+
   </div>
+
+
+

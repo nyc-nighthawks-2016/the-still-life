@@ -1,0 +1,14 @@
+  <h2> Chants </h2>
+    <% @chants.each do |chant| %>
+        <p><%= chant.name %></p>
+        <p><%= chant.description %></p>
+        <p><%= chant.method %></p>
+        <% if current_user %>
+          <% if current_user.regimes.length == 0 %>
+            <button>
+              <%= link_to "Create A Regiment", new_regime_path(practice_id: chant.id) %>
+            </button>
+          <% end %>
+        <% end %>
+        <br></br>
+    <% end %>

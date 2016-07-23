@@ -17,6 +17,9 @@
       <% if @current_user %>
         <%= link_to "Sangha", users_path, :class => "name" %>
         <%= link_to @current_user.username, user_path(@current_user), :class => "name" %>
+        <% if current_user.regimes.length > 0 %>
+          <%= link_to "Current Regimen", regime_path(@current_user.regimes.last), :class => "name" %>
+        <% end %>
         <%= link_to "Logout", '/logout', method: :delete, :class => "name" %>
       <% else %>
         <%= link_to "Login", '/login', :class => "name" %>

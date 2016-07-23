@@ -9,6 +9,12 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    if @user.practice != nil
+      @practice = @user.practice
+      if @practice.regimes.length > 0
+        @egimens = @user_practice.regimes
+      end
+    end
     redirect_to root_url and return unless true
     not_found if !@user
   end

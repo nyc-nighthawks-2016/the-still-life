@@ -164,10 +164,10 @@ regimens = []
 90.times do
 regimens << Regime.create!({
                         duration: 5,
-                        description: "Practice of the Om Chant in Spoken/Sung form",
                         completion: true,
                         practice: Practice.first,
-                        user: User.first
+                        user: User.first,
+                        daily_
                         })
 end 
 

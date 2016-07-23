@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160722193509) do
+ActiveRecord::Schema.define(version: 20160723161214) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -68,7 +68,7 @@ ActiveRecord::Schema.define(version: 20160722193509) do
 
   create_table "resources", force: :cascade do |t|
     t.string   "name",        null: false
-    t.string   "type",        null: false
+    t.string   "category",    null: false
     t.string   "url",         null: false
     t.string   "description", null: false
     t.integer  "practice_id"

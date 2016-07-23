@@ -46,22 +46,40 @@ Practice.create(category:"Service", name:"Environmental Care", description:"Look
 
 Practice.create(category:"Service", name:"Animals", description:"The good man is the friend of all living things. — Mahatma Gandhi", method:"Task")
 
-Resource.create(name:"Sky Ting Yoga", type:"Body", url:"http://www.skytingyoga.com/", description:"Sky Ting Yoga Studio")
+Resource.create(name:"Sky Ting Yoga", type:"Body", url:"http://www.skytingyoga.com/", description:"Sky Ting Yoga Studio", practice_id: 15)
 
-Resource.create(name:"Bhakti Center", type:"Body", url:"http://bhakticenter.org/", description:"Bhakti Center")
+Resource.create(name:"Bhakti Center", type:"Body", url:"http://bhakticenter.org/", description:"Bhakti Center", practice_id: 15)
 
-Resource.create(name:"Dharma Yoga Center", type:"Body", url:"http://www.dharmayogacenter.com/#6/40.747/-74.015", description:"Dharma Yoga Center")
+Resource.create(name:"Dharma Yoga Center", type:"Body", url:"http://www.dharmayogacenter.com/#6/40.747/-74.015", description:"Dharma Yoga Center", practice_id: 15)
 
-Resource.create(name:"The Shala", type:"Body", url:"http://theshala.com/", description:"The Shala Yoga House")
+Resource.create(name:"The Shala", type:"Body", url:"http://theshala.com/", description:"The Shala Yoga House", practice_id: 15)
 
-Resource.create(name: , type: , url: , description: )
+Resource.create(name:"Tao of Healing", type:"Body", url:"http://taoofhealing.com/", description:"Tao of Healing", practice_id: 17)
 
-Resource.create(name: , type: , url: , description: )
+Resource.create(name:"Center for Taiji Studies", type:"Body", url:"http://www.centerfortaiji.com/", description:"Center for Taiji Studies", practice_id: 17)
 
-Resource.create(name: , type: , url: , description: )
+Resource.create(name:"Tai Chi", type:"Body", url:"http://www.nytaichi.com/hwon.htm", description:"Classical Yang Family Tai Chi Chuan", practice_id: 17)
 
-Resource.create(name: , type: , url: , description: )
+Resource.create(name:"Wu Tang", type:"Body", url:"http://www.qigongnyc.com/", description:"Wu Tang Physical Culture Association", practice_id: 17)
 
-Resource.create(name: , type: , url: , description: )
+Resource.create(name:"Food", type:"Service", url:"http://www.coalitionforthehomeless.org/" , description:"Coalition for the Homeless", practice_id: 20)
 
-Resource.create(name: , type: , url: , description: )
+Resource.create(name:"Food", type:"Service", url:"https://www.bowery.org/" , description:"The Bowery Mission", practice_id: 20)
+
+Resource.create(name:"Companionship", type:"Service" , url:"https://www.newyorkcares.org/program-areas/seniors" , description:"Elder Companionship through New York Care", practice_id: 21)
+
+Resource.create(name:"Companionship", type:"Service" , url:"http://www.hpcanys.org/community-resources/volunteer-opportunities/" , description:"New York State Hospice opportunities to support the dying and their families", practice_id: 21)
+
+Resource.create(name:"Assistance", type:"Service" , url:"http://www.nychealthandhospitals.org/hhc/html/contact/Volunteering.shtml#1" , description:"A variety of opportunities can be found at NYC Hospitals to assist those in need", practice_id: 22)
+
+Resource.create(name:"Assistance" , type:"Service" , url:"https://www.newyorkcares.org/program-areas/special-needs" , description:"New York Cares programs for assisting people with special needs", practice_id: 22)
+
+Resource.create(name:"Environment" , type:"Service" , url:"http://www.lesecologycenter.org/about/jobs-internships/" , description:"Lower East Side Ecology Center", practice_id: 23)
+
+Resource.create(name: , type:"Service" , url: , description:, practice_id: 23)
+
+Resource.create(name: , type:"Service" , url: , description:, practice_id: )
+
+Resource.create(name: , type:"Service" , url: , description:, practice_id: )
+
+Resource.create(name: , type:"Service" , url: , description:, practice_id: )

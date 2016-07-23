@@ -43,3 +43,35 @@ Practice.create(category:"Service", name:"Companionship", description:"Golden Ru
 Practice.create(category:"Service", name:"Assistance", description:"Golden Rule", method:"Task")
 
 Practice.create(category:"Service", name:"Environmental Care", description:"Golden Rule", method:"Task")
+
+
+
+User.create!({
+	first_name: "jonathan", 
+	last_name: "philippou", 
+	username: "jonathan", 
+	email: "jonathan@gmail.com",
+	password: "jonathan",
+	gender: "boy",
+	age: 10,
+	practice: Practice.first
+	})
+
+User.create!({
+	first_name: "tooty", 
+	last_name: "tooty", 
+	username: "tooty", 
+	email: "tooty@gmail.com",
+	password: "password",
+	gender: "girl",
+	practice: Practice.first,
+	age: 10
+	})
+
+
+
+
+
+
+
+

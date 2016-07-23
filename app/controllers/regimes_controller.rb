@@ -4,13 +4,17 @@ class RegimesController < ApplicationController
 	end
 
 	def new
-		@practice = Practice.find(params[:practice_id])
+		if logged_in?
+			@practice = Practice.find(params[:practice_id])
 
-		@regime = Regime.new
+			@regime = Regime.new
+		else
+			redirect_to login_url
+		end
 	end
 
 	def show
-		@regime = Regime.find_by_id(params[:id])
+		@regime = Regime.find(params[:id])
 	end
 
 
@@ -18,7 +22,7 @@ class RegimesController < ApplicationController
 		if logged_in?
 
 			@regime = generate_regime(params)
-
+			current_user.update_attribute(:practice, Practice.find(params[:practice_id]))
 			# Do this stuff (copied and pasted from Seth)
 			respond_to do |format|
 		    if @regime.save
@@ -32,38 +36,41 @@ class RegimesController < ApplicationController
 		 # else (if not logged in)...
 		else
 			# ...take a hike
-			redirect_to new_regime_path
+			redirect_to login_url
 		end
 	end
 
 	def edit
-		@regime = Regime.find_by_id(params[:id])
+		@regime = Regime.find(params[:id])
 
 		if logged_in? && @regime.user == current_user
 			render 'edit'
 		else
-			redirect_to root
+			redirect_to root_path
 		end
 	end
 
 	def update
-		@regime = Regime.find_by_id(params[:id])
-		time = generate_time(params)
-		@regime.update(daily_practice_time: time)
-		redirect_to @regime
+		@regime = Regime.find(params[:id])
+		if logged_in? && @regime.user == current_user
+			time = generate_time(params)
+			@regime.update(daily_practice_time: time)
+			redirect_to @regime
+		else
+			redirect_to root_path
+		end
 	end
 
 
 	private
 	def generate_regime(params)
 	  # Get the practice
-			practice = Practice.find_by_id(params[:practice_id])
+			practice = Practice.find(params[:practice_id])
 			# Get the time
 			time = generate_time(params)
 			# Create Regimen
 			regime = Regime.new({
 				daily_practice_time: time,
-				description: practice.description,
 				practice: practice,
 				user: current_user
 				})

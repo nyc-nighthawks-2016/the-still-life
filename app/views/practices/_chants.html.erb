@@ -1,6 +1,6 @@
   <h2> Chants </h2>
     <% @chants.each do |chant| %>
-        <p><%= chant.name %></p>
+        <p><%= link_to chant.name, practice_path(chant) %></p>
         <p><%= chant.description %></p>
         <p><%= chant.method %></p>
         <% if current_user %>

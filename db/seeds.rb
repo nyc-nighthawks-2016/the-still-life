@@ -46,4 +46,22 @@ Practice.create(category:"Service", name:"Environmental Care", description:"Look
 
 Practice.create(category:"Service", name:"Animals", description:"The good man is the friend of all living things. — Mahatma Gandhi", method:"Task")
 
-Resource.create()
+Resource.create(name:"Sky Ting Yoga", type:"Body", url:"http://www.skytingyoga.com/", description:"Sky Ting Yoga Studio")
+
+Resource.create(name:"Bhakti Center", type:"Body", url:"http://bhakticenter.org/", description:"Bhakti Center")
+
+Resource.create(name:"Dharma Yoga Center", type:"Body", url:"http://www.dharmayogacenter.com/#6/40.747/-74.015", description:"Dharma Yoga Center")
+
+Resource.create(name:"The Shala", type:"Body", url:"http://theshala.com/", description:"The Shala Yoga House")
+
+Resource.create(name: , type: , url: , description: )
+
+Resource.create(name: , type: , url: , description: )
+
+Resource.create(name: , type: , url: , description: )
+
+Resource.create(name: , type: , url: , description: )
+
+Resource.create(name: , type: , url: , description: )
+
+Resource.create(name: , type: , url: , description: )

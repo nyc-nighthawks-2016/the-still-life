@@ -75,6 +75,7 @@
 }
 
 .sub-info {
+	vertical-align: top;
 	margin-top: 200px;
 	margin-left: 50px;
 	width: 100%;
@@ -89,6 +90,7 @@
 	width: 50%;
 	float: right;
 	word-wrap: break-word;
+	background-color: yellow;
 }
 
 #profile-header {
@@ -104,16 +106,16 @@
 
 #regimen-info {
 	width: 65%;
-	margin-top: 100px;
+	background-color: blue;
 	float: left;
 
 }
 
 #bookmarked-sources {
 	width: 35%;
-	margin-top: 100px;
+	background-color: red;
 	float: right;
-	margin-right: 100px;
+	
 }
 
 

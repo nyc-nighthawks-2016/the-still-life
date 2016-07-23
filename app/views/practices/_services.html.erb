@@ -1,0 +1,14 @@
+<h2> Services </h2>
+    <% @services.each do |service| %>
+        <p><%= service.name %></p>
+        <p><%= service.description %></p>
+        <p><%= service.method %></p>
+        <% if current_user %>
+          <% if current_user.regimes.length == 0 %>
+            <button>
+              <%= link_to "Create A Regiment", new_regime_path(practice_id: service.id) %>
+            </button>
+          <% end %>
+        <% end %>
+        <br></br>
+    <% end %>

@@ -17,20 +17,8 @@ class RegimesController < ApplicationController
 	def create
 		if logged_in?
 
-			# Get the practice
-			practice = Practice.find_by_id(params[:practice_id])
+			@regime = generate_regime(params)
 
-			# Get the time
-			time = generate_time(params)
-
-			# Create Regimen
-			@regime = Regime.new({
-				daily_practice_time: time,
-				duration: 5,
-				description: practice.description,
-				practice: practice,
-				user: current_user
-				})
 			# Do this stuff (copied and pasted from Seth)
 			respond_to do |format|
 		    if @regime.save
@@ -41,7 +29,6 @@ class RegimesController < ApplicationController
 		      format.json { render json: @regime.errors, status: :unprocessable_entity }
 		    end
 		  end
-
 		 # else (if not logged in)...
 		else
 			# ...take a hike
@@ -68,8 +55,19 @@ class RegimesController < ApplicationController
 
 
 	private
-	def params_user
-	  params.require(:user).permit(:phone)
+	def generate_regime(params)
+	  # Get the practice
+			practice = Practice.find_by_id(params[:practice_id])
+			# Get the time
+			time = generate_time(params)
+			# Create Regimen
+			regime = Regime.new({
+				daily_practice_time: time,
+				description: practice.description,
+				practice: practice,
+				user: current_user
+				})
+			return regime
 	end
 
 	def generate_time(params)

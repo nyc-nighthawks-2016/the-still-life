@@ -68,7 +68,7 @@ users << User.create!({
                         username: "jonathan", 
                         email: "jonathan@gmail.com",
                         password: "jonathan",
-                        about_me: "Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon "
+                        about_me: "Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon Jon",
                         gender: "boy",
                         age: 10,
                         admin: true,

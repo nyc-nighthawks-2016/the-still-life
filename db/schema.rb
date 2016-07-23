@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160722173832) do
+ActiveRecord::Schema.define(version: 20160722193509) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -76,19 +76,26 @@ ActiveRecord::Schema.define(version: 20160722173832) do
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "username",            null: false
-    t.string   "email",               null: false
-    t.string   "password_digest",     null: false
+    t.string   "username",                            null: false
+    t.string   "email",                               null: false
+    t.string   "password_digest",                     null: false
     t.text     "about_me"
     t.integer  "practice_id"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.string   "gender"
     t.integer  "age"
+    t.string   "remember_digest"
+    t.boolean  "admin",               default: false
+    t.string   "activation_digest"
+    t.boolean  "activated",           default: false
+    t.datetime "activated_at"
+    t.string   "reset_digest"
+    t.datetime "reset_sent_at"
   end
 
   create_table "videos", force: :cascade do |t|

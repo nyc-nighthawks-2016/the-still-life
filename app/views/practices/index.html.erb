@@ -26,6 +26,9 @@
         <p><%= body_practice.name %></p>
         <p><%= body_practice.description %></p>
         <p><%= body_practice.method %></p>
+         <button>
+        <%= link_to "Create A Regiment", new_regime_path(practice_id: body_practice.id) %>
+        </button>
       </div><br>
     <% end %>
     </section>
@@ -37,6 +40,9 @@
         <p><%= seated_practice.name %></p>
         <p><%= seated_practice.description %></p>
         <p><%= seated_practice.method %></p>
+         <button>
+        <%= link_to "Create A Regiment", new_regime_path(practice_id: seated_practice.id) %>
+        </button>
       </div><br>
     <% end %>
     </section>
@@ -48,6 +54,9 @@
         <p><%= service.name %></p>
         <p><%= service.description %></p>
         <p><%= service.method %></p>
+         <button>
+        <%= link_to "Create A Regiment", new_regime_path(practice_id: service.id) %>
+        </button>
       </div><br>
     <% end %>
     </section>
@@ -55,3 +64,6 @@
     </center>
 
   </div>
+
+
+

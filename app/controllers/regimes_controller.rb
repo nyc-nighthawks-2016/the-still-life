@@ -21,6 +21,9 @@ class RegimesController < ApplicationController
 
 	def show
 		@regimen = Regime.find(params[:id])
+		if request.xhr?
+			@regimen.update_attribute(completion: true)
+		end
 	end
 
 
@@ -65,6 +68,8 @@ class RegimesController < ApplicationController
 		else
 			redirect_to root_path
 		end
+
+
 	end
 
 

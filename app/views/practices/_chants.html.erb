@@ -1,4 +1,5 @@
   <h2> Chants </h2>
+  <%= will_paginate @chants %>
     <% @chants.each do |chant| %>
         <p><%= link_to chant.name, practice_path(chant) %></p>
         <p><%= chant.description %></p>

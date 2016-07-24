@@ -3,12 +3,14 @@ class ResourcesController < ApplicationController
 
   def index
     @resources = media_type_class.all
-    binding.pry
+
+    #For Future Resource Organization
+    @yoga_res = media_type_class.where(practice_id: 15)
+    @qigong_res = media_type_class.where(practice_id: 17)
   end
 
   def show
     @resource = media_type_class.find(params[:id])
-    binding.pry
   end
 
 
@@ -25,5 +27,5 @@ private
  def media_type_class
      media_type.constantize
  end
- 
+
 end

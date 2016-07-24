@@ -1,5 +1,5 @@
 <h2> Body Practices </h2>
-<%= will_paginate @body_practices %>
+
     <% @body_practices.each do |body_practice| %>
         <p><%=link_to body_practice.name, practice_path(body_practice) %></p>
         <p><%= body_practice.description %></p>
@@ -13,3 +13,4 @@
         <% end %>
         <br></br>
     <% end %>
+    <%= will_paginate @services %>

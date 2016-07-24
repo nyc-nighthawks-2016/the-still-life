@@ -107,6 +107,19 @@ resources << Resource.create(name:"Animals", category:"Service" , url:"http://ww
 
 resources << Resource.create(name:"Bhagavad Gita", category:"Readings" , url:"https://s3.amazonaws.com/the-still-life/Readings/Bhagavad-Gita.pdf", type:"Reading", description:"Hindu Scripture", practice_id: 7)
 
+      # AUDIOS
+resources << Resource.create(name:"Shema Yisrael", category:"Audios" , url:"https://s3.amazonaws.com/the-still-life/Audio/Shema+Yisrael.mp3", type:"Audio", description:"Traditional Jewish Chant", practice_id: 2)
+
+resources << Resource.create(name:"Sanctus", category:"Audios" , url:"https://s3.amazonaws.com/the-still-life/Audio/Sanctus.mp3", type:"Audio", description:"Traditional Christian Chant", practice_id: 6)
+
+resources << Resource.create(name:"Om Namah Shiv'aya", category:"Audios" , url:"https://s3.amazonaws.com/the-still-life/Audio/Sanctus.mp3", type:"Audio", description:"Traditional Hindu Chant", practice_id: 4)
+
+resources << Resource.create(name:"Om Mani Padme Hum", category:"Audios" , url:"https://s3.amazonaws.com/the-still-life/Audio/OmManiPadmeHum.mp3", type:"Audio", description:"Traditional Buddhist Chant", practice_id: 5)
+
+resources << Resource.create(name:"Om Mani Padme Hum", category:"Audios" , url:"https://s3.amazonaws.com/the-still-life/Audio/OmManiPadmeHum.mp3", type:"Audio", description:"Traditional Buddhist Chant", practice_id: 5)
+
+
+
 
 #-------------------------------------------------------------------------------------------------------------------------------
 # USERS

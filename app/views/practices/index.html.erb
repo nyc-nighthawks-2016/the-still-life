@@ -71,7 +71,7 @@
       <div class="section" id='seated_practices' data-menuanchor="fourthPage">
 
         <% @seated_practices.each do |seated_practice| %>
-          <div class='slide' id="#practices-three">
+          <div class='slide'>
             <div class='container'>
             <h1 style="text-decoration: underline"> Seated Practices </h1><br><br>
             <h2><%= link_to seated_practice.name, practice_path(seated_practice) %></h2>
@@ -97,7 +97,7 @@
 
        <% @services.each do |service| %>
 
-          <div class='slide' id="#practices-four">
+          <div class='slide'>
             <div class='container'>
             <h1 style="text-decoration: underline"> Services </h1><br><br>
             <h2><%= link_to service.name, practice_path(service)%></h2>
@@ -119,27 +119,53 @@
       </div>
 
       <div class="section" id="guidelines" data-menuanchor="sixthPage">
-        <div class="container">
-          <br>
-          <h1 style="text-decoration: underline"> Guidelines for Meditation</h1><br>
-          <p>The benefits of a consistent meditation practice are very well documented elsewhere. What we aim to do here is to help make your personal practice a successful one. Consistency is key! Here are some ways to build a consistent practice.</p>
-          <h5>Choose a practice that is good for you</h5>
-          <p>Pick something that seems pleasant fro you to do, as opposed to a chore. Something you might even look forward to.</p>
-          <h5>Set aside the time</h5>
-          <p>Make a small commitment at first, but one you can do every day or the same day each week. Ideally, your commitment would be for the same time. It is simpler and easier to remember.</p>
-          <h5>Don’t do too much!</h5>
-          <p>Making too large a time commitment can get in the way of establishing a routine. Don’t underestimate the power of practicing 5 minutes every day, or going to a strong class once per week.</p>
-          <h5>Love your practice</h5>
-          <p>Your practice should give you an internal smile. While there can be times that this is not the case, in general we should be growing a love of the practice itself.</p>
-          <h5>Your practice is yours</h5>
-          <p>It is tempting to compare ourselves to others or feel like we “should” be doing this or that. Try to trust that you have picked the best practice for yourself, and let that practice take care of itself. No need to worry!</p>
-          <h5>Keep your life as it is</h5>
-          <p>There is no need to quit your job, leave your partner, move to a cave in the mountains. Often, these are the very things that propel our practice forward, and in time we learn to make practices out of everything in our lives. But at first: just add a simple, sweet practice and let everything else be.</p>
-          <h3 style="text-decoration: underline">DURING PRACTICE</h3>
-          <h5>Return to your focus</h5>
-          <p>Whatever you choose to practice, you will find your mind wanders. This is 100% ok! That’s what the mind does! It wanders. The only thing you do is notice, and bring it lovingly back to your practice. Like lovingly redirecting a child back to their favorite toy.</p>
-          <h5>Trust yourself</h5>
-          <p>If you just can’t get calm or focused on a certain day, this is ok. There may be something that needs to be let go, or you may just need to stretch and try again. There are some tips for handling this in the lifestyle section.</p>
+        <div class='slide'>
+          <div class="container">
+            <br>
+            <h1 style="text-decoration: underline"> Guidelines for Meditation</h1><br>
+            <p>The benefits of a consistent meditation practice are very well documented elsewhere. What we aim to do here is to help make your personal practice a successful one. Consistency is key! Here are some ways to build a consistent practice.</p>
+            <h5>Choose a practice that is good for you</h5>
+            <p>Pick something that seems pleasant fro you to do, as opposed to a chore. Something you might even look forward to.</p>
+            <h5>Set aside the time</h5>
+            <p>Make a small commitment at first, but one you can do every day or the same day each week. Ideally, your commitment would be for the same time. It is simpler and easier to remember.</p>
+            <h5>Don’t do too much!</h5>
+            <p>Making too large a time commitment can get in the way of establishing a routine. Don’t underestimate the power of practicing 5 minutes every day, or going to a strong class once per week.</p>
+            <h5>Love your practice</h5>
+            <p>Your practice should give you an internal smile. While there can be times that this is not the case, in general we should be growing a love of the practice itself.</p>
+            <h5>Your practice is yours</h5>
+            <p>It is tempting to compare ourselves to others or feel like we “should” be doing this or that. Try to trust that you have picked the best practice for yourself, and let that practice take care of itself. No need to worry!</p>
+            <h5>Keep your life as it is</h5>
+            <p>There is no need to quit your job, leave your partner, move to a cave in the mountains. Often, these are the very things that propel our practice forward, and in time we learn to make practices out of everything in our lives. But at first: just add a simple, sweet practice and let everything else be.</p>
+          </div>
+        </div>
+
+        <div class='slide'>
+          <div class="container">
+            <h3 style="text-decoration: underline">During Practice</h3>
+            <h5>Return to your focus</h5>
+            <p>Whatever you choose to practice, you will find your mind wanders. This is 100% ok! That’s what the mind does! It wanders. The only thing you do is notice, and bring it lovingly back to your practice. Like lovingly redirecting a child back to their favorite toy.</p>
+            <h5>Trust yourself</h5>
+            <p>If you just can’t get calm or focused on a certain day, this is ok. There may be something that needs to be let go, or you may just need to stretch and try again. There are some tips for handling this in the lifestyle section.</p>
+          </div>
+        </div>
+
+        <div class='slide'>
+          <div class="container">
+            <h3 style="text-decoration: underline">Tips - Halp! My Mind Is Argh!</h3>
+            <p>Yep! That is exactly what your mind is. It wanders. It spins. It overfocuses. It second-guesses. It criticizes. It also feels and laughs and perceives and recognizes. And it’s yours. Make friends and work with it. Do not wrestle it. Here are some suggestions for un-argh-ing the mind.</p>
+            <h5>Make a list</h5>
+            <p>If thoughts overwhelm your practice and you feel the argh, stop and make a list of all the things that come up. When they’re all down, go back to your practice.</p>
+            <h5>The houseguest</h5>
+            <p>Imagine your mind is a party. You are the host, thoughts are the guests. Welcome the guests, and let the know that you will get chat with them when you are done preparing their party, i.e., your practice. (This is a recommendation from Swami Ashokananda from Integral Yoga Institute).</p>
+            <h5>Talk therapy</h5>
+            <p>While dredging up old baggage is never really useful, having insight into your emotional life can bring insights into your habits and bring clarity to your intention. And help you let go of things you find you no longer need.</p>
+            <h5>Fill it with good things</h5>
+            <p>It can be helpful to moderate what you read and watch to support your practice. If you shift your reading and watching habits to include things that are related to your practice, it is easier to get into your practice mode when the time comes.</p>
+            <h5>People</h5>
+            <p>Being with people who are of a like mind, who have a practice, is a nice way to support your work. Knowing there are people experiencing similar troubles and triumphs can be very calming.</p>
+            <h5>Finding a teacher</h5>
+            <p>There is no substitute for having access to someone who has completed the journey you are beginning. They can help in ways that are hard to imagine. Finding a proper guide can be a long process, but for %99.99 of us our practice can only go so far without one. There is no rush- do your chosen practice, and start looking into who teaches similar things. That will take care of it.</p>
+          </div>
         </div>
       </div>
 

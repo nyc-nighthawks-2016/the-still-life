@@ -1,175 +1,142 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-</head>
+  <head>
+      <%= stylesheet_link_tag    'application', media: 'all' %>
+      <%= javascript_include_tag 'application' %>
+  </head>
 
-<div id="fullpage">
-  <div class="section" id="homepage" data-menuanchor="firstPage">
-    <div class='container'>
-      <h1> The Still Life </h1>
-      <h5>Here at The Still Life strive to simplify....</h5>
-    </div>
-  </div>
-
-<!-- This will be the slide section for the CHANTS PRACTICE -->
-
-  <div class="section" id='chants' data-menuanchor="secondPage">
-
-    <% @chants.each do |chant| %>
-      <div class="slide">
-        <div class='container'>    
-        <h1><%= link_to chant.name, practice_path(chant) %></h1>
-        <h3>Method: <%= chant.method %></h3>
-        <br>
-        <h5><%= chant.description %></h5>
-        <br>
-        <% if current_user %>
-          <% if current_user.regimes.length == 0 %>
-            <button>
-              <%= link_to "Create A Regiment", new_regime_path(practice_id: chant.id) %>
-            </button>
-          <% end %>
-        <% end %>
-        </div>
-      </div>
-    <% end %>
-
-  </div>
-
-  <!-- This will be the slide section for the BODY PRACTICES -->
-
-  <div class="section" id='body_practices' data-menuanchor="secondPage">
-    <% @body_practices.each do |body_practice| %>
-      <div class="slide">
+  <body>
+    <div id="fullpage">
+      <div class="section" id="homepage" data-menuanchor="firstPage">
         <div class='container'>
-        <h1><%=link_to body_practice.name, practice_path(body_practice) %></h1>
-        <h3>Method: <%= body_practice.method %></h3>
-        <br>
-        <h5><%= body_practice.description %></h5>
-        <br>
-        <% if current_user %>
-          <% if current_user.regimes.length == 0 %>
-            <button>
-              <%= link_to "Create A Regiment", new_regime_path(practice_id: body_practice.id) %>
-            </button>
-          <% end %>
-        <% end %>
+          <h1> The Still Life </h1>
+          <h5>Here at The Still Life strive to simplify....</h5>
         </div>
       </div>
-    <% end %>
-  </div>
 
-  <!-- This will be the slide section for the SEATED PRACTICES -->
+    <!-- This will be the slide section for the CHANTS PRACTICE -->
 
-  <div class="section" id='seated_practices' data-menuanchor="secondPage">
-    <% @seated_practices.each do |seated_practice| %>
-      <div class='slide' id="#practices-three">
-        <div class='container'>
-        <h1><%= link_to seated_practice.name, practice_path(seated_practice) %></h1>
-        <h3>Method: <%= seated_practice.method %></h3>
-        <br>
-        <h5><%= seated_practice.description %></h5>
-        <br>
-        <% if current_user %>
-          <% if current_user.regimes.length == 0 %>
-            <button>
-              <%= link_to "Create A Regiment", new_regime_path(practice_id: seated_practice.id) %>
-            </button>
-          <% end %>
+      <div class="section" id='chants' data-menuanchor="secondPage">
+
+        <% @chants.each do |chant| %>
+          <div class="slide">
+            <div class='container'>    
+            <h1><%= link_to chant.name, practice_path(chant) %></h1>
+            <h3>Method: <%= chant.method %></h3>
+            <br>
+            <h5><%= chant.description %></h5>
+            <br>
+            <% if current_user %>
+              <% if current_user.regimes.length == 0 %>
+                <button>
+                  <%= link_to "Create A Regiment", new_regime_path(practice_id: chant.id) %>
+                </button>
+              <% end %>
+            <% end %>
+            </div>
+          </div>
         <% end %>
+      </div>
+
+      <!-- This will be the slide section for the BODY PRACTICES -->
+
+      <div class="section" id='body_practices' data-menuanchor="thirdPage">
+
+        <% @body_practices.each do |body_practice| %>
+          <div class="slide">
+            <div class='container'>
+            <h1><%=link_to body_practice.name, practice_path(body_practice) %></h1>
+            <h3>Method: <%= body_practice.method %></h3>
+            <br>
+            <h5><%= body_practice.description %></h5>
+            <br>
+            <% if current_user %>
+              <% if current_user.regimes.length == 0 %>
+                <button>
+                  <%= link_to "Create A Regiment", new_regime_path(practice_id: body_practice.id) %>
+                </button>
+              <% end %>
+            <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+      <!-- This will be the slide section for the SEATED PRACTICES -->
+
+      <div class="section" id='seated_practices' data-menuanchor="fourthPage">
+
+        <% @seated_practices.each do |seated_practice| %>
+          <div class='slide' id="#practices-three">
+            <div class='container'>
+            <h1><%= link_to seated_practice.name, practice_path(seated_practice) %></h1>
+            <h3>Method: <%= seated_practice.method %></h3>
+            <br>
+            <h5><%= seated_practice.description %></h5>
+            <br>
+            <% if current_user %>
+              <% if current_user.regimes.length == 0 %>
+                <button>
+                  <%= link_to "Create A Regiment", new_regime_path(practice_id: seated_practice.id) %>
+                </button>
+              <% end %>
+            <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+      <!-- This will be the slide section for the SERVICES PRACTICE -->
+
+      <div class="section" id='services' data-menuanchor="fifthPage">
+
+       <% @services.each do |service| %>
+          <div class='slide' id="#practices-four">
+            <div class='container'>
+            <h1><%= link_to service.name, practice_path(service)%></h1>
+            <h3>Method: <%= service.method %></h3>
+            <br>
+            <h5><%= service.description %></h5>
+            <br>
+            <% if current_user %>
+              <% if current_user.regimes.length == 0 %>
+                <button>
+                  <%= link_to "Create A Regiment", new_regime_path(practice_id: service.id) %>
+                </button>
+              <% end %>
+            <% end %>
+            <br>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="section" id="guidelines" data-menuanchor="sixthPage">
+        <div class="container">
+          <h1> This will be the Guidelines page</h1>
         </div>
       </div>
-    <% end %>
-  </div>
 
-  <!-- This will be the slide section for the SERVICES PRACTICE -->
-
-  <div class="section" id='services' data-menuanchor="secondPage">
-   <% @services.each do |service| %>
-      <div class='slide' id="#practices-four">
-        <div class='container'>
-        <h1><%= link_to service.name, practice_path(service)%></h1>
-        <h3>Method: <%= service.method %></h3>
-        <br>
-        <h5><%= service.description %></h5>
-        <br>
-        <% if current_user %>
-          <% if current_user.regimes.length == 0 %>
-            <button>
-              <%= link_to "Create A Regiment", new_regime_path(practice_id: service.id) %>
-            </button>
-          <% end %>
-        <% end %>
-        <br>
+      <div class="section" id="lifestyle" data-menuanchor="seventhPage">
+        <div class="container">
+          <h1> This will be the Lifestyle page</h1>
         </div>
       </div>
-    <% end %>
-  </div>
 
+      <div class="section" id="resources" data-menuanchor="eighthPage">
+        <div class="container">
+          <h1> This will be the further study page</h1>
+        </div>
+      </div>
 
+      <div class="section" id="about" data-menuanchor="ninthPage">
+        <div class="container">
+          <h1> This will be the about page </h1>
+        </div>
+      </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div class="section" id="guidelines" data-menuanchor="thirdPage">
-    <div class="container">
-      <h1> This will be the Guidelines page</h1>
     </div>
-  </div>
-
-  <div class="section" id="lifestyle" data-menuanchor="fourthPage">
-    <div class="container">
-      <h1> This will be the Lifestyle page</h1>
-    </div>
-  </div>
-
-  <div class="section" id="resources" data-menuanchor="fifthPage">
-    <div class="container">
-      <h1> This will be the further study page</h1>
-    </div>
-  </div>
-
-  <div class="section" id="about" data-menuanchor="sixthPage">
-    <div class="container">
-      <h1> This will be the about page </h1>
-    </div>
-  </div>
-</div>
-
-</body>
+  </body>
 </html>
 
 

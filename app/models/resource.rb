@@ -3,6 +3,7 @@ class Resource < ActiveRecord::Base
   scope :recordings, -> { where(type: 'Audio') }
   scope :videos,  -> { where(type: 'Video') }
   scope :images, -> { where(type: 'Image') }
+  scope :links, -> { where(type: 'Link') }
 
   has_many :bookmarks
 	has_many :users, through: :bookmarks
@@ -10,6 +11,6 @@ class Resource < ActiveRecord::Base
 
 
   def self.types
-    %w(Reading Audio Video Image)
+    %w(Reading Audio Video Image Link)
   end
 end

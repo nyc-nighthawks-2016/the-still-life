@@ -1,0 +1,6 @@
+<h2> Readings </h2>
+    <% @resources.readings.each do |reading| %>
+        <p><%= link_to reading.name, reading.url %></p>
+        <p><%= reading.description %></p>
+        <br></br>
+    <% end %>

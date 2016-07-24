@@ -1,0 +1,6 @@
+<h2> Links </h2>
+    <% @resources.links.each do |link| %>
+        <p><%= link.name %></p>
+        <p><%= link_to link.description, link.url %></p>
+        <br></br>
+    <% end %>

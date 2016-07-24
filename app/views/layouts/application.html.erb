@@ -71,9 +71,9 @@
             $('#header').addClass('fixed');
           }
           //back to the first section
-          if(nextIndex == 0) {
-            $('#header').removeClass('fixed');
-          }
+          // if(nextIndex == 0) {
+          //   $('#header').removeClass('fixed');
+          // }
         },
         afterLoad: function(anchorLink, index){},
         afterRender: function(){},
@@ -88,7 +88,7 @@
 
 <body>
 
-	<header id="header" class="clearfix">
+	<header id="header" class="clearfix fixed">
     <nav id="menu">
       <% if @current_user %>
       <div><a href="/#firstPage" class="name" id="mainpage">The Still Life</a></div>

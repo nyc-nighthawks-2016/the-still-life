@@ -57,7 +57,6 @@ practices << Practice.create(category:"Service", name:"Environmental Care", desc
 
 practices << Practice.create(category:"Service", name:"Animals", description:"The good man is the friend of all living things. — Mahatma Gandhi", method:"Task")
 
-practices << Practice.create(category:"Service", name:"Environmental Care", description:"Golden Rule", method:"Task")
 
 
 #-------------------------------------------------------------------------------------------------------------------------------

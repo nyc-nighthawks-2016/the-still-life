@@ -1,8 +1,9 @@
-<h1>Here is your regime</h1>
-
-<h2><%= @regime.user.username %></h2>
-<h2><%= @regime.practice.name %></h2>
-<h2><%= @regime.practice.description %></h2>
-<h2><%= display_time(@regime) %></h2>
-<%= link_to "Edit", edit_regime_path(@regime) %>
-
+<center>
+  <h1>Here is your regimen</h1>
+  <h2><%= @regimen.practice.name %></h2>
+  <% if @regimen.practice.category == "Body" || @regimen.practice.category == "Service"%>
+    <h4> Browse resources for <% "#{@regimen.practice.name}" %> and find an activity to do this week </h4>
+  <% end %>
+  <h2><%= display_time(@regimen) %></h2>
+  <h3><%= link_to "Edit", edit_regime_path(@regimen) %></h3>
+</center>

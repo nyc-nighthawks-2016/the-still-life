@@ -37,15 +37,15 @@ practices << Practice.create(category:"Seated Meditation", name:"Silent Chanting
 
 practices << Practice.create(category:"Seated Meditation", name:"Guided Audio", description:"Follow the steps of the guided audio as provided." , method:"Audio" )
 
-practices << Practice.create(category:"Body", name:"Yoga Asana", description:"A set of postures meant to clean and prepare the body for seated meditation. Refer to resources to perform this practice.", method:"studio" )
+practices << Practice.create(category:"Body", name:"Yoga Asana", description:"A set of postures meant to clean and prepare the body for seated meditation. Refer to resources to perform this practice.", method:"Studio" )
 
-practices << Practice.create(category:"Body", name:"Yoga Asana", description:"A set of postures meant to clean and prepare the body for seated meditation. Refer to resources to perform this practice.", method:"self_study" )
+practices << Practice.create(category:"Body", name:"Yoga Asana", description:"A set of postures meant to clean and prepare the body for seated meditation. Refer to resources to perform this practice.", method:"Self Study" )
 
-practices << Practice.create(category:"Body", name:"QiGong", description:"A set of repetitive exercises that build and balance energy. Refer to resources to perform this practice.", method:"studio" )
+practices << Practice.create(category:"Body", name:"QiGong", description:"A set of repetitive exercises that build and balance energy. Refer to resources to perform this practice.", method:"Studio" )
 
-practices << Practice.create(category:"Body", name:"QiGong", description:"A set of repetitive exercises that build and balance energy. Refer to resources to perform this practice.", method:"self_study" )
+practices << Practice.create(category:"Body", name:"QiGong", description:"A set of repetitive exercises that build and balance energy. Refer to resources to perform this practice.", method:"Self Study" )
 
-practices << Practice.create(category:"Body", name:"Traditional Aerobic Exercise", description:"Exercises such as running, walking, swimming, etc. during which you can focus on your breath. Refer to resources to perform this practice.", method:"exercise")
+practices << Practice.create(category:"Body", name:"Traditional Aerobic Exercise", description:"Exercises such as running, walking, swimming, etc. during which you can focus on your breath. Refer to resources to perform this practice.", method:"Exercise")
 
 practices << Practice.create(category:"Service", name:"Food", description:"If you can’t feed a hundred people, then feed just one. -Mother Teresa", method:"Task")
 

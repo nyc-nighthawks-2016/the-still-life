@@ -1,16 +1,16 @@
 <h2> Body Practices </h2>
 
-    <% @body_practices.each do |body_practice| %>
-        <p><%=link_to body_practice.name, practice_path(body_practice) %></p>
-        <p><%= body_practice.description %></p>
-        <p><%= body_practice.method %></p>
-        <% if current_user %>
-          <% if current_user.regimes.length == 0 %>
-            <button>
-              <%= link_to "Create A Regiment", new_regime_path(practice_id: body_practice.id) %>
-            </button>
-          <% end %>
-        <% end %>
-        <br></br>
+<% @body_practices.each do |body_practice| %>
+  <p><%=link_to body_practice.name, practice_path(body_practice) %></p>
+  <p><%= body_practice.description %></p>
+  <p><%= body_practice.method %></p>
+  <% if current_user %>
+    <% if current_user.regimes.length == 0 %>
+      <button>
+        <%= link_to "Create A Regiment", new_regime_path(practice_id: body_practice.id) %>
+      </button>
     <% end %>
-    <%= will_paginate @services %>
+  <% end %>
+  <br>
+<% end %>
+<%= will_paginate @services %>

@@ -14,8 +14,8 @@
   <script type="text/javascript">
     $(document).ready(function() {
       $('#fullpage').fullpage({
-        sectionsColor: ['#1bbc9b', '#4BBFC3', '#4BBFC3', '#4BBFC3', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff', '#1bbc9b'],
-         anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage'],
+        sectionsColor: ['#1bbc9b', '#4BBFC3', '#9683ec', '#4BBFC3', '#5bad9f', '#7BAABE', 'whitesmoke', '#ccddff', '#1bbc9b'],
+         anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage', 'eighthPage', 'ninthPage'],
         menu: '#menu',
         lockAnchors: false,
         navigation: false,
@@ -38,7 +38,7 @@
         loopTop: false,
         loopHorizontal: true,
         continuousVertical: false,
-
+        // fixedElements: '#header',
         scrollOverflow: false,
         scrollOverflowOptions: null,
         touchSensitivity: 15,
@@ -65,7 +65,16 @@
         slideSelector: '.slide',
 
         //events
-        onLeave: function(index, nextIndex, direction){},
+        onLeave: function(index, nextIndex, direction){
+          //leaving first section
+          if(index == 1) {
+            $('#header').addClass('fixed');
+          }
+          //back to the first section
+          // if(nextIndex == 0) {
+          //   $('#header').removeClass('fixed');
+          // }
+        },
         afterLoad: function(anchorLink, index){},
         afterRender: function(){},
         afterResize: function(){},
@@ -79,39 +88,101 @@
 
 <body>
 
-	<div id="header" class="clearfix">
+	<header id="header" class="clearfix fixed">
     <nav id="menu">
-      <div data-menuanchor="firstPage"><a href="/#firstPage" class="name" id="mainpage">The Still Life</a></div>
-
-      <div data-menuanchor="secondPage-one"><a href="/#secondPage" class="name">Chants</a></div>
-
-      <div data-menuanchor="secondPage-two"><a href="/#secondPage/1" class="name">Body Practices</a></div>
-
-      <div data-menuanchor="secondPage-three"><a href="/#secondPage/2" class="name">Seated Practices</a></div>
-
-      <div data-menuanchor="secondPage-four"><a href="/#secondPage/3" class="name">Service</a></div>
-
-      <div data-menuanchor="thirdPage"><a href="/#thirdPage" class="name">Guidelines</a></div>
-
-      <div data-menuanchor="fourthPage"><a href="/#fourthPage" class="name">Lifestyle</a></div>
-
-      <div data-menuanchor="fifthPage"><a href="/#fifthPage" class="name">Resources</a></div>
-
-      <div data-menuanchor="sixthPage"><a href="/#sixthPage" class="name">About</a></div>
-
-      <% if @current_user %>
-        <%= link_to "Sangha", users_path, :class => "name" %>
-        <% if current_user.regimes.length > 0 %>
-          <%= link_to "Current Regimen", regime_path(@current_user.regimes.last), :class => "name" %>
+      <div class="">
+        <% if @current_user %>
+        <a href="/#firstPage" class="name" id="mainpage">The Still Life</a>
+        <% else %>
+        <a href="/#firstPage" class="name" id="alt-mainpage">The Still Life</a>
         <% end %>
-        <%= link_to @current_user.username, user_path(@current_user), :class => "name" %>
-        <%= link_to "Logout", '/logout', method: :delete, :class => "name" %>
-      <% else %>
-        <%= link_to "Login", '/login', :class => "name" %>
-        <%= link_to "Register", new_user_path, :class => "name" %>
-      <% end %>
+
+        <a href="/#secondPage" class="name">Chants</a>
+
+        <!-- <a href="/#secondPage" class="name">Om</a> -->
+
+        <!-- <a href="/#secondPage/1" class="name">Shema Yisrael! Yhwh Eloheinu, Yhwh Echad</a> -->
+
+        <!-- <a href="/#secondPage/2" class="name">La Illaha Illallah</a> -->
+
+        <!-- <a href="/#secondPage/3" class="name">Om Namah Shiv'aya</a> -->
+
+        <!-- <a href="/#secondPage/4" class="name">Om Mani Padme Hum</a> -->
+
+        <!-- <a href="/#secondPage/5" class="name">Sanctus, Sanctus, Sanctus, Dominus Deus Sabaoth</a> -->
+
+        <!-- <a href="/#secondPage/6" class="name">Gate, Gate, Para Gate, Parasamgate, Bodhi Svaha</a> -->
+
+        <a href="/#thirdPage" class="name">Body Practices</a>
+
+        <!-- <a href="/#thirdPage" class="name">Yoga Asana - Studio</a>
+   -->
+        <!-- <a href="/#thirdPage/1" class="name">Yoga Asana - Self Study</a> -->
+
+        <!-- <a href="/#thirdPage/2" class="name">QiGong - Studio</a> -->
+
+        <!-- <a href="/#thirdPage/3" class="name">QiGong - Self Study</a> -->
+
+        <!-- <a href="/#thirdPage/4" class="name">Traditional Aerobic Exercise</a> -->
+
+        <a href="/#fourthPage" class="name">Seated Practices</a>
+
+        <!-- <a href="/#fourthPage" class="name">Stillness/Source</a> -->
+
+        <!-- <a href="/#fourthPage/1" class="name">Breath Control</a> -->
+
+        <!-- <a href="/#fourthPage/2" class="name">Devotional Visualization</a> -->
+
+        <!-- <a href="/#fourthPage/3" class="name">Abstract Visualization</a> -->
+
+        <!-- <a href="/#fourthPage/4" class="name">Abstract Visualization 2</a> -->
+
+        <!-- <a href="/#fourthPage/5" class="name">Silent Chanting</a> -->
+
+        <!-- <a href="/#fourthPage/6" class="name">Guided Audio</a> -->
+
+        <a href="/#fifthPage" class="name">Services</a>
+
+        <!-- <a href="/#fifthPage" class="name">Food</a> -->
+
+        <!-- <a href="/#fifthPage/1" class="name">Companionship</a> -->
+
+        <!-- <a href="/#fifthPage/2" class="name">Assistance</a> -->
+
+        <!-- <a href="/#fifthPage/3" class="name">Environmental Care</a> -->
+
+        <!-- <a href="/#fifthPage/4" class="name">Animals</a> -->
+
+        <!-- <a href="/#fifthPage/5" class="name">Golden Rule</a> -->
+
+        <a href="/#sixthPage" class="name">Guidelines</a>
+
+        <!-- <a href="/#sixthPage" class="name">Guidelines</a> -->
+
+        <!-- <a href="/#sixthPage/1" class="name">During Practice</a> -->
+
+        <!-- <a href="/#sixthPage/2" class="name">Tips</a> -->
+
+        <a href="/#seventhPage" class="name">Lifestyle</a>
+
+        <a href="/#eighthPage" class="name">Resources</a>
+
+        <a href="/#ninthPage" class="name">Getting Started</a>
+
+        <% if @current_user %>
+          <%= link_to "Sangha", users_path, :class => "name" %>
+          <% if current_user.regimes.length > 0 %>
+            <%= link_to "Current Regimen", regime_path(@current_user.regimes.last), :class => "name" %>
+          <% end %>
+          <%= link_to @current_user.username, user_path(@current_user), :class => "name" %>
+          <%= link_to "Logout", '/logout', method: :delete, :class => "name" %>
+        <% else %>
+          <%= link_to "Login", '/login', :class => "name" %>
+          <%= link_to "Register", new_user_path, :class => "name" %>
+        <% end %>
+      </div>
     </nav>
-  </div>
+  </header>
 
   <% flash.each do |message_type, message| %>
     <div class="alert alert-<%= message_type %>"><%= message %></div>

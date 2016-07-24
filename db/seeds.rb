@@ -167,14 +167,14 @@ end
 #-------------------------------------------------------------------------------------------------------------------------------
 
 regimens = []
-90.times do
-regimens << Regime.create!({
-                        duration: 5,
-                        completion: true,
-                        practice: Practice.first,
-                        user: User.first
-                        })
-end
+# 90.times do
+# regimens << Regime.create!({
+#                         duration: 5,
+#                         completion: true,
+#                         practice: Practice.first,
+#                         user: User.first
+#                         })
+# end
 
 # 1000.times do
 #       praactice = practice.sample

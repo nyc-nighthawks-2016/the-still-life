@@ -13,15 +13,15 @@
 
     <div id="main-info">
         <p>
-        First Name: 
+        First Name:
         <%= @user.first_name %>
         </p>
         <p>
-        Last Name: 
+        Last Name:
         <%= @user.last_name %>
         </p>
         <p>
-        Email: 
+        Email:
         <a href="mailto:<%= @user.email %>?Subject=Hello%20friend"><%= @user.email%></a>
         </p>
         <p>
@@ -45,7 +45,7 @@
       <%= @user.about_me %>
       </p>
     </div>
-    
+
   </div>
 
   <div class="sub-info">
@@ -53,16 +53,16 @@
       <h3>Daily Regimen Info</h3><br>
 
       <% if @user.practice != nil %>
-
-        <p><%= @practice.name %> | <%= @practice.category %></p>
-        <p><%= @practice.description %></p>
+      <p><%= @practice.name %> | <%= @practice.category %></p>
+      <p><%= @practice.description %></p>
+      <% if @completed_regimens %>
         <% if @completed_regimens.length > 1 %>
           <p>So far you have completed <%= @completed_regimens.length %>
           <% else %>
-          <p>So far you have completed 0</p>
+          <p>So far you have completed 0
           <% end %>
         <% if @completed_regimens.length > 1 || @completed_regimens.length == 0 %>
-        regimens 
+        regimens
         <% else %>
         regimen
         <% end %>
@@ -76,13 +76,15 @@
               </div>
           <% end %>
         <% end %>
-      <% end %> 
-    </div>
+      <% end %>
+    <% end %>
+  </div>
 
     <div id="bookmarked-sources">
       <h3>Bookmarked Resources</h3>
     </div>
   </div>
 </div>
+
 
 <br><br>

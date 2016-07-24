@@ -20,9 +20,10 @@
 
         <% @chants.each do |chant| %>
           <div class="slide">
-            <div class='container'>    
-            <h1><%= link_to chant.name, practice_path(chant) %></h1>
-            <h3>Method: <%= chant.method %></h3>
+            <div class='container'>
+            <h1> Chants </h1><br><br>  
+            <h2><%= link_to chant.name, practice_path(chant) %></h2>
+            <h4>Method: <%= chant.method %></h4>
             <br>
             <h5><%= chant.description %></h5>
             <br>
@@ -45,10 +46,11 @@
         <% @body_practices.each do |body_practice| %>
           <div class="slide">
             <div class='container'>
-            <h1><%=link_to body_practice.name, practice_path(body_practice) %></h1>
-            <h3>Method: <%= body_practice.method %></h3>
+            <h1> Body Practices </h1><br><br>
+            <h2><%=link_to body_practice.name, practice_path(body_practice) %></h2>
+            <h4>Method: <%= body_practice.method %></h4>
             <br>
-            <h5><%= body_practice.description %></h5>
+            <h5>- <%= body_practice.description %></h5>
             <br>
             <% if current_user %>
               <% if current_user.regimes.length == 0 %>
@@ -69,10 +71,11 @@
         <% @seated_practices.each do |seated_practice| %>
           <div class='slide' id="#practices-three">
             <div class='container'>
-            <h1><%= link_to seated_practice.name, practice_path(seated_practice) %></h1>
-            <h3>Method: <%= seated_practice.method %></h3>
+            <h1> Seated Practices </h1><br><br>
+            <h2><%= link_to seated_practice.name, practice_path(seated_practice) %></h2>
+            <h4>Method: <%= seated_practice.method %></h4>
             <br>
-            <h5><%= seated_practice.description %></h5>
+            <h5>- <%= seated_practice.description %></h5>
             <br>
             <% if current_user %>
               <% if current_user.regimes.length == 0 %>
@@ -91,12 +94,14 @@
       <div class="section" id='services' data-menuanchor="fifthPage">
 
        <% @services.each do |service| %>
+
           <div class='slide' id="#practices-four">
             <div class='container'>
-            <h1><%= link_to service.name, practice_path(service)%></h1>
-            <h3>Method: <%= service.method %></h3>
+            <h1> Services </h1><br><br>
+            <h2><%= link_to service.name, practice_path(service)%></h2>
+            <h4>Method: <%= service.method %></h4>
             <br>
-            <h5><%= service.description %></h5>
+            <h5>- <%= service.description %></h5>
             <br>
             <% if current_user %>
               <% if current_user.regimes.length == 0 %>

@@ -1,31 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+<script type="text/javascript">
+    $(document).ready(function() {
+      $('#fullpage').fullpage({
+        sectionsColor: ['#1bbc9b', '#4BBFC3', '#4BBFC3', '#4BBFC3', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff', '#1bbc9b'],
+         anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage'],
+        menu: '#menu',
+        scrollingSpeed: 1000
+      });
+    });
+  </script>
+</head>
+
 <div id="fullpage">
-  <div class="section active" id="homepage" data-menuanchor="firstPage">
+  <div class="section" id="homepage" data-menuanchor="firstPage">
     <div class='container'>
       <h1> The Still Life </h1>
       <p>Here at The Still Life strive to simplify....</p>
     </div>
   </div>
 
-  <div class="section" id='practices'>
-    <div class="slide" id="#practices-one" data-menuanchor="secondPage-one">
+  <div class="section" id='practices' data-menuanchor="secondPage">
+    <div class="slide" id="#practices-one">
       <div class='container'>
         <%= render 'chants' %>
       </div>
     </div>
 
-    <div class="slide" id="#practices-two" data-menuanchor="secondPage-two">
+    <div class="slide" id="#practices-two">
       <div class='container'>
         <%= render 'body_practices' %>
       </div>
     </div>
 
-    <div class='slide' id="#practices-three" data-menuanchor="secondPage-three">
+    <div class='slide' id="#practices-three">
       <div class='container'>
         <%= render 'seated_practices' %>
       </div>
     </div>
 
-    <div class='slide' id="#practices-four" data-menuanchor="secondPage-four">
+    <div class='slide' id="#practices-four">
       <div class='container'>
         <%= render 'services' %>
       </div>
@@ -55,10 +72,10 @@
       <h1> This will be the about page </h1>
     </div>
   </div>
-
-
 </div>
 
+</body>
+</html>
 
 
 

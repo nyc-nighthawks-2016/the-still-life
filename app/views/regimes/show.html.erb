@@ -10,10 +10,7 @@
   <% # form_for @regimen do |f| %>
     <%#= button_tag 'Complete', class: "done-form" %>
   <% #end %>
-  <!-- <form action="/regimes/<%=@regimen.id%>" class="done-form">
-    <input type="hidden" name="_method" value="put"/>
-    <button><%= submit_tag  %></button>
-  </form> -->
+ 
 
   <%= form_for @regimen do |f| %>
     <%=f.submit "Complete", class:"btn-btn-primary" %>

@@ -5,6 +5,8 @@
       <%= javascript_include_tag 'application' %>
   </head>
 
+  
+
   <body>
     <div id="fullpage">
       <div class="section" id="homepage" data-menuanchor="firstPage">
@@ -21,7 +23,7 @@
         <% @chants.each do |chant| %>
           <div class="slide">
             <div class='container'>
-            <h1> Chants </h1><br><br>  
+            <h1 style="text-decoration: underline"> Chants </h1><br><br>  
             <h2><%= link_to chant.name, practice_path(chant) %></h2>
             <h4>Method: <%= chant.method %></h4>
             <br>
@@ -46,7 +48,7 @@
         <% @body_practices.each do |body_practice| %>
           <div class="slide">
             <div class='container'>
-            <h1> Body Practices </h1><br><br>
+            <h1 style="text-decoration: underline"> Body Practices </h1><br><br>
             <h2><%=link_to body_practice.name, practice_path(body_practice) %></h2>
             <h4>Method: <%= body_practice.method %></h4>
             <br>
@@ -71,7 +73,7 @@
         <% @seated_practices.each do |seated_practice| %>
           <div class='slide' id="#practices-three">
             <div class='container'>
-            <h1> Seated Practices </h1><br><br>
+            <h1 style="text-decoration: underline"> Seated Practices </h1><br><br>
             <h2><%= link_to seated_practice.name, practice_path(seated_practice) %></h2>
             <h4>Method: <%= seated_practice.method %></h4>
             <br>
@@ -97,7 +99,7 @@
 
           <div class='slide' id="#practices-four">
             <div class='container'>
-            <h1> Services </h1><br><br>
+            <h1 style="text-decoration: underline"> Services </h1><br><br>
             <h2><%= link_to service.name, practice_path(service)%></h2>
             <h4>Method: <%= service.method %></h4>
             <br>
@@ -119,7 +121,7 @@
       <div class="section" id="guidelines" data-menuanchor="sixthPage">
         <div class="container">
           <br>
-          <h1> Guidelines for Meditation</h1>
+          <h1 style="text-decoration: underline"> Guidelines for Meditation</h1><br>
           <p>The benefits of a consistent meditation practice are very well documented elsewhere. What we aim to do here is to help make your personal practice a successful one. Consistency is key! Here are some ways to build a consistent practice.</p>
           <h5>Choose a practice that is good for you</h5>
           <p>Pick something that seems pleasant fro you to do, as opposed to a chore. Something you might even look forward to.</p>
@@ -133,7 +135,7 @@
           <p>It is tempting to compare ourselves to others or feel like we “should” be doing this or that. Try to trust that you have picked the best practice for yourself, and let that practice take care of itself. No need to worry!</p>
           <h5>Keep your life as it is</h5>
           <p>There is no need to quit your job, leave your partner, move to a cave in the mountains. Often, these are the very things that propel our practice forward, and in time we learn to make practices out of everything in our lives. But at first: just add a simple, sweet practice and let everything else be.</p>
-          <h3>DURING PRACTICE</h3>
+          <h3 style="text-decoration: underline">DURING PRACTICE</h3>
           <h5>Return to your focus</h5>
           <p>Whatever you choose to practice, you will find your mind wanders. This is 100% ok! That’s what the mind does! It wanders. The only thing you do is notice, and bring it lovingly back to your practice. Like lovingly redirecting a child back to their favorite toy.</p>
           <h5>Trust yourself</h5>
@@ -143,19 +145,19 @@
 
       <div class="section" id="lifestyle" data-menuanchor="seventhPage">
         <div class="container">
-          <h1> This will be the Lifestyle page</h1>
+          <h1 style="text-decoration: underline"> This will be the Lifestyle page</h1>
         </div>
       </div>
 
       <div class="section" id="resources" data-menuanchor="eighthPage">
         <div class="container">
-          <h1> This will be the further study page</h1>
+          <h1 style="text-decoration: underline"> This will be the further study page</h1>
         </div>
       </div>
 
       <div class="section" id="getting-started" data-menuanchor="ninthPage">
         <div class="container">
-          <h1> Getting Started </h1>
+          <h1 style="text-decoration: underline"> Getting Started </h1>
         </div>
       </div>
 

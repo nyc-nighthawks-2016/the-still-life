@@ -71,7 +71,7 @@
             $('#header').addClass('fixed');
           }
           //back to the first section
-          if(nextIndex == 1) {
+          if(nextIndex == 0) {
             $('#header').removeClass('fixed');
           }
         },
@@ -90,7 +90,11 @@
 
 	<header id="header" class="clearfix">
     <nav id="menu">
+      <% if @current_user %>
       <div><a href="/#firstPage" class="name" id="mainpage">The Still Life</a></div>
+      <% else %>
+      <div><a href="/#firstPage" class="name" id="alt-mainpage">The Still Life</a></div>
+      <% end %>
 
       <div><a href="/#secondPage" class="name">Chants</a></div>
 

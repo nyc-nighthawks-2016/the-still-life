@@ -14,7 +14,7 @@
   <script type="text/javascript">
     $(document).ready(function() {
       $('#fullpage').fullpage({
-        sectionsColor: ['#1bbc9b', '#4BBFC3', '#4BBFC3', '#4BBFC3', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff', '#1bbc9b'],
+        sectionsColor: ['#1bbc9b', '#4BBFC3', '#9683ec', '#4BBFC3', '#5bad9f', '#7BAABE', 'whitesmoke', '#ccddff', '#1bbc9b'],
          anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage'],
         menu: '#menu',
         lockAnchors: false,
@@ -38,7 +38,7 @@
         loopTop: false,
         loopHorizontal: true,
         continuousVertical: false,
-
+        // fixedElements: '#header',
         scrollOverflow: false,
         scrollOverflowOptions: null,
         touchSensitivity: 15,
@@ -79,7 +79,7 @@
 
 <body>
 
-	<div id="header" class="clearfix">
+	<header id="header" class="clearfix">
     <nav id="menu">
       <div data-menuanchor="firstPage"><a href="/#firstPage" class="name" id="mainpage">The Still Life</a></div>
 
@@ -111,7 +111,7 @@
         <%= link_to "Register", new_user_path, :class => "name" %>
       <% end %>
     </nav>
-  </div>
+  </header>
 
   <% flash.each do |message_type, message| %>
     <div class="alert alert-<%= message_type %>"><%= message %></div>

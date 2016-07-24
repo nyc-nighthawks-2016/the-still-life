@@ -46,8 +46,9 @@ body {
 	clear: both;
 }
 
-#main_navigation {
-	
+#header {
+	z-index: 99;
+	display: fixed;
 }
 
 #menu{

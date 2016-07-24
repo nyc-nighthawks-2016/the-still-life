@@ -15,12 +15,24 @@
 
 <!-- This will be the slide section for the CHANTS PRACTICE -->
 
-  <div class="section" id='practices' data-menuanchor="secondPage">
+  <div class="section" id='chants' data-menuanchor="secondPage">
 
     <% @chants.each do |chant| %>
-      <div class="slide" id="#practices-one">
-        <div class='container'>
-          <%= render 'chants' %>
+      <div class="slide">
+        <div class='container'>    
+        <h1><%= link_to chant.name, practice_path(chant) %></h1>
+        <br>
+        <h3><%= chant.method %></h3>
+        <br>
+        <p><%= chant.description %></p>
+        <br>
+        <% if current_user %>
+          <% if current_user.regimes.length == 0 %>
+            <button>
+              <%= link_to "Create A Regiment", new_regime_path(practice_id: chant.id) %>
+            </button>
+          <% end %>
+        <% end %>
         </div>
       </div>
     <% end %>
@@ -29,86 +41,75 @@
 
   <!-- This will be the slide section for the BODY PRACTICES -->
 
-<div class="section" id='practices' data-menuanchor="secondPage">
-    <div class="slide" id="#practices-one">
-      <div class='container'>
-        <%= render 'chants' %>
+  <div class="section" id='body_practices' data-menuanchor="secondPage">
+    <% @body_practices.each do |body_practice| %>
+      <div class="slide">
+        <div class='container'>
+        <h1><%=link_to body_practice.name, practice_path(body_practice) %></h1>
+        <br>
+        <h3><%= body_practice.method %></h3>
+        <br>
+        <p><%= body_practice.description %></p>
+        <br>
+        <% if current_user %>
+          <% if current_user.regimes.length == 0 %>
+            <button>
+              <%= link_to "Create A Regiment", new_regime_path(practice_id: body_practice.id) %>
+            </button>
+          <% end %>
+        <% end %>
+        </div>
       </div>
-    </div>
-
-    <div class="slide" id="#practices-two">
-      <div class='container'>
-        <%= render 'body_practices' %>
-      </div>
-    </div>
-
-    <div class='slide' id="#practices-three">
-      <div class='container'>
-        <%= render 'seated_practices' %>
-      </div>
-    </div>
-
-    <div class='slide' id="#practices-four">
-      <div class='container'>
-        <%= render 'services' %>
-      </div>
-    </div>
+    <% end %>
   </div>
 
   <!-- This will be the slide section for the SEATED PRACTICES -->
 
-  <div class="section" id='practices' data-menuanchor="secondPage">
-    <div class="slide" id="#practices-one">
-      <div class='container'>
-        <%= render 'chants' %>
+  <div class="section" id='seated_practices' data-menuanchor="secondPage">
+    <% @seated_practices.each do |seated_practice| %>
+      <div class='slide' id="#practices-three">
+        <div class='container'>
+        <h1><%= link_to seated_practice.name, practice_path(seated_practice) %></h1>
+        <br>
+        <h3><%= seated_practice.method %></h3>
+        <br>
+        <p><%= seated_practice.description %></p>
+        <br>
+        <% if current_user %>
+          <% if current_user.regimes.length == 0 %>
+            <button>
+              <%= link_to "Create A Regiment", new_regime_path(practice_id: seated_practice.id) %>
+            </button>
+          <% end %>
+        <% end %>
+        </div>
       </div>
-    </div>
-
-    <div class="slide" id="#practices-two">
-      <div class='container'>
-        <%= render 'body_practices' %>
-      </div>
-    </div>
-
-    <div class='slide' id="#practices-three">
-      <div class='container'>
-        <%= render 'seated_practices' %>
-      </div>
-    </div>
-
-    <div class='slide' id="#practices-four">
-      <div class='container'>
-        <%= render 'services' %>
-      </div>
-    </div>
+    <% end %>
   </div>
 
   <!-- This will be the slide section for the SERVICES PRACTICE -->
 
-  <div class="section" id='practices' data-menuanchor="secondPage">
-    <div class="slide" id="#practices-one">
-      <div class='container'>
-        <%= render 'chants' %>
+  <div class="section" id='services' data-menuanchor="secondPage">
+   <% @services.each do |service| %>
+      <div class='slide' id="#practices-four">
+        <div class='container'>
+        <h1><%= link_to service.name, practice_path(service)%></h1>
+        <br>
+        <h3><%= service.method %></h3>
+        <br>
+        <p><%= service.description %></p>
+        <br>
+        <% if current_user %>
+          <% if current_user.regimes.length == 0 %>
+            <button>
+              <%= link_to "Create A Regiment", new_regime_path(practice_id: service.id) %>
+            </button>
+          <% end %>
+        <% end %>
+        <br>
+        </div>
       </div>
-    </div>
-
-    <div class="slide" id="#practices-two">
-      <div class='container'>
-        <%= render 'body_practices' %>
-      </div>
-    </div>
-
-    <div class='slide' id="#practices-three">
-      <div class='container'>
-        <%= render 'seated_practices' %>
-      </div>
-    </div>
-
-    <div class='slide' id="#practices-four">
-      <div class='container'>
-        <%= render 'services' %>
-      </div>
-    </div>
+    <% end %>
   </div>
 
 

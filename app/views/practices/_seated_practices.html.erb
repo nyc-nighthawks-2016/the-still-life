@@ -1,16 +1,16 @@
 <h2> Seated Practices </h2>
 
-    <% @seated_practices.each do |seated_practice| %>
-        <p><%= link_to seated_practice.name, practice_path(seated_practice) %></p>
-        <p><%= seated_practice.description %></p>
-        <p><%= seated_practice.method %></p>
-        <% if current_user %>
-          <% if current_user.regimes.length == 0 %>
-            <button>
-              <%= link_to "Create A Regiment", new_regime_path(practice_id: seated_practice.id) %>
-            </button>
-          <% end %>
-        <% end %>
-        <br></br>
+<% @seated_practices.each do |seated_practice| %>
+  <p><%= link_to seated_practice.name, practice_path(seated_practice) %></p>
+  <p><%= seated_practice.description %></p>
+  <p><%= seated_practice.method %></p>
+  <% if current_user %>
+    <% if current_user.regimes.length == 0 %>
+      <button>
+        <%= link_to "Create A Regiment", new_regime_path(practice_id: seated_practice.id) %>
+      </button>
     <% end %>
-    
+  <% end %>
+  <br>
+<% end %>
+<%= will_paginate @services %>

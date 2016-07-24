@@ -66,6 +66,8 @@ practices << Practice.create(category:"Service", name:"Environmental Care", desc
 
 resources = []
 
+      # LINKS
+
 resources << Resource.create(name:"Sky Ting Yoga", category:"Body", url:"http://www.skytingyoga.com/", type:"Link",  description:"Sky Ting Yoga Studio", practice_id: 15)
 
 resources << Resource.create(name:"Bhakti Center", category:"Body", url:"http://bhakticenter.org/", type:"Link", description:"Bhakti Center", practice_id: 15)
@@ -101,6 +103,10 @@ resources << Resource.create(name:"Environmental Care", category:"Service" , url
 resources << Resource.create(name:"Animals", category:"Service" , url:"http://www.nycacc.org/Volunteer.htm", type:"Link", description:"Animal Care Centers of NYC always need help as they are legally bound to accept any animal surrendered to them", practice_id: 24)
 
 resources << Resource.create(name:"Animals", category:"Service" , url:"http://www.barcshelter.org/", type:"Link", description:"Brooklyn Animal Resource Coalition in Williamsburg lets you drop in and walk a pup", practice_id: 24)
+
+      # READINGS
+
+resources << Resource.create(name:"Bhagavad Gita", category:"Readings" , url:"https://s3.amazonaws.com/the-still-life/Readings/Bhagavad-Gita.pdf", type:"Reading", description:"Hindu Scripture", practice_id: 7)
 
 
 #-------------------------------------------------------------------------------------------------------------------------------

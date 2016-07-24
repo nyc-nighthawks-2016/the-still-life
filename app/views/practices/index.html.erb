@@ -52,7 +52,7 @@
             <h2><%=link_to body_practice.name, practice_path(body_practice) %></h2>
             <h4>Method: <%= body_practice.method %></h4>
             <br>
-            <h5>- <%= body_practice.description %></h5>
+            <h5><%= body_practice.description %></h5>
             <br>
             <% if current_user %>
               <% if current_user.regimes.length == 0 %>
@@ -77,7 +77,7 @@
             <h2><%= link_to seated_practice.name, practice_path(seated_practice) %></h2>
             <h4>Method: <%= seated_practice.method %></h4>
             <br>
-            <h5>- <%= seated_practice.description %></h5>
+            <h5><%= seated_practice.description %></h5>
             <br>
             <% if current_user %>
               <% if current_user.regimes.length == 0 %>
@@ -103,7 +103,7 @@
             <h2><%= link_to service.name, practice_path(service)%></h2>
             <h4>Method: <%= service.method %></h4>
             <br>
-            <h5>- <%= service.description %></h5>
+            <h5><%= service.description %></h5>
             <br>
             <% if current_user %>
               <% if current_user.regimes.length == 0 %>

@@ -21,9 +21,6 @@ class RegimesController < ApplicationController
 
 	def show
 		@regimen = Regime.find(params[:id])
-		if request.xhr?
-			@regimen.update_attribute(completion: true)
-		end
 	end
 
 
@@ -61,14 +58,20 @@ class RegimesController < ApplicationController
 
 	def update
 		@regimen = Regime.find(params[:id])
+
+
 		if logged_in? && @regimen.user == current_user
-			time = generate_time(params)
-			@regimen.update(daily_practice_time: time)
-			redirect_to @regimen
+			if !params[:regime]
+				@regimen.update(completion: true)
+				redirect_to regime_path(@regimen)
+			elsif params[:regime]
+				time = generate_time(params)
+				@regimen.update(daily_practice_time: time)
+				redirect_to @regimen
+			end
 		else
 			redirect_to root_path
 		end
-
 
 	end
 

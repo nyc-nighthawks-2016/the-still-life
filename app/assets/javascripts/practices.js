@@ -2,18 +2,20 @@
 // All this logic will automatically be available in application.js.
 
 $( document ).ready(function() {
-    $('.done-form').on('click', function(e) {
+    $('.done-form').on('submit', function(e) {
       e.preventDefault();
-      // debugger;
-      console.log( "ready!" );
+      target = e.target
+
       var method = $(this).attr('method');
       var action = $(this).attr('action');
       $.ajax({
         url: action,
-        method: 'put'
+        method: 'put',
+        data: $(this).serialize()
       })
       .done(function(response) {
 
+        $(target).hide();
       })
     });
 });

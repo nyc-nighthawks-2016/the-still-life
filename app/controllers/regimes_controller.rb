@@ -80,8 +80,8 @@ class RegimesController < ApplicationController
 	def generate_time(params)
 		hour = params[:regime]["daily_practice_time(4i)"] # daily_pracitce_time(4i) is what is stored in params.  It looks odd, but I verfied it on pry
 		minute = params[:regime]["daily_practice_time(5i)"]
-		t = Time.now #+ 1.days
-		time = Time.new(t.year, t.month, t.day, hour, minute, 0) + Time.zone_offset('EDT')
+		t = DateTime.now
+		time = DateTime.new(t.year, t.month, t.day, hour.to_i + 4, minute.to_i, 0)
 	end
 
 end

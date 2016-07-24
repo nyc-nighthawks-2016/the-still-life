@@ -65,7 +65,16 @@
         slideSelector: '.slide',
 
         //events
-        onLeave: function(index, nextIndex, direction){},
+        onLeave: function(index, nextIndex, direction){
+          //leaving first section
+          if(index == 1) {
+            $('#header').addClass('fixed');
+          }
+          //back to the first section
+          if(nextIndex == 1) {
+            $('#header').removeClass('fixed');
+          }
+        },
         afterLoad: function(anchorLink, index){},
         afterRender: function(){},
         afterResize: function(){},

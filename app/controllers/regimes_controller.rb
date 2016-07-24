@@ -4,33 +4,39 @@ class RegimesController < ApplicationController
 	end
 
 	def new
-		if logged_in?
-			@practice = Practice.find(params[:practice_id])
+		@practice = Practice.find_by(id: params[:practice_id])
 
-			@regime = Regime.new
+		if !@practice
+			redirect_to root_path
+		end
+
+		if logged_in? && current_user.regimes.length == 0
+			@practice = Practice.find_by(id: params[:practice_id])
+
+			@regimen = Regime.new
 		else
-			redirect_to login_url
+			redirect_to root_path
 		end
 	end
 
 	def show
-		@regime = Regime.find(params[:id])
+		@regimen = Regime.find(params[:id])
 	end
 
 
 	def create
 		if logged_in?
 
-			@regime = generate_regime(params)
+			@regimen = generate_regime(params)
 			current_user.update_attribute(:practice, Practice.find(params[:practice_id]))
 			# Do this stuff (copied and pasted from Seth)
 			respond_to do |format|
-		    if @regime.save
-		      format.html { redirect_to @regime, notice: 'Regimen was successfully created.' }
-		      format.json { render :show, status: :created, location: @regime }
+		    if @regimen.save
+		      format.html { redirect_to @regimen, notice: 'Regimen was successfully created.' }
+		      format.json { render :show, status: :created, location: @regimen }
 		    else
 		      format.html { render :new }
-		      format.json { render json: @regime.errors, status: :unprocessable_entity }
+		      format.json { render json: @regimen.errors, status: :unprocessable_entity }
 		    end
 		  end
 		 # else (if not logged in)...
@@ -41,9 +47,9 @@ class RegimesController < ApplicationController
 	end
 
 	def edit
-		@regime = Regime.find(params[:id])
+		@regimen = Regime.find(params[:id])
 
-		if logged_in? && @regime.user == current_user
+		if logged_in? && @regimen.user == current_user
 			render 'edit'
 		else
 			redirect_to root_path
@@ -51,14 +57,22 @@ class RegimesController < ApplicationController
 	end
 
 	def update
-		@regime = Regime.find(params[:id])
-		if logged_in? && @regime.user == current_user
-			time = generate_time(params)
-			@regime.update(daily_practice_time: time)
-			redirect_to @regime
+		@regimen = Regime.find(params[:id])
+
+
+		if logged_in? && @regimen.user == current_user
+			if !params[:regime]
+				@regimen.update(completion: true)
+				redirect_to regime_path(@regimen)
+			elsif params[:regime]
+				time = generate_time(params)
+				@regimen.update(daily_practice_time: time)
+				redirect_to @regimen
+			end
 		else
 			redirect_to root_path
 		end
+
 	end
 
 

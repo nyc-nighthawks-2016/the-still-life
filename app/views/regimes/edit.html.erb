@@ -1,11 +1,13 @@
-<h1>Edit Regime</h1>
+<center>
+<h1>Edit Regimen</h1>
 
-<h2><%= @regime.description %></h2>
-<%= form_for @regime do |f| %>
-	<%= f.label :practice_time %>
-	<%= time_select :regime, :daily_practice_time, { ampm: true, minute_step: 15 }, :class => 'timepicker'  %><br>
+  <h2><%= @regimen.practice.description %></h2>
+  <%= form_for @regimen do |f| %>
+  	<%= f.label :practice_time %>
+  	<%= time_select :regimen, :daily_practice_time, { ampm: true, minute_step: 15 }, :class => 'timepicker form-control'  %><br>
 
-	<%= hidden_field_tag 'regime_id', @regime.id %>
+  	<%= hidden_field_tag 'regime_id', @regimen.id %>
 
-	<%= f.submit "Update Regimen", class: "btn btn-primary" %>
-<% end %>
+  	<%= f.submit "Update Regimen", class: "btn btn-primary" %>
+  <% end %>
+</center>

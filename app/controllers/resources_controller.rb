@@ -3,6 +3,8 @@ class ResourcesController < ApplicationController
 
   def index
     @resources = media_type_class.all
+    @yoga_res = media_type_class.where(practice_id: 15)
+    @qigong_res = media_type_class.where(practice_id: 17)
   end
 
   def show

@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   resources :images, controller: 'resources', type: 'Image'
   resources :readings, controller: 'resources', type: 'Reading'
   resources :videos, controller: 'resources', type: 'Video'
-
+  resources :links, controller: 'resources', type: 'Link'
 
   root 'staticpages#index'
 end

@@ -1,0 +1,8 @@
+<h2> Images </h2>
+    <% @resources.images.each do |image| %>
+        <p><%= image.name %></p>
+        <p><%= image.category %></p>
+        <p><%= image.description %></p>
+        <p><%= image.url %></p>
+        <br></br>
+    <% end %>

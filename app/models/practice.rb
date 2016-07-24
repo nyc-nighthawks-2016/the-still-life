@@ -8,6 +8,6 @@ class Practice < ActiveRecord::Base
 	scope :seated, -> { where(category: 'Seated Meditation') }
 	scope :service, -> { where(category: 'Service') }
 
-	delegate :readings, :recordings, :videos, :images, to: :resources
+	delegate :readings, :recordings, :videos, :images, :links, to: :resources
 
 end

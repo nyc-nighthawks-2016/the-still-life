@@ -1,0 +1,8 @@
+<h2> Audios </h2>
+    <% @resources.audios.each do |audio| %>
+        <p><%= audio.name %></p>
+        <p><%= audio.category %></p>
+        <p><%= audio.description %></p>
+        <p><%= audio.url %></p>
+        <br></br>
+    <% end %>

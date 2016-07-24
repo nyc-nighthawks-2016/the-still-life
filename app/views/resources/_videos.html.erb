@@ -1,0 +1,8 @@
+<h2> Videos </h2>
+    <% @resources.videos.each do |video| %>
+        <p><%= video.name %></p>
+        <p><%= video.category %></p>
+        <p><%= video.description %></p>
+        <p><%= video.url %></p>
+        <br></br>
+    <% end %>

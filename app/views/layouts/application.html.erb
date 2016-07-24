@@ -15,7 +15,7 @@
     $(document).ready(function() {
       $('#fullpage').fullpage({
         sectionsColor: ['#1bbc9b', '#4BBFC3', '#4BBFC3', '#4BBFC3', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff', '#1bbc9b'],
-         anchors: ['firstPage', 'secondPage/1', 'secondPage/2', 'secondPage/3', 'secondPage/4', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage'],
+         anchors: ['firstPage', 'secondPage-one', 'secondPage-two', 'secondPage-three', 'secondPage-four', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage'],
         menu: '#menu',
         scrollingSpeed: 1000
       });
@@ -27,23 +27,23 @@
 
 	<header id="main_navigation" class="clearfix">
     <nav id="menu">
-      <div data-menuanchor="firstPage"><a href="/practices#index#homepage" class="name" id="mainpage">The Still Life</a></div>
+      <div data-menuanchor="firstPage"><a href="/#homepage" class="name" id="mainpage">The Still Life</a></div>
 
-      <div data-menuanchor="secondPage/1"><a href="/practices#index#practices/1" class="name">Chants</a></div>
+      <div data-menuanchor="secondPage-one"><a href="/#practices-one" class="name">Chants</a></div>
 
-      <div data-menuanchor="secondPage/2"><a href="/practices#index#practices/2" class="name">Body Practices</a></div>
+      <div data-menuanchor="secondPage-two"><a href="/#practices-two" class="name">Body Practices</a></div>
 
-      <div data-menuanchor="secondPage/3"><a href="/practices#index#practices/3" class="name">Seated Practices</a></div>
+      <div data-menuanchor="secondPage-three"><a href="/#practices-three" class="name">Seated Practices</a></div>
 
-      <div data-menuanchor="secondPage/4"><a href="/practices#index#practices/4" class="name">Service</a></div>
+      <div data-menuanchor="secondPage-four"><a href="/#practices-four" class="name">Service</a></div>
 
-      <div data-menuanchor="thirdPage"><a href="/practices#index#guidelines" class="name">Guidelines</a></div>
+      <div data-menuanchor="thirdPage"><a href="/#guidelines" class="name">Guidelines</a></div>
 
-      <div data-menuanchor="fourthPage"><a href="/practices#index#lifestyle" class="name">Lifestyle</a></div>
+      <div data-menuanchor="fourthPage"><a href="/#lifestyle" class="name">Lifestyle</a></div>
 
-      <div data-menuanchor="fifthPage"><a href="/practices#index#resources" class="name">Resources</a></div>
+      <div data-menuanchor="fifthPage"><a href="/#resources" class="name">Resources</a></div>
 
-      <div data-menuanchor="sixthPage"><a href="/practices#index#about" class="name">About</a></div>
+      <div data-menuanchor="sixthPage"><a href="/#about" class="name">About</a></div>
 
       <% if @current_user %>
         <%= link_to "Sangha", users_path, :class => "name" %>

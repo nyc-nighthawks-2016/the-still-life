@@ -1,34 +1,64 @@
-<h1> Practices </h1>
-  <center>
-  <div class='practice-container'>
+<div id="fullpage">
+  <div class="section active" id="homepage" data-menuanchor="firstPage">
+    <div class='container'>
+      <h1> The Still Life </h1>
+      <p>Here at The Still Life strive to simplify....</p>
+    </div>
+  </div>
 
-    <section class='chants-container'>
-      <div class='chants'>
+  <div class="section" id='practices' data-menuanchor="secondPage">
+    <div class="slide" data-menuanchor="1">
+      <div class='container'>
         <%= render 'chants' %>
       </div>
-    </section>
+    </div>
 
-    <section class='body-practices-container'>
-      <div class='body-practices'>
+    <div class="slide" data-menuanchor="2">
+      <div class='container'>
         <%= render 'body_practices' %>
-      </div><br>
-    </section>
+      </div>
+    </div>
 
-    <section class='seated-practices-container'>
-      <div class='seated-practices'>
+    <div class='slide' data-menuanchor="3">
+      <div class='container'>
         <%= render 'seated_practices' %>
-      </div><br>
-    </section>
+      </div>
+    </div>
 
-    <section class='service-container'>
-      <div class='services'>
+    <div class='slide' data-menuanchor="4">
+      <div class='container'>
         <%= render 'services' %>
-      </div><br>
-    </section>
-
-    </center>
-
+      </div>
+    </div>
   </div>
+
+  <div class="section" id="guidelines" data-menuanchor="thirdPage">
+    <div class="container">
+      <h1> This will be the Guidelines page</h1>
+    </div>
+  </div>
+
+  <div class="section" id="lifestyle" data-menuanchor="fourthPage">
+    <div class="container">
+      <h1> This will be the Lifestyle page</h1>
+    </div>
+  </div>
+
+  <div class="section" id="resources" data-menuanchor="fifthPage">
+    <div class="container">
+      <h1> This will be the further study page</h1>
+    </div>
+  </div>
+
+  <div class="section" id="about" data-menuanchor="sixthPage">
+    <div class="container">
+      <h1> This will be the about page </h1>
+    </div>
+  </div>
+
+
+</div>
+
 
 
 

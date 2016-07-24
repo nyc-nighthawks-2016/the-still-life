@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
 
-  get '/spiral', to: 'staticpages#spiral'
 
   resources :users
   resources :practices
@@ -24,5 +23,5 @@ Rails.application.routes.draw do
   resources :videos, controller: 'resources', type: 'Video'
 
 
-  root 'staticpages#index'
+  root 'practices#index#homepage'
 end

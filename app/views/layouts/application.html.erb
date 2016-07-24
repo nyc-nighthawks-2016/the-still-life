@@ -5,15 +5,46 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  <style>
+  </style>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+  
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#fullpage').fullpage({
+        sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff', '#1bbc9b'],
+         anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage'],
+        menu: '#menu',
+        scrollingSpeed: 1000
+      });
+    });
+  </script>
 </head>
+
 <body>
+
 	<header id="main_navigation" class="clearfix">
-      <%= link_to "The Still Life", root_path, :class => "name"%>
-    <nav>
-      <a href="/practices#index.chants-container" class="name">Chants</a>
-      <a href="/practices#index.body-practices-container" class="name">Body Practices</a>
-      <a href="/practices#index.seated-practices-container" class="name">Seated Practices</a>
-      <a href="/practices#index.service-container" class="name">Service</a>
+    <nav id="menu">
+      <div data-menuanchor="firstPage"><a href="/practices#index#homepage" class="name" id="mainpage">The Still Life</a></div>
+
+      <div data-menuanchor="secondPage"><a href="/practices#index#practices/1" class="name">Chants</a></div>
+
+      <div data-menuanchor="secondPage"><a href="/practices#index#practices/2" class="name">Body Practices</a></div>
+
+      <div data-menuanchor="secondPage"><a href="/practices#index#practices/3" class="name">Seated Practices</a></div>
+
+      <div data-menuanchor="secondPage"><a href="/practices#index#practices/4" class="name">Service</a></div>
+
+      <div data-menuanchor="thirdPage"><a href="/practices#index#guidelines" class="name">Guidelines</a></div>
+
+      <div data-menuanchor="fourthPage"><a href="/practices#index#lifestyle" class="name">Lifestyle</a></div>
+
+      <div data-menuanchor="fifthPage"><a href="/practices#index#resources" class="name">Resources</a></div>
+
+      <div data-menuanchor="sixthPage"><a href="/practices#index#about" class="name">About</a></div>
+
       <% if @current_user %>
         <%= link_to "Sangha", users_path, :class => "name" %>
         <% if current_user.regimes.length > 0 %>
@@ -27,6 +58,7 @@
       <% end %>
     </nav>
   </header>
+
   <% flash.each do |message_type, message| %>
     <div class="alert alert-<%= message_type %>"><%= message %></div>
   <% end %>

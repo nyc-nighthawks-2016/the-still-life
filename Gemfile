@@ -38,6 +38,8 @@ gem 'better_errors', '~> 2.1', '>= 2.1.1'
 
 # Use delayed job for running background jobs
 gem 'delayed_job_active_record'
+gem 'delayed_job'
+
 
 # Need daemons to start delayed_job
 gem 'daemons'

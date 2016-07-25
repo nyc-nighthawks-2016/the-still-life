@@ -1,70 +1,236 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-</head>
+  <head>
+      <%= stylesheet_link_tag    'application', media: 'all' %>
+      <%= javascript_include_tag 'application' %>
+  </head>
 
-<div id="fullpage">
-  <div class="section" id="homepage" data-menuanchor="firstPage">
-    <div class='container'>
-      <h1> The Still Life </h1>
-      <p>Here at The Still Life strive to simplify....</p>
-    </div>
-  </div>
 
-  <div class="section" id='practices' data-menuanchor="secondPage">
-    <div class="slide" id="#practices-one">
-      <div class='container'>
-        <%= render 'chants' %>
+
+  <body>
+    <div id="fullpage">
+      <div class="section" id="homepage" data-menuanchor="firstPage">
+        <div class='container'>
+          <h1> The Still Life </h1>
+          <h5>Here at The Still Life strive to simplify....</h5>
+        </div>
       </div>
-    </div>
 
-    <div class="slide" id="#practices-two">
-      <div class='container'>
-        <%= render 'body_practices' %>
+    <!-- This will be the slide section for the CHANTS PRACTICE -->
+
+      <div class="section" id='chants' data-menuanchor="secondPage">
+
+        <% @chants.each do |chant| %>
+          <div class="slide">
+            <div class='container'>
+            <h1 style="text-decoration: underline"> Chants </h1><br><br>
+            <h2><%= link_to chant.name, practice_path(chant) %></h2>
+            <h4>Method: <%= chant.method %></h4>
+            <br>
+            <h5><%= chant.description %></h5>
+            <br>
+            <% if current_user %>
+              <% if current_user.regimes.length == 0 %>
+                <button>
+                  <%= link_to "Choose this Practice", new_regime_path(practice_id: chant.id) %>
+                </button>
+              <% end %>
+            <% end %>
+            </div>
+          </div>
+        <% end %>
       </div>
-    </div>
 
-    <div class='slide' id="#practices-three">
-      <div class='container'>
-        <%= render 'seated_practices' %>
+      <!-- This will be the slide section for the BODY PRACTICES -->
+
+      <div class="section" id='body_practices' data-menuanchor="thirdPage">
+
+        <% @body_practices.each do |body_practice| %>
+          <div class="slide">
+            <div class='container'>
+            <h1 style="text-decoration: underline"> Body Practices </h1><br><br>
+            <h2><%=link_to body_practice.name, practice_path(body_practice) %></h2>
+            <h4>Method: <%= body_practice.method %></h4>
+            <br>
+            <h5><%= body_practice.description %></h5>
+            <br>
+            <% if current_user %>
+              <% if current_user.regimes.length == 0 %>
+                <button>
+                  <%= link_to "Choose this Practice", new_regime_path(practice_id: body_practice.id) %>
+                </button>
+              <% end %>
+            <% end %>
+            </div>
+          </div>
+        <% end %>
       </div>
-    </div>
 
-    <div class='slide' id="#practices-four">
-      <div class='container'>
-        <%= render 'services' %>
+      <!-- This will be the slide section for the SEATED PRACTICES -->
+
+      <div class="section" id='seated_practices' data-menuanchor="fourthPage">
+
+        <% @seated_practices.each do |seated_practice| %>
+          <div class='slide'>
+            <div class='container'>
+            <h1 style="text-decoration: underline"> Seated Practices </h1><br><br>
+            <h2><%= link_to seated_practice.name, practice_path(seated_practice) %></h2>
+            <h4>Method: <%= seated_practice.method %></h4>
+            <br>
+            <h5><%= seated_practice.description %></h5>
+            <br>
+            <% if current_user %>
+              <% if current_user.regimes.length == 0 %>
+                <button>
+                  <%= link_to "Choose this Practice", new_regime_path(practice_id: seated_practice.id) %>
+                </button>
+              <% end %>
+            <% end %>
+            </div>
+          </div>
+        <% end %>
       </div>
-    </div>
-  </div>
 
-  <div class="section" id="guidelines" data-menuanchor="thirdPage">
-    <div class="container">
-      <h1> This will be the Guidelines page</h1>
-    </div>
-  </div>
+      <!-- This will be the slide section for the SERVICES PRACTICE -->
 
-  <div class="section" id="lifestyle" data-menuanchor="fourthPage">
-    <div class="container">
-      <h1> This will be the Lifestyle page</h1>
-    </div>
-  </div>
+      <div class="section" id='services' data-menuanchor="fifthPage">
 
-  <div class="section" id="resources" data-menuanchor="fifthPage">
-    <div class="container">
-      <h1> This will be the further study page</h1>
-    </div>
-  </div>
+       <% @services.each do |service| %>
 
-  <div class="section" id="about" data-menuanchor="sixthPage">
-    <div class="container">
-      <h1> This will be the about page </h1>
-    </div>
-  </div>
-</div>
+          <div class='slide'>
+            <div class='container'>
+            <h1 style="text-decoration: underline"> Services </h1><br><br>
+            <h2><%= link_to service.name, practice_path(service)%></h2>
+            <h4>Method: <%= service.method %></h4>
+            <br>
+            <h5><%= service.description %></h5>
+            <br>
+            <% if current_user %>
+              <% if current_user.regimes.length == 0 %>
+                <button>
+                  <%= link_to "Choose this Practice", new_regime_path(practice_id: service.id) %>
+                </button>
+              <% end %>
+            <% end %>
+            <br>
+            </div>
+          </div>
+        <% end %>
+      </div>
 
-</body>
+      <div class="section" id="guidelines" data-menuanchor="sixthPage">
+        <div class='slide'>
+          <div class="container">
+            <br>
+            <h1 style="text-decoration: underline"> Guidelines for Meditation</h1><br>
+            <h6>The benefits of a consistent meditation practice are very well documented elsewhere. What we aim to do here is to help make your personal practice a successful one. Consistency is key! Here are some ways to build a consistent practice.</h6>
+            <h3>Choose a practice that is good for you</h3>
+            <h6>Pick something that seems pleasant fro you to do, as opposed to a chore. Something you might even look forward to.</h6>
+            <h3>Set aside the time</h3>
+            <h6>Make a small commitment at first, but one you can do every day or the same day each week. Ideally, your commitment would be for the same time. It is simpler and easier to remember.</h6>
+            <h3>Don’t do too much!</h3>
+            <h6>Making too large a time commitment can get in the way of establishing a routine. Don’t underestimate the power of practicing 5 minutes every day, or going to a strong class once per week.</h6>
+            <h3>Love your practice</h3>
+            <h6>Your practice should give you an internal smile. While there can be times that this is not the case, in general we should be growing a love of the practice itself.</h6>
+            <h3>Your practice is yours</h3>
+            <h6>It is tempting to compare ourselves to others or feel like we “should” be doing this or that. Try to trust that you have picked the best practice for yourself, and let that practice take care of itself. No need to worry!</h6>
+            <h3>Keep your life as it is</h3>
+            <h6>There is no need to quit your job, leave your partner, move to a cave in the mountains. Often, these are the very things that propel our practice forward, and in time we learn to make practices out of everything in our lives. But at first: just add a simple, sweet practice and let everything else be.</h6>
+          </div>
+        </div>
+
+        <div class='slide'>
+          <div class="container">
+            <h1 style="text-decoration: underline">During Practice</h1>
+            <h3>Return to your focus</h3>
+            <h6>Whatever you choose to practice, you will find your mind wanders. This is 100% ok! That’s what the mind does! It wanders. The only thing you do is notice, and bring it lovingly back to your practice. Like lovingly redirecting a child back to their favorite toy.</h6>
+            <h3>Trust yourself</h3>
+            <h6>If you just can’t get calm or focused on a certain day, this is ok. There may be something that needs to be let go, or you may just need to stretch and try again. There are some tips for handling this in the lifestyle section.</h6>
+          </div>
+        </div>
+
+        <div class='slide'>
+          <div class="container">
+            <h1 style="text-decoration: underline">Tips - Halp! My Mind Is Argh!</h1>
+            <h6>Yep! That is exactly what your mind is. It wanders. It spins. It overfocuses. It second-guesses. It criticizes. It also feels and laughs and perceives and recognizes. And it’s yours. Make friends and work with it. Do not wrestle it. Here are some suggestions for un-argh-ing the mind.</h6>
+            <h3>Make a list</h3>
+            <h6>If thoughts overwhelm your practice and you feel the argh, stop and make a list of all the things that come up. When they’re all down, go back to your practice.</h6>
+            <h3>The houseguest</h3>
+            <h6>Imagine your mind is a party. You are the host, thoughts are the guests. Welcome the guests, and let the know that you will get chat with them when you are done preparing their party, i.e., your practice. (This is a recommendation from Swami Ashokananda from Integral Yoga Institute).</h6>
+            <h3>Talk therapy</h3>
+            <h6>While dredging up old baggage is never really useful, having insight into your emotional life can bring insights into your habits and bring clarity to your intention. And help you let go of things you find you no longer need.</h6>
+            <h3>Fill it with good things</h3>
+            <h6>It can be helpful to moderate what you read and watch to support your practice. If you shift your reading and watching habits to include things that are related to your practice, it is easier to get into your practice mode when the time comes.</h6>
+            <h3>People</h3>
+            <h6>Being with people who are of a like mind, who have a practice, is a nice way to support your work. Knowing there are people experiencing similar troubles and triumphs can be very calming.</h6>
+            <h3>Finding a teacher</h3>
+            <h6>There is no substitute for having access to someone who has completed the journey you are beginning. They can help in ways that are hard to imagine. Finding a proper guide can be a long process, but for %99.99 of us our practice can only go so far without one. There is no rush- do your chosen practice, and start looking into who teaches similar things. That will take care of it.</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="lifestyle" data-menuanchor="seventhPage">
+        <div class='slide'>
+          <div class="container">
+            <h1 style="text-decoration: underline">Lifestyle</h1>
+            <h6>Many people have questions about how to incorporate meditation into regular life. This section addresses some of the more common ones. The best advice is: Be good! Be good for your health, and be good for the uplift of the world. The suggestions below are meant as things to think about as you deepen your practice.</h6>
+            <h3>Quitting everything</h3>
+            <h6>Don’t do it! Change one thing a time. Start with adding your practice. Make it a habit. Then, to support your practice, change one small thing if you like. Make that a habit. Small changes over time are much better than massive changes all at once.</h6>
+            <h3>Eating habits</h3>
+            <h6>The best advice I have ever heard on this is you should eat what you want, just not too much. Below, however, are some considerations from a variety of traditions that can help people feel confident making positive changes to support their new practice.</h6>
+            <h3>Simple foods, well prepared</h3>
+            <h6>Think for a moment how sugar affects you. You get a burst of mental and physical energy, followed by a trough. Moderating these types of foods seems like a good idea. Start to notice how the food you eat makes you feel.</h6>
+            <h3>72 labors</h3>
+            <h6>This is a practice that considers what work (and by whom) has gone into the meal that has been set in front of you. It can be nice to simply honor that, but it can also be a good way to decide what to eat.</h6>
+            <h3>Vegetarian/Veganism</h3>
+            <h6>Many traditions strongly recommend cutting at least meat and fish out of the diet. It is not expressly necessary, but here are the reasons worth considering for yourself.</h6>
+            <h6><em>Compassion:</em></h6>
+            <h6>Consuming a diet mainly of plant based ingredients is generally more gentle both from a saving lives standpoint and from a food production standpoint.</h6>
+            <h6><em>Health:</em></h6>
+            <h6>Adjusting the ratio of animal to plant-based foods to be more on the plant side has many health benefits.</h6>
+          </div>
+        </div>
+        <div class='slide'>
+          <div class="container">
+            <h1 style="text-decoration: underline">Lifestyle (cont.)</h1>
+
+            <h3>Alcohol and other social and ritual substances</h3>
+            <h6>Moderate and in the right circumstances is fine. It is best to keep your main practice time free of these things if you can.</h6>
+            <h3>Work habits</h3>
+            <h6>The ideal is to work thoughtfully without overly identifying with whatever you do.</h6>
+            <h3>What kind of work?</h3>
+            <h6>The kind you feel is good work.</h6>
+            <h3>How much?</h3>
+            <h6>Over-work and under-work have a negative impact on health. Find the place where you feel engaged but not consumed.</h6>
+            <h3>Exercise habits</h3>
+            <h6>Even if your personal practice is not physically demanding, a little regular exercise can go a long way to supporting a developing meditation practice. Something simple like a morning walk would do it.</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="resources" data-menuanchor="eighthPage">
+        <div class="container">
+          <h1 style="text-decoration: underline"> This will be the further study page</h1>
+        </div>
+      </div>
+
+      <div class="section" id="getting-started" data-menuanchor="ninthPage">
+        <div class="container">
+          <h1 style="text-decoration: underline"> Getting Started </h1>
+          <h6>
+          Meditation can be a scary word. Like say goodbye to family, quit the job, sell the possessions, and run off to a cave in the mountains, never to be seen again scary. Thankfully, this is not the case. There are about as many ways to develop a meditation practice as there are people in the universe, as the saying goes. Here’s how our site works:</h6>
+          <h6>1. Pick a practice- look through the practice categories. Listen to the audio. Click the links. Read the descriptions. Find a practice that makes you feel like you’d have fun doing that every day for a few minutes. Something that makes you feel peaceful. This is very personal, and is an important part of the process, so take your time. Once you choose a practice, that will be the main one you do for at least a few weeks, and the one that will be used to show your progress. It should make you happy.</h6>
+          <h6>2. Set your practice time- once you have settled on a practice, select it and set your practice time. Be sure this time is pretty consistently available to you.</h6>
+          <h6>3. Do your practice- you’ll get a reminder texted to you to help you remember to do your practice. Once you have, click the complete button.</h6>
+          <h6>4. Watch your progress- that’s all! Every time you complete a practice session, you’ll get a new leaf stored on your profile so you can watch your practice grow.</h6>
+          <h6>Once you select your practice, we don’t want you to feel trapped by it. You can bookmark many of the resources we have here to your profile for easy reference and to inspire and fortify your practice. If you have a practice that doesn’t quite fit what we have here, sign up for something close, and just do you own thing during your practice time. Keep an eye out for new features, and be in touch!</h6>
+          <h6>Love,</h6>
+          <h6>The Still Life</h6>
+        </div>
+      </div>
+
+    </div>
+  </body>
 </html>
 
 

@@ -1,45 +1,46 @@
-<% provide(:title, "Edit User") %>
-<h1 id="styled-heading">Update your profile</h1><br>
+<div id="pageshift">
+	<% provide(:title, "Edit User") %>
+	<h1 id="styled-heading">Update your profile</h1><br>
 
-<br>
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-  	
-    <%= form_for(@user, :html => {:id => "form"}) do |f| %>
-      	 <%= render 'shared/error_messages' %>
+	<br>
+	<div class="row">
+	  <div class="col-md-6 col-md-offset-3">
+	  	
+	    <%= form_for(@user, :html => {:id => "form"}) do |f| %>
+	      	 <%= render 'shared/error_messages' %>
 
-	    <%= f.label :first_name %>
-	    <%= f.text_field :first_name, class: 'form-control' %><br>
-	  
-	    <%= f.label :last_name %>
-	    <%= f.text_field :last_name, class: 'form-control' %><br>
-	  
-	    <%= f.label :username %>
-	    <%= f.text_field :username, class: 'form-control' %><br>
-	  
-	  	<%= f.label :age %>
-        <%= f.number_field :age, min: 5, class: 'form-control' %><br>
+		    <%= f.label :first_name %>
+		    <%= f.text_field :first_name, class: 'form-control' %><br>
+		  
+		    <%= f.label :last_name %>
+		    <%= f.text_field :last_name, class: 'form-control' %><br>
+		  
+		    <%= f.label :username %>
+		    <%= f.text_field :username, class: 'form-control' %><br>
+		  
+		  	<%= f.label :age %>
+	        <%= f.number_field :age, min: 5, class: 'form-control' %><br>
 
-        <%= f.label :gender %>
-        <%= f.text_field :gender, class: 'form-control' %><br>
-        
-	    <%= f.label :email %>
-	    <%= f.email_field :email, class: 'form-control' %><br>
-	  
-	    <%= f.label :password %>
-	    <%= f.password_field :password, class: 'form-control' %><br>
-	  
-	    <%= f.label :about_me %>
-	    <%= f.text_area :about_me, class: 'form-control', rows: '10' %><br>
-	  
-	    <%= f.submit "Edit User", class: "btn btn-primary" %>
-	  
-	<% end %>
-	<div class="gravatar_edit">
-      <%= gravatar_for @user %>
-      <a href="http://gravatar.com/emails" target="_blank">Change</a>
-    </div>
-	<%= link_to 'Back', user_path(@user) %>
+	        <%= f.label :gender %>
+	        <%= f.text_field :gender, class: 'form-control' %><br>
+	        
+		    <%= f.label :email %>
+		    <%= f.email_field :email, class: 'form-control' %><br>
+		  
+		    <%= f.label :password %>
+		    <%= f.password_field :password, class: 'form-control' %><br>
+		  
+		    <%= f.label :about_me %>
+		    <%= f.text_area :about_me, class: 'form-control', rows: '10' %><br>
+		  
+		    <%= f.submit "Edit User", class: "btn btn-primary" %>
+		  
+		<% end %>
+		<div class="gravatar_edit">
+	      <%= gravatar_for @user %>
+	      <a href="http://gravatar.com/emails" target="_blank">Change</a>
+	    </div>
+		<%= link_to 'Back', user_path(@user) %>
+		</div>
 	</div>
 </div>
-

@@ -35,6 +35,19 @@ gem 'faker'
 gem 'pry'
 gem 'rails-pry'
 gem 'better_errors', '~> 2.1', '>= 2.1.1'
+
+# Use delayed job for running background jobs
+gem 'delayed_job_active_record'
+
+# Need daemons to start delayed_job
+gem 'daemons'
+
+# Use workless to use less workers on heroku
+gem "workless", "~> 1.2.2"
+
+# Use Twilio
+gem 'twilio-ruby'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

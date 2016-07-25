@@ -1,0 +1,9 @@
+development:
+	jons_number: +18005551234
+	twilio_number: +18005551234
+	twilio_account_sid: ACblahblahblahblahblahblahblah
+	twilio_auth_token: blahblahblahblahblahblahblah
+
+test:
+
+production:

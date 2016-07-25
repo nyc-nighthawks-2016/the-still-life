@@ -108,4 +108,8 @@ ActiveRecord::Schema.define(version: 20160723231308) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "bookmarks", "resources"
+  add_foreign_key "bookmarks", "users"
+  add_foreign_key "regimes", "practices"
+  add_foreign_key "resources", "practices"
 end

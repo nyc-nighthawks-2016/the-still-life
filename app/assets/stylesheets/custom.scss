@@ -38,10 +38,6 @@ body {
   clear: both;
 }
 
-header {
-  top: 0;
-}
-
 #header{
     -webkit-transition: all 0.7s ease;
     -moz-transition: all 0.7s ease;
@@ -62,16 +58,6 @@ header {
     margin-top: 0;
 }
 
-#menu{
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #E9E9E9;
-  text-transform: uppercase;
-  display: inline-block;
-  width: 100%;
-  z-index: 0;
-}
-
 .name {
   font-weight: 700;
   font-size: .8em;
@@ -85,36 +71,8 @@ header {
   float: left;
 }
 
-.dropdown-link {
-  font-weight: 700;
-  font-size: .8em;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  border: 2px solid #E9E9E9;
-  padding: 1rem;
-  margin: 0.25rem;
-  text-decoration: none;
-  color: #424652;
-  text-align: center;
-  display: block;
-  padding: 10px 15px;
-}
 
-#mainpage {
-  float: left;
-  margin-left: 15px;
-  margin-right: 45px;
-}
 
-#alt-mainpage {
-  float: left;
-  margin-left: 15px;
-  margin-right: 300px;
-}
-
-nav {
-  float: right;
-}
 
 #pageshift {
   margin-top: 100px;
@@ -144,8 +102,6 @@ nav {
 audio {
   display: block;
 }
-
-
 
 aside {
   section.user_info {

@@ -50,34 +50,21 @@
 
   <div class="sub-info">
     <div id="regimen-info">
-      <h3>Daily Regimen Info</h3><br>
+      <h3>Your Practice</h3><br>
 
       <% if @user.practice != nil %>
-      <p><%= @practice.name %> | <%= @practice.category %></p>
-      <p><%= @practice.description %></p>
-      <% if @completed_regimens %>
-        <% if @completed_regimens.length > 1 %>
-          <p>So far you have completed <%= @completed_regimens.length %>
-          <% else %>
-          <p>So far you have completed 0
-          <% end %>
-        <% if @completed_regimens.length > 1 || @completed_regimens.length == 0 %>
-        regimens
-        <% else %>
-        regimen
-        <% end %>
-        for this practice.</p>
-        <% if @completed_regimens.length > 0 %>
-          <% @completed_regimens.length.times do %>
-              <div id="single-regimen">
-                <center>
-                  <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
-                </center>
-              </div>
-          <% end %>
-        <% end %>
+        <%= render 'regimes/show' %><br>
+          <% if @completed_regimens %>
+            <p> You have completed <%= @completed_regimens.length %> regimens. </p> 
+              <% @completed_regimens.each do |regimen| %>
+                  <div id="single-regimen">
+                    <center>
+                      <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
+                    </center>
+                  </div>
+              <% end %>
+           <% end %>
       <% end %>
-    <% end %>
   </div>
 
     <div id="bookmarked-sources">

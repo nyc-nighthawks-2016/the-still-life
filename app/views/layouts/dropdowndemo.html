@@ -1,40 +1,154 @@
-<div class="dropdown dropdown-accordion" data-accordion="#accordion">
-  <a class="btn btn-primary" href="#" data-toggle="dropdown">Dropdown trigger </a>
-  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-    <li>
-      <div class="panel-group" id="accordion">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a href="#collapseOne" data-toggle="collapse" data-parent="#accordion">
-                Unit 1
-              </a>
-            </h4>
-          </div>
-          <div class="panel-collapse collapse" id="collapseOne">
-            <div class="panel-body">
-              <a href="#">Item a</a><br>
-              <a href="#">Item b</a>
-            </div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a href="#collapseTwo" data-toggle="collapse" data-parent="#accordion">
-                Unit 2
-              </a>
-            </h4>
-          </div>
-          <div class="panel-collapse collapse" id="collapseTwo">
-            <div class="panel-body">
-              <a href="#">Item a</a><br>
-              <a href="#">Item b</a><br>
-              <a href="#">Item c</a>
-            </div>
-          </div>
-        </div>
+<!-- Open Navbar -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    
+    <!-- Open Container Fluid for Nav Spacing and Alignment -->
+    <div class="container-fluid">
+
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Brand</a>
       </div>
-    </li>
-  </ul>
-</div>
+      <!-- //Close Mobile Toggle Button -->
+
+      <!-- Collect The Nav Links, and Other Content for Toggling -->
+      <div class="collapse navbar-collapse" id="main-nav-collapse">
+
+        <!-- Open Main UL for Nav Links -->
+        <ul class="nav navbar-nav">
+
+          <!-- Back To Top Link Only Visible On Small Screens -->
+          <li class="hidden-sm hidden-md hidden-lg">
+            <a href="#toTop">Back To Top <span class="glyphicon glyphicon-hand-up"></span></a>
+          </li>
+          <!-- //Close Back To Top Link -->
+
+          <!-- Nav Link with Active State -->
+          <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+
+          <!-- Nav Link -->
+          <li><a href="#">Link</a></li>
+
+          <!-- Dropdown Link for Dropdown Accordion -->
+          <li>
+            
+            <!-- Open Wrapper for Dropdown Accordion -->
+            <div class="dropdown dropdown-accordion" data-accordion="#accordion">
+              
+              <!-- Main Link For Opening Dropdown -->
+              <a class="btn dropdown-toggle" href="#" data-toggle="dropdown">
+                Accordion Dropdown<span class="glyphicon glyphicon-option-vertical"></span>
+              </a>
+              <!-- //Close Main Link For Opening Dropdown -->
+
+              <!-- Open Dropdown Menu Wrapper -->
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                
+                <!-- Child li element was needed on testing as a wrapper for alignment and functionality -->
+                <li>
+
+                  <!-- Open Panel Group for Accordion Content and Headings -->
+                  <div class="panel-group" id="accordion">
+                    
+                    
+                    <!-- Open Panel One -->
+                    <div class="panel panel-default">
+
+                      <!-- Panel Heading Wrapper -->
+                      <div class="panel-heading">
+
+                        <!-- Panel Heading / Accordion Content Toggle -->
+                        <h4 class="panel-title">
+                          <a href="#collapseOne" data-toggle="collapse" data-parent="#accordion">Section One <span class="glyphicon glyphicon-option-vertical"></span></a>
+                        </h4>
+                        <!-- //Close Panel Heading -->
+
+                      </div>
+                      <!-- //Close Panel Heading Wrapper -->
+                      
+                      <!-- Open Panel Collapse Items Wrapper -->
+                      <div class="panel-collapse collapse" id="collapseOne">
+
+                        <!-- Open List Group for Internal Page Links -->
+                        <ul class="list-group">
+                          <li class="list-group-item"><a href="#sectionOne">From Beginning</a></li>
+                          <li class="list-group-item"><a href="#sectionOneSubOne">Item One</a></li>
+                          <li class="list-group-item"><a href="#sectionOneSubTwo">Item Two</a></li>
+                          <li class="list-group-item"><a href="#sectionOneSubThree">Item Three</a></li>
+                        </ul>
+                        <!-- //Close List Group for Internal Page Links -->
+
+                      </div>
+                      <!-- //Close Panel Collapse Items Wrapper -->
+
+                    </div>
+                    <!-- //Close Panel One -->
+
+                    
+                    <!-- Open Panel Two -->
+                    <div class="panel panel-default">
+                      
+                      <!-- Panel Heading Wrapper -->
+                      <div class="panel-heading">
+                        
+                        <!-- Panel Heading / Accordion Content Toggle -->
+                        <h4 class="panel-title">
+                          <a href="#collapseTwo" data-toggle="collapse" data-parent="#accordion">Section Two
+                            <span class="glyphicon glyphicon-option-vertical"></span>
+                          </a>
+                        </h4>
+                        <!-- //Close Panel Heading -->
+                        
+                      </div>
+                      <!-- //Close Panel Heading Wrapper -->
+                      
+                      <!-- Open Panel Collapse Items Wrapper -->
+                      <div class="panel-collapse collapse" id="collapseTwo">
+                        
+                        <!-- Open List Group for Internal Page Links -->
+                        <ul class="list-group">
+                          <li class="list-group-item"><a href="#sectionTwo">From Beginning</a></li>
+                          <li class="list-group-item"><a href="#sectionTwoSubOne">Item One</a></li>
+                          <li class="list-group-item"><a href="#sectionTwoSubTwo">Item Two</a></li>
+                          <li class="list-group-item"><a href="#sectionTwoSubThree">Item Three</a></li>
+                        </ul>
+                        <!-- //Close List Group for Internal Page Links -->
+                        
+                      </div>
+                      <!-- //Close Panel Collapse Items Wrapper -->
+                      
+                    </div>
+                    <!-- //Close Panel Two -->
+                    
+                    
+                  </div>
+                  <!-- //Close Panel Group for Accordion Content and Headings -->
+                  
+                </li>
+                <!-- //Close Dropdown Child li -->
+                
+              </ul>
+              <!-- //Close Dropdown Menu Wrapper -->
+              
+            </div>
+            <!-- //Close Wrapper for Dropdown Accordion -->
+            
+          </li>
+          <!-- //Close Dropdown Link for Dropdown Accordion -->
+          
+        </ul>
+        <!-- //Close Main UL for Nav Links -->
+        
+      </div>
+      <!-- //Close Navbar Collapse for Content for Toggling -->
+
+    </div>
+    <!-- //Close Container Fluid -->
+    
+  </nav>
+  <!-- //Close Navbar -->

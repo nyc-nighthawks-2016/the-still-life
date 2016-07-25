@@ -82,10 +82,8 @@ $(document).ready(function() {
       event.preventDefault();
       event.stopPropagation();
       $($(this).data('parent')).find('.panel-collapse.in').collapse('hide');
-      
       $($(this).attr('href')).collapse('show');
     });
-
 
     //Navbar Box Shadow on Scroll 
     $(function(){

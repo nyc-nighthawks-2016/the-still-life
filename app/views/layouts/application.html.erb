@@ -2,88 +2,14 @@
 <html>
 <head>
   <title>TheStillLife</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-  <style>
-  </style>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('#fullpage').fullpage({
-        sectionsColor: ['#1bbc9b', '#4BBFC3', '#9683ec', '#4BBFC3', '#5bad9f', '#7BAABE', 'whitesmoke', '#ccddff', '#1bbc9b'],
-         anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage', 'eighthPage', 'ninthPage'],
-        menu: '#menu',
-        lockAnchors: false,
-        navigation: false,
-        navigationPosition: 'right',
-        navigationTooltips: ['firstSlide', 'secondSlide'],
-        showActiveTooltip: false,
-        slidesNavigation: true,
-        slidesNavPosition: 'bottom',
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
 
-        //Scrolling
-        css3: true,
-        scrollingSpeed: 1000,
-        autoScrolling: true,
-        fitToSection: true,
-        fitToSectionDelay: 1000,
-        scrollBar: false,
-        easing: 'easeInOutCubic',
-        easingcss3: 'ease',
-        loopBottom: false,
-        loopTop: false,
-        loopHorizontal: true,
-        continuousVertical: false,
-        // fixedElements: '#header',
-        scrollOverflow: false,
-        scrollOverflowOptions: null,
-        touchSensitivity: 15,
-        normalScrollElementTouchThreshold: 5,
-        bigSectionsDestination: null,
-
-        //Accessibility
-        keyboardScrolling: true,
-        animateAnchor: true,
-        recordHistory: true,
-
-        //Design
-        controlArrows: true,
-        verticalCentered: true,
-
-        // paddingTop: '3em',
-        // paddingBottom: '10px',
-
-        responsiveWidth: 0,
-        responsiveHeight: 0,
-
-        //Custom selectors
-        sectionSelector: '.section',
-        slideSelector: '.slide',
-
-        //events
-        onLeave: function(index, nextIndex, direction){
-          //leaving first section
-          if(index == 1) {
-            $('#header').addClass('fixed');
-          }
-          //back to the first section
-          // if(nextIndex == 0) {
-          //   $('#header').removeClass('fixed');
-          // }
-        },
-        afterLoad: function(anchorLink, index){},
-        afterRender: function(){},
-        afterResize: function(){},
-        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-        onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
-
-      });
-    });
-  </script>
 </head>
 
 <body>
@@ -96,106 +22,66 @@
         <% else %>
         <a href="/#firstPage" class="name" id="alt-mainpage">The Still Life</a>
         <% end %>
-        <div class="dropdown dropdown-accordion" data-accordion="#accordion">
-          <a href="#practices" class="name" data-toggle="dropdown">Practices</a>
-          <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-            <li>
-              <div class="panel-group" id="accordion">
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a href="/#secondPage" class="name">Chant</a>
-                      </h4>
-                  </div>
-                  <!-- <div class="panel-collapse collapse" id="secondPage">
-                    <div class="panel-body"> -->
-                    <!-- <a href="/#secondPage" class="name">Om</a> -->
+        <div class="dropdown">
+          <a href="#" class="name dropdown-toggle" data-toggle="dropdown">Practices</a>
+          <ul class="dropdown-menu">
+            <li><a href="/#secondPage" class="dropdown-link">Chant</a></li>
+              
+            <!-- <a href="/#secondPage" class="name">Om</a> -->
 
-                    <!-- <a href="/#secondPage/1" class="name">Shema Yisrael! Yhwh Eloheinu, Yhwh Echad</a> -->
+            <!-- <a href="/#secondPage/1" class="name">Shema Yisrael! Yhwh Eloheinu, Yhwh Echad</a> -->
 
-                    <!-- <a href="/#secondPage/2" class="name">La Illaha Illallah</a> -->
+            <!-- <a href="/#secondPage/2" class="name">La Illaha Illallah</a> -->
 
-                    <!-- <a href="/#secondPage/3" class="name">Om Namah Shiv'aya</a> -->
+            <!-- <a href="/#secondPage/3" class="name">Om Namah Shiv'aya</a> -->
 
-                    <!-- <a href="/#secondPage/4" class="name">Om Mani Padme Hum</a> -->
+            <!-- <a href="/#secondPage/4" class="name">Om Mani Padme Hum</a> -->
 
-                    <!-- <a href="/#secondPage/5" class="name">Sanctus, Sanctus, Sanctus, Dominus Deus Sabaoth</a> -->
+            <!-- <a href="/#secondPage/5" class="name">Sanctus, Sanctus, Sanctus, Dominus Deus Sabaoth</a> -->
 
-                    <!-- <a href="/#secondPage/6" class="name">Gate, Gate, Para Gate, Parasamgate, Bodhi Svaha</a> -->
-                    <!-- </div>
-                  </div> -->
-                </div>
+            <!-- <a href="/#secondPage/6" class="name">Gate, Gate, Para Gate, Parasamgate, Bodhi Svaha</a> -->
+                           
+            <li><a href="/#thirdPage" class="dropdown-link">Body Practice</a></li>
+             
+            <!-- <a href="/#thirdPage" class="name">Yoga Asana - Studio</a>
+       -->
+            <!-- <a href="/#thirdPage/1" class="name">Yoga Asana - Self Study</a> -->
 
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a href="/#thirdPage" class="name">Body Practice</a>
-                    </h4>
-                  </div>
-                  <!-- <div class="panel-collapse collapse" id="thirdPage">
-                    <div class="panel-body"> -->
-                    <!-- <a href="/#thirdPage" class="name">Yoga Asana - Studio</a>
-               -->
-                    <!-- <a href="/#thirdPage/1" class="name">Yoga Asana - Self Study</a> -->
+            <!-- <a href="/#thirdPage/2" class="name">QiGong - Studio</a> -->
 
-                    <!-- <a href="/#thirdPage/2" class="name">QiGong - Studio</a> -->
+            <!-- <a href="/#thirdPage/3" class="name">QiGong - Self Study</a> -->
 
-                    <!-- <a href="/#thirdPage/3" class="name">QiGong - Self Study</a> -->
+            <!-- <a href="/#thirdPage/4" class="name">Traditional Aerobic Exercise</a> -->
+          
+            <li><a href="/#fourthPage" class="dropdown-link">Seated Practice</a></li>
+              
+            <!-- <a href="/#fourthPage" class="name">Stillness/Source</a> -->
 
-                    <!-- <a href="/#thirdPage/4" class="name">Traditional Aerobic Exercise</a> -->
-                  <!-- </div>
-                </div> -->
-                </div>
+            <!-- <a href="/#fourthPage/1" class="name">Breath Control</a> -->
 
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a href="/#fourthPage" class="name">Seated Practice</a>
-                    </h4>
-                  </div>
-                  <!-- <div class="panel-collapse collapse" id="fourthPage">
-                  <div class="panel-body"> -->
-                  <!-- <a href="/#fourthPage" class="name">Stillness/Source</a> -->
+            <!-- <a href="/#fourthPage/2" class="name">Devotional Visualization</a> -->
 
-                  <!-- <a href="/#fourthPage/1" class="name">Breath Control</a> -->
+            <!-- <a href="/#fourthPage/3" class="name">Abstract Visualization</a> -->
 
-                  <!-- <a href="/#fourthPage/2" class="name">Devotional Visualization</a> -->
+            <!-- <a href="/#fourthPage/4" class="name">Abstract Visualization 2</a> -->
 
-                  <!-- <a href="/#fourthPage/3" class="name">Abstract Visualization</a> -->
+            <!-- <a href="/#fourthPage/5" class="name">Silent Chanting</a> -->
 
-                  <!-- <a href="/#fourthPage/4" class="name">Abstract Visualization 2</a> -->
+            <!-- <a href="/#fourthPage/6" class="name">Guided Audio</a> -->
 
-                  <!-- <a href="/#fourthPage/5" class="name">Silent Chanting</a> -->
+            <li><a href="/#fifthPage" class="dropdown-link">Service</a></li>
+            
+            <!-- <a href="/#fifthPage" class="name">Food</a> -->
 
-                  <!-- <a href="/#fourthPage/6" class="name">Guided Audio</a> -->
-                  <!-- </div>
-                        </div> -->
-                </div>
+            <!-- <a href="/#fifthPage/1" class="name">Companionship</a> -->
 
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                     <a href="/#fifthPage" class="name">Service</a>
-                    </h4>
-                  </div>
-                  <!-- <div class="panel-collapse collapse" id="fourthPage">
-                  <div class="panel-body"> -->
-                  <!-- <a href="/#fifthPage" class="name">Food</a> -->
+            <!-- <a href="/#fifthPage/2" class="name">Assistance</a> -->
 
-                  <!-- <a href="/#fifthPage/1" class="name">Companionship</a> -->
+            <!-- <a href="/#fifthPage/3" class="name">Environmental Care</a> -->
 
-                  <!-- <a href="/#fifthPage/2" class="name">Assistance</a> -->
+            <!-- <a href="/#fifthPage/4" class="name">Animals</a> -->
 
-                  <!-- <a href="/#fifthPage/3" class="name">Environmental Care</a> -->
-
-                  <!-- <a href="/#fifthPage/4" class="name">Animals</a> -->
-
-                  <!-- <a href="/#fifthPage/5" class="name">Golden Rule</a> -->
-                  <!-- </div>
-                        </div> -->
-                </div>
-              </div>
-            </li>
+            <!-- <a href="/#fifthPage/5" class="name">Golden Rule</a> -->
           </ul>
         </div>
 

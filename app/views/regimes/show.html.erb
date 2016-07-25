@@ -1,10 +1,17 @@
 <div class="show-regime">
 <center>
   <h1><%= @regimen.practice.name %></h1>
+  <h3><%= display_time(@regimen) %></h3>
+
   <% if @regimen.practice.category == "Body" || @regimen.practice.category == "Service"%>
     <h4> Browse <%= "#{@regimen.practice.name}" %> resources and find an activity to do this week.<br><br>Incorporate your activity once or twice each week. </h4>
+  <% else %>
+    <h3>Your duration goal for this practice is <%= @regimen.duration %> minutes </h3>
   <% end %>
-  <h2><%= display_time(@regimen) %></h2>
+
+
+
+
   <h3><%= link_to "Edit", edit_regime_path(@regimen) %></h3>
 
   <%= form_for @regimen do |f| %>

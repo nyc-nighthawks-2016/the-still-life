@@ -112,12 +112,15 @@ resources << Resource.create(name:"Shema Yisrael", category:"Audios" , url:"http
 
 resources << Resource.create(name:"Sanctus", category:"Audios" , url:"https://s3.amazonaws.com/the-still-life/Audio/Sanctus.mp3", type:"Audio", description:"Traditional Christian Chant", practice_id: 6)
 
-resources << Resource.create(name:"Om Namah Shiv'aya", category:"Audios" , url:"https://s3.amazonaws.com/the-still-life/Audio/Sanctus.mp3", type:"Audio", description:"Traditional Hindu Chant", practice_id: 4)
+resources << Resource.create(name:"Om Namah Shivaya", category:"Audios" , url:"https://s3.amazonaws.com/the-still-life/Audio/Sanctus.mp3", type:"Audio", description:"Traditional Hindu Chant", practice_id: 4)
 
 resources << Resource.create(name:"Om Mani Padme Hum", category:"Audios" , url:"https://s3.amazonaws.com/the-still-life/Audio/OmManiPadmeHum.mp3", type:"Audio", description:"Traditional Buddhist Chant", practice_id: 5)
 
-resources << Resource.create(name:"Om Mani Padme Hum", category:"Audios" , url:"https://s3.amazonaws.com/the-still-life/Audio/OmManiPadmeHum.mp3", type:"Audio", description:"Traditional Buddhist Chant", practice_id: 5)
+resources << Resource.create(name:"La Illaha Illallah", category:"Audios" , url:"https://s3.amazonaws.com/the-still-life/Audio/La+Illaha+Ilallah.mp3", type:"Audio", description:"Traditional Islamic Chant", practice_id: 3)
 
+resources << Resource.create(name:"Gate Gate Paragate", category:"Audios" , url:"https://s3.amazonaws.com/the-still-life/Audio/Gate+Gate+Paragate.mp3", type:"Audio", description:"Non-traditional Chant", practice_id: 7)
+
+resources << Resource.create(name:"Om", category:"Audios" , url:"https://s3.amazonaws.com/the-still-life/Audio/Om.mp3", type:"Audio", description:"Classical Chant", practice_id: 1)
 
 
 

@@ -1,8 +1,6 @@
-<h2> Audios </h2>
-    <% @resources.audios.each do |audio| %>
-        <p><%= audio.name %></p>
-        <p><%= audio.category %></p>
-        <p><%= audio.description %></p>
-        <p><%= audio.url %></p>
+<h2> Recordings </h2>
+    <% @resources.recordings.each do |recording| %>
+        <p><%= link_to recording.name, recording.url %> </p>
+        <p><%= recording.description %></p>
         <br></br>
     <% end %>

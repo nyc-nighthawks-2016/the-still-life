@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
- 
+
 
  *{
 	box-sizing: border-box;
@@ -51,10 +51,10 @@ header {
 }
 
 #header{
-    -webkit-transition: all 0.7s ease;  
-    -moz-transition: all 0.7s ease;  
-      -o-transition: all 0.7s ease; 
-         transition: all 0.7s ease; 
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+      -o-transition: all 0.7s ease;
+         transition: all 0.7s ease;
     position:absolute;
     top:100%;
     margin-top: -100px;
@@ -106,10 +106,34 @@ header {
 }
 
 nav {
-	float: right;	
+	float: right;
 }
 
 #pageshift {
 	margin-top: 100px;
 }
 
+.alert {
+  margin: 100px;
+}
+
+.new-regime-form {
+  margin: 95px;
+}
+
+.show-regime {
+  margin: 95px;
+}
+
+.complete-button {
+  width: 15%;
+  border-radius: 2px;
+}
+
+.edit-regime-form {
+  margin: 95px;
+}
+
+audio {
+  display: block;
+}

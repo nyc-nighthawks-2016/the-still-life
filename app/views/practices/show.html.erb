@@ -1,7 +1,15 @@
 <div id="pageshift">
 	<center>
 	  <h1><%= @practice.name %></h1>
-	  Description:<p><%= @practice.description %></p>
-	  Method: <p><%= @practice.method %></p>
-	</center>
+    <div class="single-practice">
+  	  Description:<p><%= @practice.description %></p>
+  	  Method: <p><%= @practice.method %></p>
+	 </div>
+   <% if @practice.category == "Chant" %>
+     <audio>
+       <source src= <%= @chant_recording.url %> type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    <% end %>
+  </center>
 </div>

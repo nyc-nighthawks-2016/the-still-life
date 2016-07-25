@@ -7,6 +7,11 @@ class ResourcesController < ApplicationController
     #For Future Resource Organization
     @yoga_res = media_type_class.where(practice_id: 15)
     @qigong_res = media_type_class.where(practice_id: 17)
+    @food_res = media_type_class.where(practice_id: 20)
+    @companionship_res = media_type_class.where(practice_id: 21)
+    @assistance_res = media_type_class.where(practice_id: 22)
+    @env_res = media_type_class.where(practice_id: 23)
+    @animals_res = media_type_class.where(practice_id: 24)
   end
 
   def show

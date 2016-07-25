@@ -8,6 +8,7 @@ class PracticesController < ApplicationController
 
   def show
     @practice = Practice.find(params[:id])
+    @chant_recording = Resource.recordings.find_by(practice_id: @practice.id)
   end
 
 end

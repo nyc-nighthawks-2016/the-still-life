@@ -4,7 +4,12 @@
     <div class="single-practice">
   	  Description:<p><%= @practice.description %></p>
   	  Method: <p><%= @practice.method %></p>
-      <audio>
 	 </div>
+   <% if @practice.category == "Chant" %>
+     <audio>
+       <source src= <%= @chant_recording.url %> type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    <% end %>
   </center>
 </div>

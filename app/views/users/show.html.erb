@@ -4,56 +4,25 @@
         <div id="user-avatar">
           <%= gravatar_for @user %>
           <div id="profile-header">
-            <h2><%= @user.username %>'s Profile Page</h2>
+            <h2><%= @user.username %>'s Profile Page</h2> 
           </div>
         </div>
+           <div id="main-info">
+              <p>
+              <% if @current_user == @user %>
+                <%= link_to "Edit Information", edit_user_path(@user) %>
+              <% end %>
+              </p>
+          </div>
       <br>
 
-  <div class="users-info">
-
-    <div id="main-info">
-        <p>
-        First Name:
-        <%= @user.first_name %>
-        </p>
-        <p>
-        Last Name:
-        <%= @user.last_name %>
-        </p>
-        <p>
-        Email:
-        <a href="mailto:<%= @user.email %>?Subject=Hello%20friend"><%= @user.email%></a>
-        </p>
-        <p>
-        Gender:
-        <%= @user.gender %>
-        </p>
-        <p>
-        Age:
-        <%= @user.age %>
-        </p>
-        <p>
-        <% if @current_user == @user %>
-          <%= link_to "Edit Information", edit_user_path(@user) %>
-        <% end %>
-        </p>
-    </div>
-
-    <div id="about-me">
-      <p>
-      About me:<br>
-      <%= @user.about_me %>
-      </p>
-    </div>
-
-  </div>
-
-  <div class="sub-info">
-    <div id="regimen-info">
-      <h3>Your Practice</h3><br>
-
-      <% if @user.practice != nil %>
+  <div class='container' id='regimen-card'>
+      <h3>Your Practice is</h3><br>
+        <% if @user.practice != nil %>
         <%= render 'regimes/show' %><br>
+  </div> 
+  <div class="sub-info">
+    <div id="regimen-info">   
           <% if @completed_regimens %>
             <p> You have completed <%= @completed_regimens.length %> regimens. </p> 
               <% @completed_regimens.each do |regimen| %>
@@ -67,11 +36,16 @@
       <% end %>
   </div>
 
-    <div id="bookmarked-sources">
+  <div id="bookmarked-sources">
       <h3>Bookmarked Resources</h3>
-    </div>
   </div>
+
+  </div>
+    <div id="about-me">
+      <p>
+      About me:<br>
+      <%= @user.about_me %>
+      </p>
+    </div>
 </div>
 
-
-<br><br>

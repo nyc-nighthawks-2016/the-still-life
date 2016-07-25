@@ -11,9 +11,8 @@
   <% end %>
 
   <h3><%= link_to "Edit", edit_regime_path(@regimen) %></h3>
-
-  <%= form_for @regimen do |f| %>
-    <%=f.submit "Complete", class:"btn btn-primary col-md-2 col-md-offset-5" %>
+  <% if !@regimen.completion %>
+    <%= form_for @regimen do |f| %>
+      <%=f.submit "Complete", class:"btn btn-primary col-md-2 col-md-offset-5" %>
+    <% end %>
   <% end %>
-  <br>
-  <br>

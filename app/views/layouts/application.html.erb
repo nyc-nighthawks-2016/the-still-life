@@ -61,7 +61,7 @@
                     <div class="panel panel-default">
                       <div class="panel-heading">
                         <h4 class="panel-title">           
-                          <a href="#collapseTwo" class="dropdown-link" data-toggle="collapse" data-parent="#accordion">Body Practice
+                          <a href="#collapseTwo" class="dropdown-link" data-toggle="collapse" data-parent="#accordion">Body
                           </a>
                         </h4>
                       </div>
@@ -80,7 +80,7 @@
                     <div class="panel panel-default">
                       <div class="panel-heading">
                         <h4 class="panel-title">            
-                          <a href="#collapseThree" class="dropdown-link" data-toggle="collapse" data-parent="#accordion">Seated Practice
+                          <a href="#collapseThree" class="dropdown-link" data-toggle="collapse" data-parent="#accordion">Seated
                           </a>
                         </h4>
                       </div>
@@ -131,30 +131,41 @@
                     <div class="panel panel-default">
                       <div class="panel-heading">
                         <h4 class="panel-title">
-                          <a href="#collapsefive" data-toggle="collapse" data-parent="#accordion">Guidelines</a>
+                          <a href="#collapseFive" data-toggle="collapse" data-parent="#accordion">Guidelines</a>
                         </h4>
-
-          <!-- <a href="/#sixthPage">Guidelines</a> -->
-
-          <!-- <a href="/#sixthPage/1">During Practice</a> -->
-
-          <!-- <a href="/#sixthPage/2">Tips</a> -->
-
-          <a href="/#seventhPage">Lifestyle</a>
-
-          <!-- <a href="/#seventhPage">Lifestyle</a> -->
-
-          <!-- <a href="/#seventhPage/1">Lifestyle (cont.)</a> -->
-
-          <a href="/#eighthPage">Resources</a>
-
-          <a href="/#ninthPage">Getting Started</a>
+                      </div>
+                      <div class="panel-collapse collapse" id="collapseFive">
+                        <ul class="list-group">
+                          <li class="list-group-item"><a href="/#sixthPage">Guidelines</a></li>
+                          <li class="list-group-item"><a href="/#sixthPage/1">During Practice</a></li>
+                          <li class="list-group-item"><a href="/#sixthPage/2">Tips</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                        <!-- //Close Panel Five -->                
+                        <!-- Open Panel Six -->
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a href="#collapseSix" data-toggle="collapse" data-parent="#accordion">Lifestyle</a>
+                        </h4>
+                      </div>
+                      <div class="panel-collapse collapse" id="collapseSix">
+                        <ul class="list-group">
+                          <li class="list-group-item"><a href="/#seventhPage">Lifestyle Pt. I</a></li>
+                          <li class="list-group-item"><a href="/#seventhPage/1">Lifestyle Pt. II</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </li>
 
-        
+          <li><a href="/#eighthPage">Resources</a></li>
 
-<!-- ///////////////////////////////////////////////////// -->
-
+          <li><a href="/#ninthPage">Getting Started</a></li>
 
         <% if @current_user %>
           <li><%= link_to "Sangha", users_path, :class => "name" %></li>

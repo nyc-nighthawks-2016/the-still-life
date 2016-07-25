@@ -1,7 +1,10 @@
 <div id="pageshift">
 	<center>
+    <% if @practice.category
 	  <h1><%= @practice.name %></h1>
-	  Description:<p><%= @practice.description %></p>
-	  Method: <p><%= @practice.method %></p>
+    <div class="single-practice">
+  	  Description:<p><%= @practice.description %></p>
+  	  Method: <p><%= @practice.method %></p>
+    </div>
 	</center>
 </div>

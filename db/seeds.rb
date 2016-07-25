@@ -15,7 +15,7 @@ practices << Practice.create(category:"Chant" , name:"Shema Yisrael! Yhwh Elohei
 
 practices << Practice.create(category:"Chant" , name:"La Illaha Illallah", description:"From the Qur'an, 'There is no deity but God'" , method:"Spoken/Sung" )
 
-practices << Practice.create(category:"Chant" , name:"Om Namah Shiv'aya", description:"A Vedic/Tantric/Himalayan Chant known as 'Five-Syllable Mantra', 'I bow to the Divine/Absolute Consciousness'", method:"Spoken/Sung")
+practices << Practice.create(category:"Chant" , name:"Om Namah Shivaya", description:"A Vedic/Tantric/Himalayan Chant known as 'Five-Syllable Mantra', 'I bow to the Divine/Absolute Consciousness'", method:"Spoken/Sung")
 
 practices << Practice.create(category:"Chant" , name:"Om Mani Padme Hum", description:"Chant to Avalokitesavara a.k.a Chenrezig, Bodhisattva of Compassion, 'All hail the Jewel hidden in the Lotus'", method:"Spoken/Sung" )
 

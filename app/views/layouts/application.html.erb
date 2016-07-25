@@ -90,70 +90,116 @@
 
 	<header id="header" class="clearfix fixed">
     <nav id="menu">
-      <div class="">
+      
         <% if @current_user %>
         <a href="/#firstPage" class="name" id="mainpage">The Still Life</a>
         <% else %>
         <a href="/#firstPage" class="name" id="alt-mainpage">The Still Life</a>
         <% end %>
+        <div class="dropdown dropdown-accordion" data-accordion="#accordion">
+          <a href="#practices" class="name" data-toggle="dropdown">Practices</a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+            <li>
+              <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a href="/#secondPage" class="name">Chant</a>
+                      </h4>
+                  </div>
+                  <!-- <div class="panel-collapse collapse" id="secondPage">
+                    <div class="panel-body"> -->
+                    <!-- <a href="/#secondPage" class="name">Om</a> -->
 
-        <a href="/#secondPage" class="name">Chant</a>
+                    <!-- <a href="/#secondPage/1" class="name">Shema Yisrael! Yhwh Eloheinu, Yhwh Echad</a> -->
 
-        <!-- <a href="/#secondPage" class="name">Om</a> -->
+                    <!-- <a href="/#secondPage/2" class="name">La Illaha Illallah</a> -->
 
-        <!-- <a href="/#secondPage/1" class="name">Shema Yisrael! Yhwh Eloheinu, Yhwh Echad</a> -->
+                    <!-- <a href="/#secondPage/3" class="name">Om Namah Shiv'aya</a> -->
 
-        <!-- <a href="/#secondPage/2" class="name">La Illaha Illallah</a> -->
+                    <!-- <a href="/#secondPage/4" class="name">Om Mani Padme Hum</a> -->
 
-        <!-- <a href="/#secondPage/3" class="name">Om Namah Shiv'aya</a> -->
+                    <!-- <a href="/#secondPage/5" class="name">Sanctus, Sanctus, Sanctus, Dominus Deus Sabaoth</a> -->
 
-        <!-- <a href="/#secondPage/4" class="name">Om Mani Padme Hum</a> -->
+                    <!-- <a href="/#secondPage/6" class="name">Gate, Gate, Para Gate, Parasamgate, Bodhi Svaha</a> -->
+                    <!-- </div>
+                  </div> -->
+                </div>
 
-        <!-- <a href="/#secondPage/5" class="name">Sanctus, Sanctus, Sanctus, Dominus Deus Sabaoth</a> -->
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a href="/#thirdPage" class="name">Body Practice</a>
+                    </h4>
+                  </div>
+                  <!-- <div class="panel-collapse collapse" id="thirdPage">
+                    <div class="panel-body"> -->
+                    <!-- <a href="/#thirdPage" class="name">Yoga Asana - Studio</a>
+               -->
+                    <!-- <a href="/#thirdPage/1" class="name">Yoga Asana - Self Study</a> -->
 
-        <!-- <a href="/#secondPage/6" class="name">Gate, Gate, Para Gate, Parasamgate, Bodhi Svaha</a> -->
+                    <!-- <a href="/#thirdPage/2" class="name">QiGong - Studio</a> -->
 
-        <a href="/#thirdPage" class="name">Body Practice</a>
+                    <!-- <a href="/#thirdPage/3" class="name">QiGong - Self Study</a> -->
 
-        <!-- <a href="/#thirdPage" class="name">Yoga Asana - Studio</a>
-   -->
-        <!-- <a href="/#thirdPage/1" class="name">Yoga Asana - Self Study</a> -->
+                    <!-- <a href="/#thirdPage/4" class="name">Traditional Aerobic Exercise</a> -->
+                  <!-- </div>
+                </div> -->
+                </div>
 
-        <!-- <a href="/#thirdPage/2" class="name">QiGong - Studio</a> -->
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a href="/#fourthPage" class="name">Seated Practice</a>
+                    </h4>
+                  </div>
+                  <!-- <div class="panel-collapse collapse" id="fourthPage">
+                  <div class="panel-body"> -->
+                  <!-- <a href="/#fourthPage" class="name">Stillness/Source</a> -->
 
-        <!-- <a href="/#thirdPage/3" class="name">QiGong - Self Study</a> -->
+                  <!-- <a href="/#fourthPage/1" class="name">Breath Control</a> -->
 
-        <!-- <a href="/#thirdPage/4" class="name">Traditional Aerobic Exercise</a> -->
+                  <!-- <a href="/#fourthPage/2" class="name">Devotional Visualization</a> -->
 
-        <a href="/#fourthPage" class="name">Seated Practice</a>
+                  <!-- <a href="/#fourthPage/3" class="name">Abstract Visualization</a> -->
 
-        <!-- <a href="/#fourthPage" class="name">Stillness/Source</a> -->
+                  <!-- <a href="/#fourthPage/4" class="name">Abstract Visualization 2</a> -->
 
-        <!-- <a href="/#fourthPage/1" class="name">Breath Control</a> -->
+                  <!-- <a href="/#fourthPage/5" class="name">Silent Chanting</a> -->
 
-        <!-- <a href="/#fourthPage/2" class="name">Devotional Visualization</a> -->
+                  <!-- <a href="/#fourthPage/6" class="name">Guided Audio</a> -->
+                  <!-- </div>
+                        </div> -->
+                </div>
 
-        <!-- <a href="/#fourthPage/3" class="name">Abstract Visualization</a> -->
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                     <a href="/#fifthPage" class="name">Service</a>
+                    </h4>
+                  </div>
+                  <!-- <div class="panel-collapse collapse" id="fourthPage">
+                  <div class="panel-body"> -->
+                  <!-- <a href="/#fifthPage" class="name">Food</a> -->
 
-        <!-- <a href="/#fourthPage/4" class="name">Abstract Visualization 2</a> -->
+                  <!-- <a href="/#fifthPage/1" class="name">Companionship</a> -->
 
-        <!-- <a href="/#fourthPage/5" class="name">Silent Chanting</a> -->
+                  <!-- <a href="/#fifthPage/2" class="name">Assistance</a> -->
 
-        <!-- <a href="/#fourthPage/6" class="name">Guided Audio</a> -->
+                  <!-- <a href="/#fifthPage/3" class="name">Environmental Care</a> -->
 
-        <a href="/#fifthPage" class="name">Service</a>
+                  <!-- <a href="/#fifthPage/4" class="name">Animals</a> -->
 
-        <!-- <a href="/#fifthPage" class="name">Food</a> -->
+                  <!-- <a href="/#fifthPage/5" class="name">Golden Rule</a> -->
+                  <!-- </div>
+                        </div> -->
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
 
-        <!-- <a href="/#fifthPage/1" class="name">Companionship</a> -->
-
-        <!-- <a href="/#fifthPage/2" class="name">Assistance</a> -->
-
-        <!-- <a href="/#fifthPage/3" class="name">Environmental Care</a> -->
-
-        <!-- <a href="/#fifthPage/4" class="name">Animals</a> -->
-
-        <!-- <a href="/#fifthPage/5" class="name">Golden Rule</a> -->
+        <!-- ///////////////////////////////////////////////////// -->
 
         <a href="/#sixthPage" class="name">Guidelines</a>
 
@@ -184,7 +230,7 @@
           <%= link_to "Login", '/login', :class => "name" %>
           <%= link_to "Register", new_user_path, :class => "name" %>
         <% end %>
-      </div>
+      
     </nav>
   </header>
  

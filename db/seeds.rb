@@ -107,6 +107,22 @@ resources << Resource.create(name:"Animals", category:"Service" , url:"http://ww
 
 resources << Resource.create(name:"Bhagavad Gita", category:"Readings" , url:"https://s3.amazonaws.com/the-still-life/Readings/Bhagavad-Gita.pdf", type:"Reading", description:"Hindu Scripture", practice_id: 7)
 
+      # AUDIOS
+resources << Resource.create(name:"Shema Yisrael", category:"Recordings" , url:"https://s3.amazonaws.com/the-still-life/Audio/Shema+Yisrael.mp3", type:"Audio", description:"Traditional Jewish Chant", practice_id: 2)
+
+resources << Resource.create(name:"Sanctus", category:"Recordings" , url:"https://s3.amazonaws.com/the-still-life/Audio/Sanctus.mp3", type:"Audio", description:"Traditional Christian Chant", practice_id: 6)
+
+resources << Resource.create(name:"Om Namah Shivaya", category:"Recordings" , url:"https://s3.amazonaws.com/the-still-life/Audio/OmNamahShivaya.mp3", type:"Audio", description:"Traditional Hindu Chant", practice_id: 4)
+
+resources << Resource.create(name:"Om Mani Padme Hum", category:"Recordings" , url:"https://s3.amazonaws.com/the-still-life/Audio/OmManiPadmeHum.mp3", type:"Audio", description:"Traditional Buddhist Chant", practice_id: 5)
+
+resources << Resource.create(name:"La Illaha Illallah", category:"Recordings" , url:"https://s3.amazonaws.com/the-still-life/Audio/La+Illaha+Ilallah.mp3", type:"Audio", description:"Traditional Islamic Chant", practice_id: 3)
+
+resources << Resource.create(name:"Gate Gate Paragate", category:"Recordings" , url:"https://s3.amazonaws.com/the-still-life/Audio/Gate+Gate+Paragate.mp3", type:"Audio", description:"Non-traditional Chant", practice_id: 7)
+
+resources << Resource.create(name:"Om", category:"Recordings" , url:"https://s3.amazonaws.com/the-still-life/Audio/Om.mp3", type:"Audio", description:"Classical Chant", practice_id: 1)
+
+
 
 #-------------------------------------------------------------------------------------------------------------------------------
 # USERS

@@ -13,21 +13,25 @@
         <div class="section" id='chants' data-menuanchor="secondPage">
         <% chant_id_counter = 0 %>
           <% @chants.each do |chant| %>
-            <div class="slide" id="chant<%=chant_id_counter%>">
+            <div class="slide" id="chant<%=chant_id_counter%>"> 
               <div class='container'>
-              <h1 style="text-decoration: underline"> Chants </h1><br><br>
-              <h2><%= link_to chant.name, practice_path(chant) %></h2>
-              <h4>Method: <%= chant.method %></h4>
-              <br>
-              <h5><%= chant.description %></h5>
-              <br>
-              <% if current_user %>
-                <% if current_user.regimes.length == 0 %>
-                  <button>
-                    <%= link_to "Choose this Practice", new_regime_path(practice_id: chant.id) %>
-                  </button>
-                <% end %>
-              <% end %>
+                <div class="chants-style">
+                  <h1 style="text-decoration: underline" class="whitefont"> Chants </h1><br>
+                  <h2 class="whitefont"><%= link_to chant.name, practice_path(chant) %></h2>
+                  <h3 class="whitefont">Method: <%= chant.method %></h3>
+                  <br>
+                  <div class="description">
+                    <h4 class="whitefont"><%= chant.description %></h4>
+                  </div>
+                  <br>
+                  <% if current_user %>
+                    <% if current_user.regimes.length == 0 %>
+                      <button>
+                        <%= link_to "Choose this Practice", new_regime_path(practice_id: chant.id), :class => "whitefont" %>
+                      </button>
+                    <% end %>
+                  <% end %>
+                </div>
               </div>
             </div>
             <% chant_id_counter += 1 %>
@@ -41,19 +45,23 @@
           <% @body_practices.each do |body_practice| %>
             <div class="slide" id="body<%=body_id_counter%>">
               <div class='container'>
-              <h1 style="text-decoration: underline"> Body Practices </h1><br><br>
-              <h2><%=link_to body_practice.name, practice_path(body_practice) %></h2>
-              <h4>Method: <%= body_practice.method %></h4>
-              <br>
-              <h5><%= body_practice.description %></h5>
-              <br>
-              <% if current_user %>
-                <% if current_user.regimes.length == 0 %>
-                  <button>
-                    <%= link_to "Choose this Practice", new_regime_path(practice_id: body_practice.id) %>
-                  </button>
-                <% end %>
-              <% end %>
+                <div class="body-style">
+                  <h1 style="text-decoration: underline" class="darkfont"> Body Practices </h1><br>
+                  <h2 class="darkfont"><%=link_to body_practice.name, practice_path(body_practice) %></h2>
+                  <h3 class="darkfont">Method: <%= body_practice.method %></h3>
+                  <br>
+                  <div class="description">
+                    <h4 class="darkfont"><%= body_practice.description %></h4>
+                  </div>
+                  <br>
+                  <% if current_user %>
+                    <% if current_user.regimes.length == 0 %>
+                      <button>
+                        <%= link_to "Choose this Practice", new_regime_path(practice_id: body_practice.id), :class => "darkfont" %>
+                      </button>
+                    <% end %>
+                  <% end %>
+                </div>
               </div>
             </div>
             <% body_id_counter += 1 %>
@@ -67,7 +75,7 @@
           <% @seated_practices.each do |seated_practice| %>
             <div class='slide' id="seated<%=seated_id_counter%>">
               <div class='container'>
-              <h1 style="text-decoration: underline"> Seated Practices </h1><br><br>
+              <h1 style="text-decoration: underline"> Seated Practices </h1><br>
               <h2><%= link_to seated_practice.name, practice_path(seated_practice) %></h2>
               <h4>Method: <%= seated_practice.method %></h4>
               <br>
@@ -94,7 +102,7 @@
           <% service_id_counter = 0 %>
             <div class='slide' id="service<%= service_id_counter%>">
               <div class='container'>
-              <h1 style="text-decoration: underline"> Services </h1><br><br>
+              <h1 style="text-decoration: underline"> Services </h1><br>
               <h2><%= link_to service.name, practice_path(service)%></h2>
               <h4>Method: <%= service.method %></h4>
               <br>

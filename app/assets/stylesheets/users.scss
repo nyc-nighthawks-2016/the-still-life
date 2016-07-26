@@ -38,6 +38,7 @@
 	display: inline-block;
 	border: 2px solid #E9E9E9;
 	border-radius: 100px;
+
 }
 
 .user-box {
@@ -45,6 +46,7 @@
 	display: table;
 	text-align: center;
 	vertical-align: middle;
+	display: inline-block;
 }
 
 #profile-image {
@@ -53,7 +55,7 @@
 }
 
 #circle-user-info {
-	
+	margin: 0 auto;
 }
 
 #halfsize {
@@ -144,11 +146,14 @@
 
 }
 
+.glyphicon-trash {
+	width: 10px;
+	height: 10px;
+}
 
 #bookmarked-sources {
 	width: 45%;
 	float: left;
 }
-
 
 

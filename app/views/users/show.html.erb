@@ -1,10 +1,10 @@
 <div id="pageshift">
   <% provide(:title, @user.username) %>
-
-        <div id="user-avatar">
+<div class="container-fluid col-md-4" >
+        <div  id="user-avatar">
           <%= gravatar_for @user %>
           <div id="profile-header">
-            <h2><%= @user.username %>'s Profile Page</h2> 
+            <h2><%= @user.username %>'s Page</h2> 
           </div>
         </div>
       <br>
@@ -12,38 +12,46 @@
 
     <div id="main-info">
         <p>
+          <% if @current_user == @user %>
+            <%= link_to "Edit Information", edit_user_path(@user) %>
+          <% end %>
+        </p>
+        <!-- <p>
         First Name:
         <%= @user.first_name %>
         </p>
         <p>
         Last Name:
         <%= @user.last_name %>
-        </p>
+        </p> -->
         <p>
-        Email:
-        <a href="mailto:<%= @user.email %>?Subject=Hello%20friend"><%= @user.email%></a>
+        <a href="mailto:<%= @user.email %>?Subject=Hello%20friend">message me</a>
         </p>
-        <p>
+        <!-- <p>
         Gender:
         <%= @user.gender %>
         </p>
         <p>
         Age:
         <%= @user.age %>
-        </p>
-        <p>
-        <% if @current_user == @user %>
-          <%= link_to "Edit Information", edit_user_path(@user) %>
-        <% end %>
-        </p>
+        </p> -->
+        <div id="about-me">
+          <p>
+          About me:<br>
+          <%= @user.about_me %>
+          </p>
+        </div>
     </div>
+    
+</div>
+</div>
 
-  <div class='container' id='regimen-card'>
+ <div class='container-fluid col-md-8' id='regimen-card'>
       <h3>Your Practice is</h3><br>
         <% if @user.practice != nil %>
         <%= render 'regimes/show' %><br>
   </div> 
-  <div class="sub-info">
+  <div class="sub-info container-fluid">
     <div id="regimen-info">   
           <% if @completed_regimens %>
             <p> You have completed <%= @completed_regimens.length %> regimens. </p> 
@@ -68,11 +76,4 @@
   </div>
 
   </div>
-    <div id="about-me">
-      <p>
-      About me:<br>
-      <%= @user.about_me %>
-      </p>
-    </div>
-</div>
 

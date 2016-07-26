@@ -60,7 +60,11 @@
 
   <div id="bookmarked-sources">
       <h3>Bookmarked Resources</h3>
-      
+      <% if @user.bookmarks %>
+        <% @user.bookmarks.each do |bookmark| %>
+        <%= link_to bookmark.resource.name, bookmark.resource.url %>
+      <% end %>
+    <% end %>
   </div>
 
   </div>

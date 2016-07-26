@@ -171,9 +171,6 @@
               </ul>
             </div>
           </li>
-
-         
-
           <li><a href="/#ninthPage" class="btn">Getting Started</a></li>
 
         <% if @current_user %>
@@ -185,7 +182,6 @@
             <% end %>
           </li>
         <% else %>
-          <!-- <li><%= link_to "Login", '/login', :class => "btn" %><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></li> -->
           <li><%= link_to "Register", new_user_path, :class => "btn" %></li>
           <li><a href="/login" class="btn"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></a></li>
           

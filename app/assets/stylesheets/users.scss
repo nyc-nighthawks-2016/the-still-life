@@ -107,10 +107,9 @@
 }
 
 #regimen-info {
-	width: 100%;
 	vertical-align: top;
-	margin-right: 10px;
-	margin-bottom: 3em;
+	float: right;
+	padding: 10px;
 		p {
 	 font-size: 150%;
 	}
@@ -135,23 +134,28 @@
 }
 
 #regimen-card {
-	border: 1px solid black;
-	border-radius: 25px;
-	paddig: 20px; 
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	border-radius: 30px;
+	padding: 15px; 
 	content-align: center;
 	float: right;
 	
 
 }
 
+
 .glyphicon-trash {
 	width: 10px;
 	height: 10px;
 }
 
+
 #bookmarked-sources {
-	width: 45%;
-	float: left;
+	border-top: 1px solid black;
+	padding: 10px;
+	float: right;
+	font-size: 150%;
 }
 
 

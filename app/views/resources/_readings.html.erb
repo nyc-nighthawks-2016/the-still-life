@@ -2,5 +2,11 @@
     <% @resources.readings.each do |reading| %>
         <p><%= link_to reading.name, reading.url %></p>
         <p><%= reading.description %></p>
+        <div class='bookmarks-form'>
+          <%= form_for @bookmarks do |f| %>
+            <%= f.submit "Bookmark", class: "btn btn-primary" %>
+            <%= hidden_field_tag 'resource_id', reading.id %>
+          <% end %>
+        </div>
         <br></br>
     <% end %>

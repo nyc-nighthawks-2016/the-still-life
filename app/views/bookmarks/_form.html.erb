@@ -1,0 +1,6 @@
+<div class='bookmarks-form'>
+<%= form_for @bookmarks do |f| %>
+  <%= f.submit "Bookmark", class: "btn btn-primary" %>
+  <%= hidden_field_tag 'resource_id', @practice.id %>
+<% end %>
+</div>

@@ -3,6 +3,7 @@ class ResourcesController < ApplicationController
 
   def index
     @resources = media_type_class.all
+    @bookmarks = Bookmark.new
 
     #For Future Resource Organization
     @yoga_res = media_type_class.where(practice_id: 15)

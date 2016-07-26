@@ -4,6 +4,12 @@
   <h3> Yoga Asana </h3><br>
     <% @yoga_res.each do |res| %>
     <p><%= link_to res.description, res.url %></p>
+    <div class='bookmarks-form'>
+        <%= form_for @bookmarks do |f| %>
+          <%= f.submit "Bookmark", class: "btn btn-primary" %>
+          <%= hidden_field_tag 'resource_id', res.id %>
+        <% end %>
+    </div>
     <br></br>
     <% end %>
 </div>
@@ -12,6 +18,12 @@
   <h3> QiGong </h3><br>
     <% @qigong_res.each do |res| %>
     <p><%= link_to res.description, res.url %></p>
+        <div class='bookmarks-form'>
+        <%= form_for @bookmarks do |f| %>
+          <%= f.submit "Bookmark", class: "btn btn-primary" %>
+          <%= hidden_field_tag 'resource_id', res.id %>
+        <% end %>
+    </div>
     <br></br>
     <% end %>
 </div>
@@ -20,6 +32,12 @@
   <h3> Service: Food </h3><br>
     <% @food_res.each do |res| %>
     <p><%= link_to res.description, res.url %></p>
+        <div class='bookmarks-form'>
+        <%= form_for @bookmarks do |f| %>
+          <%= f.submit "Bookmark", class: "btn btn-primary" %>
+          <%= hidden_field_tag 'resource_id', res.id %>
+        <% end %>
+    </div>
     <br></br>
     <% end %>
 </div>
@@ -28,6 +46,12 @@
   <h3> Service: Companionship </h3><br>
     <% @companionship_res.each do |res| %>
     <p><%= link_to res.description, res.url %></p>
+        <div class='bookmarks-form'>
+        <%= form_for @bookmarks do |f| %>
+          <%= f.submit "Bookmark", class: "btn btn-primary" %>
+          <%= hidden_field_tag 'resource_id', res.id %>
+        <% end %>
+    </div>
     <br></br>
     <% end %>
 </div>
@@ -36,6 +60,12 @@
   <h3> Service: Assistance </h3><br>
     <% @assistance_res.each do |res| %>
     <p><%= link_to res.description, res.url %></p>
+        <div class='bookmarks-form'>
+        <%= form_for @bookmarks do |f| %>
+          <%= f.submit "Bookmark", class: "btn btn-primary" %>
+          <%= hidden_field_tag 'resource_id', res.id %>
+        <% end %>
+    </div>
     <br></br>
     <% end %>
 </div>
@@ -44,6 +74,12 @@
   <h3> Service: Environment </h3><br>
     <% @env_res.each do |res| %>
     <p><%= link_to res.description, res.url %></p>
+        <div class='bookmarks-form'>
+        <%= form_for @bookmarks do |f| %>
+          <%= f.submit "Bookmark", class: "btn btn-primary" %>
+          <%= hidden_field_tag 'resource_id', res.id %>
+        <% end %>
+    </div>
     <br></br>
     <% end %>
 </div>
@@ -52,6 +88,12 @@
   <h3> Service: Animals </h3><br>
     <% @animals_res.each do |res| %>
     <p><%= link_to res.description, res.url %></p>
+        <div class='bookmarks-form'>
+        <%= form_for @bookmarks do |f| %>
+          <%= f.submit "Bookmark", class: "btn btn-primary" %>
+          <%= hidden_field_tag 'resource_id', res.id %>
+        <% end %>
+    </div>
     <br></br>
     <% end %>
 </div>

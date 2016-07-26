@@ -116,9 +116,19 @@ body {
 	background-size: 100%;
 }
 
+.life-style {
+	background-color: rgba(51, 51, 51, 0.45);
+  	width: 85%;
+}
+
 #getting-started0, #getting-started1, #getting-started2, #getting-started3, #getting-started4, #getting-started5 {
 	background-image: url("kayak_lake.jpg");
 	background-size: contain;
 	background-attachment: fixed;
 	background-size: 100%;	
+}
+
+.started-style {
+	background-color: rgba(255, 250, 250, 0.35);
+  	width: 75%;
 }

@@ -9,12 +9,11 @@
           </div>
         </div>
 
-      <!-- This will be the slide section for the CHANTS PRACTICE -->
-
+        <!-- This will be the slide section for the CHANTS PRACTICE -->
         <div class="section" id='chants' data-menuanchor="secondPage">
-
+        <% chant_id_counter = 0 %>
           <% @chants.each do |chant| %>
-            <div class="slide">
+            <div class="slide" id="chant<%=chant_id_counter%>">
               <div class='container'>
               <h1 style="text-decoration: underline"> Chants </h1><br><br>
               <h2><%= link_to chant.name, practice_path(chant) %></h2>
@@ -31,15 +30,16 @@
               <% end %>
               </div>
             </div>
+            <% chant_id_counter += 1 %>
           <% end %>
         </div>
 
         <!-- This will be the slide section for the BODY PRACTICES -->
 
         <div class="section" id='body_practices' data-menuanchor="thirdPage">
-
+        <% body_id_counter = 0 %>
           <% @body_practices.each do |body_practice| %>
-            <div class="slide">
+            <div class="slide" id="body<%=body_id_counter%>">
               <div class='container'>
               <h1 style="text-decoration: underline"> Body Practices </h1><br><br>
               <h2><%=link_to body_practice.name, practice_path(body_practice) %></h2>
@@ -56,15 +56,16 @@
               <% end %>
               </div>
             </div>
+            <% body_id_counter += 1 %>
           <% end %>
         </div>
 
         <!-- This will be the slide section for the SEATED PRACTICES -->
 
         <div class="section" id='seated_practices' data-menuanchor="fourthPage">
-
+        <% seated_id_counter = 0 %>
           <% @seated_practices.each do |seated_practice| %>
-            <div class='slide'>
+            <div class='slide' id="seated<%=seated_id_counter%>">
               <div class='container'>
               <h1 style="text-decoration: underline"> Seated Practices </h1><br><br>
               <h2><%= link_to seated_practice.name, practice_path(seated_practice) %></h2>
@@ -81,6 +82,7 @@
               <% end %>
               </div>
             </div>
+            <% seated_id_counter += 1 %>
           <% end %>
         </div>
 
@@ -89,8 +91,8 @@
         <div class="section" id='services' data-menuanchor="fifthPage">
 
          <% @services.each do |service| %>
-
-            <div class='slide'>
+          <% service_id_counter = 0 %>
+            <div class='slide' id="service<%= service_id_counter%>">
               <div class='container'>
               <h1 style="text-decoration: underline"> Services </h1><br><br>
               <h2><%= link_to service.name, practice_path(service)%></h2>
@@ -108,13 +110,14 @@
               <br>
               </div>
             </div>
+            <% service_id_counter += 1 %>
           <% end %>
         </div>
 
         <!-- This will be the slide section for the GUIDELINES section -->
 
         <div class="section" id="guidelines" data-menuanchor="sixthPage">
-          <div class='slide'>
+          <div class='slide' id="guideline0">
             <div class="container">
               <br>
               <h2 style="text-decoration: underline"> Guidelines for Meditation</h2><br>
@@ -130,7 +133,7 @@
             </div>
           </div>
 
-          <div class='slide'>
+          <div class='slide' id="guideline1">
             <div class="container">
               <h1 style="text-decoration: underline">During Practice</h1>
               <h3>Return to your focus</h3>
@@ -146,7 +149,7 @@
 
           <!-- This will be the slide section for the TIPS section -->
 
-          <div class='slide'>
+          <div class='slide' id="guideline2">
             <div class="container">
               <h1 style="text-decoration: underline">Tips - Halp! My Mind Is Argh!</h1>
               <h6>Yep! That is exactly what your mind is. It wanders. It spins. It overfocuses. It second-guesses. It criticizes. It also feels and laughs and perceives and recognizes. And it’s yours. Make friends and work with it. Do not wrestle it. Here are some suggestions for un-argh-ing the mind.</h6>
@@ -157,59 +160,58 @@
               <h3>Fill your mind with good things</h3>
               <h6>It can be helpful to moderate what you read and watch to support your practice. If you shift your reading and watching habits to include things that are related to your practice, it is easier to get into your practice mode when the time comes.</h6>
             </div>
+          </div>
 
-            <div class="slide">
-              <div class="container">
-                <h1 style="text-decoration: underline">Tips - Seek Company for Your Journey</h1>
-                <h3>People</h3>
-                <h6>Being with people who are of a like mind, who have a practice, is a nice way to support your work. Knowing there are people experiencing similar troubles and triumphs can be very calming.</h6>
-                <h3>Finding a teacher</h3>
-                <h6>There is no substitute for having access to someone who has completed the journey you are beginning. They can help in ways that are hard to imagine. Finding a proper guide can be a long process, but for %99.99 of us our practice can only go so far without one. There is no rush- do your chosen practice, and start looking into who teaches similar things. That will take care of it.</h6>
-                <h3>Talk therapy</h3>
-                <h6>While dredging up old baggage is never really useful, having insight into your emotional life can bring insights into your habits and bring clarity to your intention. And help you let go of things you find you no longer need.</h6>
-              </div>
+          <div class="slide" id="guideline3">
+            <div class="container">
+              <h1 style="text-decoration: underline">Tips - Seek Company for Your Journey</h1>
+              <h3>People</h3>
+              <h6>Being with people who are of a like mind, who have a practice, is a nice way to support your work. Knowing there are people experiencing similar troubles and triumphs can be very calming.</h6>
+              <h3>Finding a teacher</h3>
+              <h6>There is no substitute for having access to someone who has completed the journey you are beginning. They can help in ways that are hard to imagine. Finding a proper guide can be a long process, but for %99.99 of us our practice can only go so far without one. There is no rush- do your chosen practice, and start looking into who teaches similar things. That will take care of it.</h6>
+              <h3>Talk therapy</h3>
+              <h6>While dredging up old baggage is never really useful, having insight into your emotional life can bring insights into your habits and bring clarity to your intention. And help you let go of things you find you no longer need.</h6>
             </div>
-
           </div>
         </div>
-
+       
         <!-- This will be the slide section for the LIFESTYLE section -->
 
         <div class="section" id="lifestyle" data-menuanchor="seventhPage">
-          <div class='slide'>
+          <div class='slide' id="lifestyle0">
             <div class="container">
               <h1 style="text-decoration: underline">Lifestyle</h1>
               <h6>Many people have questions about how to incorporate meditation into regular life. This section addresses some of the more common ones. The best advice is: Be good! Be good for your health, and be good for the uplift of the world. These suggestions are meant as things to think about as you deepen your practice.</h6>
               <h3>Quitting everything</h3>
               <h6>Don’t do it! Change one thing a time. Start with adding your practice. Make it a habit. Then, to support your practice, change one small thing if you like. Make that a habit. Small changes over time are much better than massive changes all at once.</h6>
             </div>
-
-            <div class="slide">
-              <div class="container">
-                <h1>Eating habits</h1>
-                <h6>The best advice I have ever heard on this is you should eat what you want, just not too much. The following suggestions are some considerations from a variety of traditions that can help people feel confident making positive changes to support their new practice.</h6>
-                <h3>Simple foods, well prepared</h3>
-                <h6>Think for a moment how sugar affects you. You get a burst of mental and physical energy, followed by a trough. Moderating these types of foods seems like a good idea. Start to notice how the food you eat makes you feel.</h6>
-                <h3>72 labors</h3>
-                <h6>This is a practice that considers what work (and by whom) has gone into the meal that has been set in front of you. It can be nice to simply honor that, but it can also be a good way to decide what to eat.</h6>
-                <h3>Alcohol and other social and ritual substances</h3>
-                <h6>Moderate and in the right circumstances is fine. It is best to keep your main practice time free of these things if you can.</h6>
-              </div>
-            </div>
-
-            <div class="slide">
-              <div class="container">
-                <h1> Vegetarian/Veganism</h3>
-                <h6>Many traditions strongly recommend cutting at least meat and fish out of the diet. It is not expressly necessary, but here are the reasons worth considering for yourself.</h6>
-                <h6><em>Compassion:</em></h6>
-                <h6>Consuming a diet mainly of plant based ingredients is generally more gentle both from a saving lives standpoint and from a food production standpoint.</h6>
-                <h6><em>Health:</em></h6>
-                <h6>Adjusting the ratio of animal to plant-based foods to be more on the plant side has many health benefits.</h6>
-              </div>
-            </div>
-
           </div>
-          <div class='slide'>
+
+          <div class="slide" id="lifestyle1">
+            <div class="container">
+              <h1 style="text-decoration: underline">Eating habits</h1>
+              <h6>The best advice I have ever heard on this is you should eat what you want, just not too much. The following suggestions are some considerations from a variety of traditions that can help people feel confident making positive changes to support their new practice.</h6>
+              <h3>Simple foods, well prepared</h3>
+              <h6>Think for a moment how sugar affects you. You get a burst of mental and physical energy, followed by a trough. Moderating these types of foods seems like a good idea. Start to notice how the food you eat makes you feel.</h6>
+              <h3>72 labors</h3>
+              <h6>This is a practice that considers what work (and by whom) has gone into the meal that has been set in front of you. It can be nice to simply honor that, but it can also be a good way to decide what to eat.</h6>
+              <h3>Alcohol and other social and ritual substances</h3>
+              <h6>Moderate and in the right circumstances is fine. It is best to keep your main practice time free of these things if you can.</h6>
+            </div>
+          </div>
+
+          <div class="slide" id="lifestyle2">
+            <div class="container">
+              <h1 style="text-decoration: underline"> Vegetarian/Veganism</h1>
+              <h6>Many traditions strongly recommend cutting at least meat and fish out of the diet. It is not expressly necessary, but here are the reasons worth considering for yourself.</h6>
+              <h6><em>Compassion:</em></h6>
+              <h6>Consuming a diet mainly of plant based ingredients is generally more gentle both from a saving lives standpoint and from a food production standpoint.</h6>
+              <h6><em>Health:</em></h6>
+              <h6>Adjusting the ratio of animal to plant-based foods to be more on the plant side has many health benefits.</h6>
+            </div>
+          </div>
+          
+          <div class='slide' id="lifestyle3">
             <div class="container">
               <h1 style="text-decoration: underline">Working Habits</h1>
               <h3>Work habits</h3>
@@ -224,14 +226,8 @@
           </div>
         </div>
 
-        <div class="section" id="resources" data-menuanchor="eighthPage">
-          <div class="container">
-            <h1 style="text-decoration: underline"> This will be the further study page</h1>
-          </div>
-        </div>
-
-        <div class="section" id="getting-started" data-menuanchor="ninthPage">
-          <div class="slide">
+        <div class="section" id="getting-started" data-menuanchor="eighthPage">
+          <div class="slide" id="getting-started0">
             <div class="container">
               <h1 style="text-decoration: underline"> Getting Started </h1>
               <h3>
@@ -239,39 +235,44 @@
             </div>
           </div>
 
-          <div class="slide">
+          <div class="slide" id="getting-started1">
             <div class="container">
               <h3>1. Pick a practice- look through the practice categories. Listen to the audio. Click the links. Read the descriptions. Find a practice that makes you feel like you’d have fun doing that every day for a few minutes. Something that makes you feel peaceful. This is very personal, and is an important part of the process, so take your time. Once you choose a practice, that will be the main one you do for at least a few weeks, and the one that will be used to show your progress. It should make you happy.</h3>
             </div>
           </div>
 
-          <div class="slide">
+          <div class="slide" id="getting-started2">
             <div class="container">
               <h3>2. Set your practice time- once you have settled on a practice, select it and set your practice time. Be sure this time is pretty consistently available to you.</h3>
             </div>
           </div>
-        </div>
-
-          <div class="slide">
+        
+          <div class="slide" id="getting-started3">
             <div class="container">
               <h3>3. Do your practice- you’ll get a reminder texted to you to help you remember to do your practice. Once you have, click the complete  button.</h3>
             </div>
           </div>
 
-          <div class="slide">
+          <div class="slide" id="getting-started4">
             <div class="container">
               <h3>4. Watch your progress- that’s all! Every time you complete a practice session, you’ll get a new leaf stored on your profile so you can watch your practice grow.</h3>
             </div>
           </div>
 
-          <div class="slide">
+          <div class="slide" id="getting-started5">
             <div class="container">
               <h3>Once you select your practice, we don’t want you to feel trapped by it. You can bookmark many of the resources we have here to your profile for easy reference and to inspire and fortify your practice. If you have a practice that doesn’t quite fit what we have here, sign up for something close, and just do you own thing during your practice time. Keep an eye out for new features, and be in touch!</h3>
               <h3>Love,</h3>
-              <h3>The Still Life</h6>
+              <h3>The Still Life</h3>
            </div>
-
           </div>
+        </div>
+
+        <!-- <div class="section" id="resources" data-menuanchor="ninthPage">
+          <div class="container">
+            <h1 style="text-decoration: underline"> This will be the further study page</h1>
+          </div>
+        </div> -->
 
       </div>
     </center>

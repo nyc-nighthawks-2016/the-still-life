@@ -24,7 +24,7 @@
 }
 
 .regular-list {
-	float: none;
+	padding-right: 40px;
 	text-align: center;
 	opacity: 1;
 	background: none;
@@ -38,13 +38,15 @@
 	display: inline-block;
 	border: 2px solid #E9E9E9;
 	border-radius: 100px;
+
 }
 
 .user-box {
-	margin: 0 auto;
+	margin: 0px auto;
 	display: table;
 	text-align: center;
 	vertical-align: middle;
+	display: inline-block;
 }
 
 #profile-image {
@@ -53,7 +55,7 @@
 }
 
 #circle-user-info {
-	
+	margin: 0 auto;
 }
 
 #halfsize {
@@ -144,11 +146,14 @@
 
 }
 
+.glyphicon-trash {
+	width: 10px;
+	height: 10px;
+}
 
 #bookmarked-sources {
 	width: 45%;
 	float: left;
 }
-
 
 

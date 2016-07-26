@@ -60,12 +60,12 @@ class RegimesController < ApplicationController
 
 
 		if logged_in? && @regimen.user == current_user
-			if !params[:regime]
-				@regimen.update(completion: true)
+			if !params[:regimen]
+				@regimen.update_attribute(:completion, true)
 				redirect_to regime_path(@regimen)
-			elsif params[:regime]
+			elsif params[:regimen]
 				time = generate_time(params)
-				@regimen.update(daily_practice_time: time)
+				@regimen.update_attribute(:daily_practice_time, time)
 				redirect_to @regimen
 			end
 		else
@@ -91,8 +91,8 @@ class RegimesController < ApplicationController
 	end
 
 	def generate_time(params)
-		hour = params[:regime]["daily_practice_time(4i)"] # daily_pracitce_time(4i) is what is stored in params.  It looks odd, but I verfied it on pry
-		minute = params[:regime]["daily_practice_time(5i)"]
+		hour = params[:regimen]["daily_practice_time(4i)"] # daily_pracitce_time(4i) is what is stored in params.  It looks odd, but I verfied it on pry
+		minute = params[:regimen]["daily_practice_time(5i)"]
 
 		# This method wants to take params and create a time in user's time zone
 		t = DateTime.now

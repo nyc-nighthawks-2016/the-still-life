@@ -187,7 +187,7 @@
           <li><a href="/resources" class="btn">Resources</a></li>
 
         <% if @current_user %>
-          <li><%= link_to "Sangha", users_path, :class => "btn" %></li>
+          <!-- <li><%= link_to "Sangha", users_path, :class => "btn" %></li> -->
           
           <li><%= link_to @current_user.username, user_path(@current_user), :class => "btn" %></li>
           <li><%= link_to '/logout', method: :delete, :class => "btn" do %>

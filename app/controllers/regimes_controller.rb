@@ -20,13 +20,12 @@ class RegimesController < ApplicationController
 	end
 
 	def show
-		@regimen = Regime.find(params[:id])
+		@regimen = Regime.where("user_id = '#{current_user.id}'").last
 	end
 
 
 	def create
 		if logged_in?
-
 			@regimen = generate_regime(params)
 			current_user.update_attribute(:practice, Practice.find(params[:practice_id]))
 			# Do this stuff (copied and pasted from Seth)
@@ -79,23 +78,26 @@ class RegimesController < ApplicationController
 	private
 	def generate_regime(params)
 	  # Get the practice
-			practice = Practice.find(params[:practice_id])
-			# Get the time
-			time = generate_time(params)
-			# Create Regimen
-			regime = Regime.new({
-				daily_practice_time: time,
-				practice: practice,
-				user: current_user
-				})
-			return regime
+		practice = Practice.find(params[:practice_id])
+		# Get the time
+		time = generate_time(params)
+		# Create Regimen
+		regime = Regime.new({
+			daily_practice_time: time,
+			practice: practice,
+			user: current_user
+			})
+		return regime
 	end
 
 	def generate_time(params)
 		hour = params[:regime]["daily_practice_time(4i)"] # daily_pracitce_time(4i) is what is stored in params.  It looks odd, but I verfied it on pry
 		minute = params[:regime]["daily_practice_time(5i)"]
+
+		# This method wants to take params and create a time in user's time zone
 		t = DateTime.now
-		time = DateTime.new(t.year, t.month, t.day, hour.to_i + 4, minute.to_i, 0)
+		time = DateTime.new(t.year, t.month, t.day, hour.to_i, minute.to_i, 0) 
+		time.change(:offset => "-0400")
 	end
 
 end

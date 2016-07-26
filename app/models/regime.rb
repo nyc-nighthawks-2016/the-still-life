@@ -5,7 +5,7 @@ class Regime < ActiveRecord::Base
   after_create :email_reminder
   after_create :create_new_regime
 
-  @@REMINDER_TIME = 30.minutes # minutes before appointment
+  @@REMINDER_TIME = 43.minutes # minutes before appointment
 
 
   def create_new_regime
@@ -18,18 +18,18 @@ class Regime < ActiveRecord::Base
     regime.save
   end
 
-  # def text_reminder
-  #   @twilio_number = ENV['TWILIO_NUMBER']
-  #   @client = Twilio::REST::Client.new ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN']
-  #   time_str = self.daily_practice_time.strftime("%l : %M %P")
-  #   reminder = "Hi #{self.user.first_name}. You have meditation at #{time_str}."
-  #   message = @client.account.messages.create(
-  #     :from => @twilio_number,
-  #     :to => ENV['JONS_NUMBER'],
-  #     :body => reminder,
-  #   )
-  #   puts message.to
-  # end
+  def text_reminder
+    @twilio_number = ENV['TWILIO_NUMBER']
+    @client = Twilio::REST::Client.new ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN']
+    time_str = self.daily_practice_time.strftime("%l : %M %P")
+    reminder = "Hi #{self.user.first_name}. You have meditation at #{time_str}."
+    message = @client.account.messages.create(
+      :from => @twilio_number,
+      :to => ENV['JONS_NUMBER'],
+      :body => reminder,
+    )
+    puts message.to
+  end
 
   def email_reminder
     ReminderMailer.delay(run_at: 5.seconds.from_now).email_reminder(self.user, self)

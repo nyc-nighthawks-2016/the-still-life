@@ -20,7 +20,9 @@ ENV.update YAML.load(File.read(File.expand_path('../application.yml', __FILE__ )
 
 module TheStillLife
   class Application < Rails::Application
-    
+
+    config.active_job.queue_adapter = :delayed_job
+
     config.time_zone = 'Eastern Time (US & Canada)'
 
     # Settings in config/environments/* take precedence over those specified here.

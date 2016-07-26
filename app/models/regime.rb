@@ -1,11 +1,11 @@
 class Regime < ActiveRecord::Base
   belongs_to :practice
   belongs_to :user
-	# after_create :text_reminder
-  after_create :email_reminder
+  after_create :text_reminder
+  #after_create :email_reminder
   after_create :create_new_regime
 
-  @@REMINDER_TIME = 43.minutes # minutes before appointment
+  @@REMINDER_TIME = 30.minutes # minutes before appointment
 
 
   def create_new_regime
@@ -20,12 +20,16 @@ class Regime < ActiveRecord::Base
 
   def text_reminder
     @twilio_number = ENV['TWILIO_NUMBER']
-    @client = Twilio::REST::Client.new ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN']
+    @ta_sid = ENV['TWILIO_ACCOUNT_SID']
+    @aa_token =  ENV['TWILIO_AUTH_TOKEN']
+    @number =  ENV['CIACCIS_NUMBER']
+
+    @client = Twilio::REST::Client.new @ta_sid, @aa_token
     time_str = self.daily_practice_time.strftime("%l : %M %P")
     reminder = "Hi #{self.user.first_name}. You have meditation at #{time_str}."
     message = @client.account.messages.create(
       :from => @twilio_number,
-      :to => ENV['JONS_NUMBER'],
+      :to => @number,
       :body => reminder,
     )
     puts message.to
@@ -39,8 +43,9 @@ class Regime < ActiveRecord::Base
     daily_practice_time - @@REMINDER_TIME
   end
 
-  # handle_asynchronously :text_reminder, :run_at => Proc.new { |i| i.when_to_run }
+
+  handle_asynchronously :text_reminder, :run_at => Proc.new { |i| i.when_to_run }
   # handle_asynchronously :email_reminder, :run_at => Proc.new { |i| i.when_to_run }
-  handle_asynchronously :create_new_regime, :run_at => Proc.new { |i| i.when_to_run }
+  handle_asynchronously :create_new_regime, :run_at => Proc.new { beginning_of_day }
 
 end

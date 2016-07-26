@@ -12,6 +12,7 @@ class UsersController < ApplicationController
     if @user.practice != nil
       @practice = @user.practice
       if @practice.regimes.length > 0
+
         @regimen = @user.regimes.last
         @completed_regimens = @practice.regimes.where(completion: true).to_a
       end

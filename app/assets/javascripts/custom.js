@@ -2,8 +2,8 @@
 
 $(document).ready(function() {
       $('#fullpage').fullpage({
-        sectionsColor: ['#1bbc9b', '#4BBFC3', '#9683ec', '#4BBFC3', '#5bad9f', '#7BAABE', 'whitesmoke', '#ccddff', '#1bbc9b'],
-         anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage', 'eighthPage', 'ninthPage'],
+        // sectionsColor: ['#1bbc9b', '#4BBFC3', '#9683ec', '#4BBFC3', '#5bad9f', '#7BAABE', 'whitesmoke', '#ccddff', '#1bbc9b'],
+        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage', 'eighthPage', 'ninthPage'],
         menu: '#menu',
         lockAnchors: false,
         navigation: false,

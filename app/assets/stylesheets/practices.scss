@@ -2,12 +2,38 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-  background-color: #1bbc9b;
-}
-
 .single-practice {
   font-size: 15px;
+}
+
+#main-header {
+	font-size: 5em;
+	color: #000000;
+}
+
+.description {
+	width: 75%;
+}
+
+.whitefont {
+	color: #fffafa;
+
+}
+
+.whitefont a {
+	color: #fffafa;	
+}
+
+.grayishfont {
+	color: #DCDCDC;
+}
+
+.darkfont {
+	color: #000000;
+}
+
+.darkfont a {
+	color: #000000;
 }
 
 #homepage {
@@ -15,6 +41,7 @@ body {
 	background-size: contain;
 	background-attachment: fixed;
 	background-size: 100%;
+	
 }
 
 #chant0, #chant1, #chant2, #chant3, #chant4, #chant5, #chant6 {
@@ -22,6 +49,13 @@ body {
 	background-size: contain;
 	background-attachment: fixed;
 	background-size: 100%;
+	
+}
+
+.chants-style {
+	background-color: rgba(51, 51, 51, 0.25);
+  	width: 65%;
+  	border: 2px solid #fffafa; 
 }
 
 #body0, #body1, #body2, #body3, #body4 {
@@ -31,12 +65,24 @@ body {
 	background-size: 100%;
 }
 
+.body-style {
+	background-color: rgba(255, 250, 250, 0.25);
+  	width: 65%;
+  	border: 2px solid #000000;
+}
+
 #seated0, #seated1, #seated2, #seated3, #seated4, #seated5, #seated6 {
 	background-image: url("centered_mountain.jpg");
 	background-size: contain;
 	background-attachment: fixed;
 	background-size: 100%;
 }	
+
+.seated-style {
+	background-color: rgba(255, 250, 250, 0.65);
+  	width: 65%;
+  	border: 2px solid #000000;
+}
 
 #service0, #service1, #service2, #service3, #service4 {
 	background-image: url("ideal_splash.jpg");
@@ -45,12 +91,22 @@ body {
 	background-size: 100%;
 }
 
+.service-style {
+	background-color: rgba(255, 250, 250, 0.65);
+  	width: 65%;
+  	border: 2px solid #000000;
+}
+
 #guideline0, #guideline1, #guideline2, #guideline3 {
 	background-image: url("perfect_pier.jpg");
 	background-size: contain;
 	background-attachment: fixed;
-	background-size: 100%;
-	
+	background-size: 100%;	
+}
+
+.guide-style {
+	background-color: rgba(255, 250, 250, 0.35);
+  	border: 2px solid #000000;
 }
 
 #lifestyle0, #lifestyle1, #lifestyle2, #lifestyle3 {
@@ -60,9 +116,21 @@ body {
 	background-size: 100%;
 }
 
+.life-style {
+	background-color: rgba(51, 51, 51, 0.45);
+  	width: 85%;
+  	border: 2px solid #fffafa; 
+}
+
 #getting-started0, #getting-started1, #getting-started2, #getting-started3, #getting-started4, #getting-started5 {
 	background-image: url("kayak_lake.jpg");
 	background-size: contain;
 	background-attachment: fixed;
 	background-size: 100%;	
+}
+
+.started-style {
+	background-color: rgba(255, 250, 250, 0.35);
+  	width: 75%;
+  	border: 2px solid #000000;
 }

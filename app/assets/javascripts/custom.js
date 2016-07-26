@@ -14,7 +14,7 @@ $(document).ready(function() {
         slidesNavPosition: 'bottom',
 
         //Scrolling
-        css3: true,
+        css3: false,
         scrollingSpeed: 1000,
         autoScrolling: true,
         fitToSection: true,

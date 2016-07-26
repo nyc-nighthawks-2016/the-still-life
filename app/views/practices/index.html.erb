@@ -10,29 +10,29 @@
         </div>
 
       <!-- This will be the slide section for the CHANTS PRACTICE -->
-
-        <div class="section" id='chants' data-menuanchor="secondPage">
-
-          <% @chants.each do |chant| %>
-            <div class="slide">
-              <div class='container'>
-              <h1 style="text-decoration: underline"> Chants </h1><br><br>
-              <h2><%= link_to chant.name, practice_path(chant) %></h2>
-              <h4>Method: <%= chant.method %></h4>
-              <br>
-              <h5><%= chant.description %></h5>
-              <br>
-              <% if current_user %>
-                <% if current_user.regimes.length == 0 %>
-                  <button>
-                    <%= link_to "Choose this Practice", new_regime_path(practice_id: chant.id) %>
-                  </button>
-                <% end %>
+      <div class="section" id='chants' data-menuanchor="secondPage">
+      <%id_counter = 0%>
+        <% @chants.each do |chant| %>
+          <div class="slide" id="chant<%=id_counter%>">
+            <div class='container'>
+            <h1 style="text-decoration: underline"> Chants </h1><br><br>
+            <h2><%= link_to chant.name, practice_path(chant) %></h2>
+            <h4>Method: <%= chant.method %></h4>
+            <br>
+            <h5><%= chant.description %></h5>
+            <br>
+            <% if current_user %>
+              <% if current_user.regimes.length == 0 %>
+                <button>
+                  <%= link_to "Choose this Practice", new_regime_path(practice_id: chant.id) %>
+                </button>
               <% end %>
               </div>
             </div>
-          <% end %>
-        </div>
+          </div>
+          <% id_counter += 1 %>
+        <% end %>
+      </div>
 
         <!-- This will be the slide section for the BODY PRACTICES -->
 

@@ -83,3 +83,5 @@ production:
   database: the_still_life_production
   username: the_still_life
   password: <%= ENV['THE_STILL_LIFE_DATABASE_PASSWORD'] %>
+  url: <%= ENV["DATABASE_URL"] %>
+  pool: <%= ENV["DB_POOL"] || ENV['RAILS_MAX_THREADS'] || 5 %>

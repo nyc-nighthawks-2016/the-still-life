@@ -46,6 +46,6 @@ class Regime < ActiveRecord::Base
 
   handle_asynchronously :text_reminder, :run_at => Proc.new { |i| i.when_to_run }
   # handle_asynchronously :email_reminder, :run_at => Proc.new { |i| i.when_to_run }
-  handle_asynchronously :create_new_regime, :run_at => Proc.new { beginning_of_day }
+  handle_asynchronously :create_new_regime, :run_at => Proc.new {  DateTime.now.beginning_of_day + 1.days }
 
 end

@@ -1,6 +1,7 @@
+<div class='profile-backdrop'>
 <div id="pageshift">
   <% provide(:title, @user.username) %>
-<div class="container-fluid col-md-4" >
+<div class="container-fluid col-md-4" id='user-info-column'>
         <div  id="user-avatar">
           <%= gravatar_for @user %>
           <div id="profile-header">
@@ -54,7 +55,7 @@
   <div class="sub-info container-fluid">
     <div class= 'col-md-8' id="regimen-info">   
           <% if @completed_regimens %>
-            <p> You have completed <%= @completed_regimens.length %> regimens. </p> 
+            <p> <h2>You have completed <%= @completed_regimens.length %> regimens. </h2></p> 
               <% @completed_regimens.each do |regimen| %>
                   <div id="single-regimen">
                     <center>
@@ -68,13 +69,13 @@
   </div>
 
   <div class="container-fluid col-md-8" id="bookmarked-sources">
-      <h3>Bookmarked Resources</h3>
+      <h2>Bookmarked Resources</h2>
       <% if @user.bookmarks %>
         <% @user.bookmarks.each do |bookmark| %>
         <p><%= link_to bookmark.resource.name, bookmark.resource.url %></p>
       <% end %>
     <% end %>
   </div>
-
+</div>
 
 

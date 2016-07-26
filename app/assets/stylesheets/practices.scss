@@ -10,12 +10,19 @@ body {
   font-size: 15px;
 }
 
+#main-header {
+	font-size: 5em;
+}
+
 #homepage {
 	background-image: url("birds_sunset.jpg");
 	background-size: contain;
 	background-attachment: fixed;
 	background-size: 100%;
+	
 }
+
+
 
 #chant0, #chant1, #chant2, #chant3, #chant4, #chant5, #chant6 {
 	background-image: url("perfect_crash.jpg");

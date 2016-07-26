@@ -18,23 +18,21 @@ body {
 }
 
 #chant0 {
-	background-image: url("mountain_lookout.jpg");
-	background-size: contain;
-	background-attachment: fixed;
-	background-size: 100%;
-}
-
-
-
-#body0 {
 	background-image: url("perfect_crash.jpg");
 	background-size: contain;
 	background-attachment: fixed;
 	background-size: 100%;
 }
 
+#body0, #body1, #body2, #body3, #body4 {
+	background-image: url("mountain_lookout.jpg");
+	background-size: contain;
+	background-attachment: fixed;
+	background-size: 100%;
+}
+
 #seated0 {
-	background-image: url("perfect_pier.jpg");
+	background-image: url("centered_mountain.jpg");
 	background-size: contain;
 	background-attachment: fixed;
 	background-size: 100%;
@@ -48,7 +46,7 @@ body {
 }
 
 #guideline0 {
-	background-image: url("water_image_snow");
+	background-image: url("perfect_pier.jpg");
 	background-size: contain;
 	background-attachment: fixed;
 	background-size: 100%;

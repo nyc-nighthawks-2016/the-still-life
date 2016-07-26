@@ -2,192 +2,199 @@
 <html>
 <head>
   <title>TheStillLife</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-  <style>
-  </style>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('#fullpage').fullpage({
-        sectionsColor: ['#1bbc9b', '#4BBFC3', '#9683ec', '#4BBFC3', '#5bad9f', '#7BAABE', 'whitesmoke', '#ccddff', '#1bbc9b'],
-         anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage', 'eighthPage', 'ninthPage'],
-        menu: '#menu',
-        lockAnchors: false,
-        navigation: false,
-        navigationPosition: 'right',
-        navigationTooltips: ['firstSlide', 'secondSlide'],
-        showActiveTooltip: false,
-        slidesNavigation: true,
-        slidesNavPosition: 'bottom',
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
 
-        //Scrolling
-        css3: true,
-        scrollingSpeed: 1000,
-        autoScrolling: true,
-        fitToSection: true,
-        fitToSectionDelay: 1000,
-        scrollBar: false,
-        easing: 'easeInOutCubic',
-        easingcss3: 'ease',
-        loopBottom: false,
-        loopTop: false,
-        loopHorizontal: true,
-        continuousVertical: false,
-        // fixedElements: '#header',
-        scrollOverflow: false,
-        scrollOverflowOptions: null,
-        touchSensitivity: 15,
-        normalScrollElementTouchThreshold: 5,
-        bigSectionsDestination: null,
-
-        //Accessibility
-        keyboardScrolling: true,
-        animateAnchor: true,
-        recordHistory: true,
-
-        //Design
-        controlArrows: true,
-        verticalCentered: true,
-
-        // paddingTop: '3em',
-        // paddingBottom: '10px',
-
-        responsiveWidth: 0,
-        responsiveHeight: 0,
-
-        //Custom selectors
-        sectionSelector: '.section',
-        slideSelector: '.slide',
-
-        //events
-        onLeave: function(index, nextIndex, direction){
-          //leaving first section
-          if(index == 1) {
-            $('#header').addClass('fixed');
-          }
-          //back to the first section
-          // if(nextIndex == 0) {
-          //   $('#header').removeClass('fixed');
-          // }
-        },
-        afterLoad: function(anchorLink, index){},
-        afterRender: function(){},
-        afterResize: function(){},
-        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-        onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
-
-      });
-    });
-  </script>
 </head>
 
 <body>
+<header id="header">
+	<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="/#firstPage">The Still Life</a>
+      </div> -->
+      <div class="collapse navbar-collapse" id="main-nav-collapse">
+        <ul class="nav navbar-nav">
+          <!-- <li class="hidden-sm hidden-md hidden-lg">
+            <a href="#toTop">Back To Top <span class="glyphicon glyphicon-hand-up"></span></a>
+          </li> -->
+          <li><a href="/#firstPage" class="btn">The Still Life</a></li>
+          <li>
+            <div class="dropdown dropdown-accordion" data-accordion="#accordion">
+              <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">Practices</a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li>
+                  <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a href="#collapseOne" data-toggle="collapse" data-parent="#accordion">Chant</a>
+                        </h4>
+                      </div>
 
-	<header id="header" class="clearfix fixed">
-    <nav id="menu">
-      <div class="">
+                      <div class="panel-collapse collapse" id="collapseOne">
+                        <ul class="list-group">
+                          <li class="list-group-item"><a href="/#secondPage">Om</a></li>
+                          <li class="list-group-item"><a href="/#secondPage/1">Shema Yisrael! Yhwh Eloheinu, Yhwh Echad</a></li>
+                          <li class="list-group-item"><a href="/#secondPage/2">La Illaha Illallah</a></li>
+                          <li class="list-group-item"><a href="/#secondPage/3">Om Namah Shiv'aya</a></li>
+                          <li class="list-group-item"><a href="/#secondPage/4">Om Mani Padme Hum</a></li>
+                          <li class="list-group-item"><a href="/#secondPage/5">Sanctus, Sanctus, Sanctus, Dominus Deus Sabaoth</a></li>
+                          <li class="list-group-item"><a href="/#secondPage/6">Gate, Gate, Para Gate, Parasamgate, Bodhi Svaha</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- //Close Panel One -->    
+                    <!-- Open Panel Two -->
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">           
+                          <a href="#collapseTwo" data-toggle="collapse" data-parent="#accordion">Body
+                          </a>
+                        </h4>
+                      </div>
+                      <div class="panel-collapse collapse" id="collapseTwo">
+                        <ul class="list-group">
+                          <li class="list-group-item"><a href="/#thirdPage">Yoga Asana - Studio</a></li>
+                          <li class="list-group-item"><a href="/#thirdPage/1">Yoga Asana - Self Study</a></li>
+                          <li class="list-group-item"><a href="/#thirdPage/2">QiGong - Studio</a></li>
+                          <li class="list-group-item"><a href="/#thirdPage/3">QiGong - Self Study</a></li>
+                          <li class="list-group-item"><a href="/#thirdPage/4">Traditional Aerobic Exercise</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- //Close Panel Two -->    
+                    <!-- Open Panel Three -->
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">            
+                          <a href="#collapseThree" data-toggle="collapse" data-parent="#accordion">Seated
+                          </a>
+                        </h4>
+                      </div>
+                      <div class="panel-collapse collapse" id="collapseThree">
+                        <ul class="list-group">
+                          <li class="list-group-item"><a href="/#fourthPage">Stillness/Source</a></li>
+                          <li class="list-group-item"><a href="/#fourthPage/1">Breath Control</a></li>
+                          <li class="list-group-item"><a href="/#fourthPage/2">Devotional Visualization</a></li>
+                          <li class="list-group-item"><a href="/#fourthPage/3">Abstract Visualization</a></li>
+                          <li class="list-group-item"><a href="/#fourthPage/4">Abstract Visualization 2</a></li>
+                          <li class="list-group-item"><a href="/#fourthPage/5">Silent Chanting</a></li>
+                          <li class="list-group-item"><a href="/#fourthPage/6">Guided Audio</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- //Close Panel Three -->    
+                    <!-- Open Panel Four -->
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a href="#collapseFour" data-toggle="collapse" data-parent="#accordion">Service
+                          </a>
+                        </h4>
+                      </div>
+                      <div class="panel-collapse collapse" id="collapseFour">
+                        <ul class="list-group">
+                          <li class="list-group-item"><a href="/#fifthPage">Food</a></li>
+                          <li class="list-group-item"><a href="/#fifthPage/1">Companionship</a></li>
+                          <li class="list-group-item"><a href="/#fifthPage/2">Assistance</a></li>
+                          <li class="list-group-item"><a href="/#fifthPage/3">Environmental Care</a></li>
+                          <li class="list-group-item"><a href="/#fifthPage/4">Animals</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <div class="dropdown dropdown-accordion" data-accordion="#accordion1">
+            <a class="btn dropdown-toggle" href="#" data-toggle="dropdown">Overall Guidelines</a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li>
+                  <div class="panel-group" id="accordion1">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a href="#collapseFive" data-toggle="collapse" data-parent="#accordion1">Guidelines</a>
+                        </h4>
+                      </div>
+                      <div class="panel-collapse collapse" id="collapseFive">
+                        <ul class="list-group">
+                          <li class="list-group-item"><a href="/#sixthPage">Meditation Guidlines</a></li>
+                          <li class="list-group-item"><a href="/#sixthPage/1">During Practice</a></li>
+                          <li class="list-group-item"><a href="/#sixthPage/2">Tips</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- //Close Panel Five -->    
+                    <!-- Open Panel Six -->
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a href="#collapseSix" data-toggle="collapse" data-parent="#accordion1">Lifestyle</a>
+                        </h4>
+                      </div>
+                      <div class="panel-collapse collapse" id="collapseSix">
+                        <ul class="list-group">
+                          <li class="list-group-item"><a href="/#seventhPage">Lifestyle Pt. I</a></li>
+                          <li class="list-group-item"><a href="/#seventhPage/1">Lifestyle Pt. II</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- //Close Panel Six -->    
+                    <!-- Open Panel Seven -->
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a href="/#eighthPage">Resources</a>
+                        </h4>
+                      </div>
+                    </div>
+                    <!-- //Close Panel Seven -->    
+                    </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+         
+
+          <li><a href="/#ninthPage" class="btn">Getting Started</a></li>
+
         <% if @current_user %>
-        <a href="/#firstPage" class="name" id="mainpage">The Still Life</a>
+          <li><%= link_to "Sangha", users_path, :class => "btn" %></li>
+          
+          <li><%= link_to @current_user.username, user_path(@current_user), :class => "btn" %></li>
+          <li><%= link_to "Logout", '/logout', method: :delete, :class => "btn" %></li>
         <% else %>
-        <a href="/#firstPage" class="name" id="alt-mainpage">The Still Life</a>
+          <li><%= link_to "Login", '/login', :class => "btn" %></li>
+          <li><%= link_to "Register", new_user_path, :class => "btn" %></li>
         <% end %>
-
-        <a href="/#secondPage" class="name">Chant</a>
-
-        <!-- <a href="/#secondPage" class="name">Om</a> -->
-
-        <!-- <a href="/#secondPage/1" class="name">Shema Yisrael! Yhwh Eloheinu, Yhwh Echad</a> -->
-
-        <!-- <a href="/#secondPage/2" class="name">La Illaha Illallah</a> -->
-
-        <!-- <a href="/#secondPage/3" class="name">Om Namah Shiv'aya</a> -->
-
-        <!-- <a href="/#secondPage/4" class="name">Om Mani Padme Hum</a> -->
-
-        <!-- <a href="/#secondPage/5" class="name">Sanctus, Sanctus, Sanctus, Dominus Deus Sabaoth</a> -->
-
-        <!-- <a href="/#secondPage/6" class="name">Gate, Gate, Para Gate, Parasamgate, Bodhi Svaha</a> -->
-
-        <a href="/#thirdPage" class="name">Body Practice</a>
-
-        <!-- <a href="/#thirdPage" class="name">Yoga Asana - Studio</a>
-   -->
-        <!-- <a href="/#thirdPage/1" class="name">Yoga Asana - Self Study</a> -->
-
-        <!-- <a href="/#thirdPage/2" class="name">QiGong - Studio</a> -->
-
-        <!-- <a href="/#thirdPage/3" class="name">QiGong - Self Study</a> -->
-
-        <!-- <a href="/#thirdPage/4" class="name">Traditional Aerobic Exercise</a> -->
-
-        <a href="/#fourthPage" class="name">Seated Practice</a>
-
-        <!-- <a href="/#fourthPage" class="name">Stillness/Source</a> -->
-
-        <!-- <a href="/#fourthPage/1" class="name">Breath Control</a> -->
-
-        <!-- <a href="/#fourthPage/2" class="name">Devotional Visualization</a> -->
-
-        <!-- <a href="/#fourthPage/3" class="name">Abstract Visualization</a> -->
-
-        <!-- <a href="/#fourthPage/4" class="name">Abstract Visualization 2</a> -->
-
-        <!-- <a href="/#fourthPage/5" class="name">Silent Chanting</a> -->
-
-        <!-- <a href="/#fourthPage/6" class="name">Guided Audio</a> -->
-
-        <a href="/#fifthPage" class="name">Service</a>
-
-        <!-- <a href="/#fifthPage" class="name">Food</a> -->
-
-        <!-- <a href="/#fifthPage/1" class="name">Companionship</a> -->
-
-        <!-- <a href="/#fifthPage/2" class="name">Assistance</a> -->
-
-        <!-- <a href="/#fifthPage/3" class="name">Environmental Care</a> -->
-
-        <!-- <a href="/#fifthPage/4" class="name">Animals</a> -->
-
-        <!-- <a href="/#fifthPage/5" class="name">Golden Rule</a> -->
-
-        <a href="/#sixthPage" class="name">Guidelines</a>
-
-        <!-- <a href="/#sixthPage" class="name">Guidelines</a> -->
-
-        <!-- <a href="/#sixthPage/1" class="name">During Practice</a> -->
-
-        <!-- <a href="/#sixthPage/2" class="name">Tips</a> -->
-
-        <a href="/#seventhPage" class="name">Lifestyle</a>
-
-        <a href="/#eighthPage" class="name">Resources</a>
-
-        <a href="/#ninthPage" class="name">Getting Started</a>
-
-        <% if @current_user %>
-          <%= link_to "Sangha", users_path, :class => "name" %>
-          <% if current_user.regimes.length > 0 %>
-            <%= link_to "Current Regimen", regime_path(@current_user.regimes.last), :class => "name" %>
-          <% end %>
-          <%= link_to @current_user.username, user_path(@current_user), :class => "name" %>
-          <%= link_to "Logout", '/logout', method: :delete, :class => "name" %>
-        <% else %>
-          <%= link_to "Login", '/login', :class => "name" %>
-          <%= link_to "Register", new_user_path, :class => "name" %>
-        <% end %>
+        </ul>
       </div>
-    </nav>
-  </header>
-
+    </div>
+  </nav>
+</header>
+ 
   <% flash.each do |message_type, message| %>
     <div class="alert alert-<%= message_type %>"><%= message %></div>
   <% end %>
   <%= yield %>
-
+  
 </body>
 </html>

@@ -48,14 +48,14 @@
 </div>
 
  <div class='container-fluid col-md-8' id='regimen-card'>
-      <h3>Your Practice is</h3><br>
-        <% if @user.practice != nil %>
+      <h3>Your Practice</h3><br>
+        <% if @user.regimes != nil %>
         <%= render 'regimes/show' %><br>
   </div> 
   <div class="sub-info container-fluid">
     <div class= 'col-md-8' id="regimen-info">   
           <% if @completed_regimens %>
-            <p> <h2>You have completed <%= @completed_regimens.length %> regimens. </h2></p> 
+            <p> <h2>You have completed <%= pluralize(@completed_regimens.length,'session') %>. </h2></p> 
               <% @completed_regimens.each do |regimen| %>
                   <div id="single-regimen">
                     <center>

@@ -1,4 +1,4 @@
-
+<%if @regimen != nil %>
 <h1><%= @regimen.practice.name %></h1>
   <h3><%= display_time(@regimen) %></h3>
 
@@ -15,4 +15,5 @@
     <%= form_for @regimen do |f| %>
       <%=f.submit "Complete", class:"btn btn-primary col-md-2 col-md-offset-5" %>
     <% end %>
+   <% end %>
   <% end %>

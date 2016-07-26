@@ -50,7 +50,6 @@
 #profile-image {
 	margin-top: 40px;
 	margin-left: 12.5px;
-
 }
 
 #circle-user-info {
@@ -76,23 +75,25 @@
 
 .sub-info {
 	vertical-align: top;
-	margin-top: 200px;
+	margin-top: 50px;
 	margin-left: 30px;
 	width: 95%;
 	float: clear;
 }
 
 #main-info {
-	width: 35%;
-	float: left;
-	word-wrap: break-word;
+	p {
+	 font-size: 195%;
+	}
 }
 
 #about-me {
-	width: 50%;
+	width: 45%;
+	font-size: 175%;
+	display: inline;
 	float: right;
+	padding-top: 20px;
 	word-wrap: break-word;
-	
 }
 
 #profile-header {
@@ -107,10 +108,15 @@
 }
 
 #regimen-info {
-	width: 40%;
+	width: 100%;
 	vertical-align: top;
 	float: left;
 	margin-right: 30px;
+	margin-bottom: 3em;
+		p {
+	 font-size: 150%;
+	}
+
 }
 
 #single-regimen {
@@ -130,9 +136,18 @@
 	color: green;
 }
 
+#regimen-card {
+	border: 1px solid black;
+	align: center;
+	margin: auto;
+	box-shadow: 5px 5px 2.5px #888888;
+
+}
+
+
 #bookmarked-sources {
 	width: 45%;
-	float: right;
+	float: left;
 }
 
 

@@ -3,4 +3,10 @@
         <p><%= link_to recording.name, recording.url %> </p>
         <p><%= recording.description %></p>
         <br></br>
+        <div class='bookmarks-form'>
+          <%= form_for @bookmarks do |f| %>
+            <%= f.submit "Bookmark", class: "btn btn-primary" %>
+            <%= hidden_field_tag 'resource_id', recording.id %>
+          <% end %>
+        </div>
     <% end %>

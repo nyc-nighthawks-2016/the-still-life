@@ -23,5 +23,7 @@ Rails.application.routes.draw do
   resources :videos, controller: 'resources', type: 'Video'
   resources :links, controller: 'resources', type: 'Link'
 
+  resources :bookmarks
+  
   root 'practices#index#homepage'
 end

@@ -2,10 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-  background-color: #1bbc9b;
-}
-
 .single-practice {
   font-size: 15px;
 }
@@ -59,6 +55,7 @@ body {
 .chants-style {
 	background-color: rgba(51, 51, 51, 0.25);
   	width: 65%;
+  	border: 2px solid #fffafa; 
 }
 
 #body0, #body1, #body2, #body3, #body4 {
@@ -71,6 +68,7 @@ body {
 .body-style {
 	background-color: rgba(255, 250, 250, 0.25);
   	width: 65%;
+  	border: 2px solid #000000;
 }
 
 #seated0, #seated1, #seated2, #seated3, #seated4, #seated5, #seated6 {
@@ -83,6 +81,7 @@ body {
 .seated-style {
 	background-color: rgba(255, 250, 250, 0.65);
   	width: 65%;
+  	border: 2px solid #000000;
 }
 
 #service0, #service1, #service2, #service3, #service4 {
@@ -95,6 +94,7 @@ body {
 .service-style {
 	background-color: rgba(255, 250, 250, 0.65);
   	width: 65%;
+  	border: 2px solid #000000;
 }
 
 #guideline0, #guideline1, #guideline2, #guideline3 {
@@ -106,7 +106,7 @@ body {
 
 .guide-style {
 	background-color: rgba(255, 250, 250, 0.35);
-  	
+  	border: 2px solid #000000;
 }
 
 #lifestyle0, #lifestyle1, #lifestyle2, #lifestyle3 {
@@ -119,6 +119,7 @@ body {
 .life-style {
 	background-color: rgba(51, 51, 51, 0.45);
   	width: 85%;
+  	border: 2px solid #fffafa; 
 }
 
 #getting-started0, #getting-started1, #getting-started2, #getting-started3, #getting-started4, #getting-started5 {
@@ -131,4 +132,5 @@ body {
 .started-style {
 	background-color: rgba(255, 250, 250, 0.35);
   	width: 75%;
+  	border: 2px solid #000000;
 }

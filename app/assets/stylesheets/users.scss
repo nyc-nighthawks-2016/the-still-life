@@ -66,55 +66,68 @@
 	text-align: center;
 }
 
+body {
+	background-image: url('misty_mountains.jpeg')
+}
+
 .user-header {
 	margin-left: 30px;
 }
 
 .users-info {
-	margin-left: 30px;
-	width: 95%;
+	margin-left: 10px;
+	p{
+	color: rgb(93, 125, 133);
+	}
 }
 
 .sub-info {
 	vertical-align: top;
 	margin-top: 50px;
 	margin-left: 30px;
-	width: 95%;
 	float: clear;
 }
 
 #main-info {
 	p {
-	 font-size: 195%;
+	 font-size: 150%;
+	 color: black;
+	}
+	a {
+	color: black;
 	}
 }
 
 #about-me {
-	width: 45%;
-	font-size: 175%;
+	font-size: 125%;
 	display: inline;
-	float: right;
 	padding-top: 20px;
 	word-wrap: break-word;
+	p {
+	color: black;
+	text-align: center;
+	border-radius: 20px;
+	background-color: rgba(180, 180, 180, 0.15);
+	}
 }
 
 #profile-header {
 	padding-top: 5px;
-	width: 100%;
+	color: white;
 }
 
 #user-avatar {
-	margin-top: 20px;
-	margin-left: 30px;
+	overflow: auto;
+	margin-top: 10px;
+	margin-left: 10px;
 	vertical-align: middle;
+	
 }
 
 #regimen-info {
-	width: 100%;
 	vertical-align: top;
-	float: left;
-	margin-right: 30px;
-	margin-bottom: 3em;
+	float: right;
+	padding: 10px;
 		p {
 	 font-size: 150%;
 	}
@@ -139,11 +152,26 @@
 }
 
 #regimen-card {
-	border: 1px solid black;
-	align: center;
-	margin: auto;
-	box-shadow: 5px 5px 2.5px #888888;
+	border-left: 1px solid rgb(93, 125, 133);
+	border-radius: 50px;
+	background-color: rgba(180, 180, 180, 0.25);
+	padding: 15px; 
+	content-align: center;
+	float: right;
+  color: rgb(22, 47, 61);
+  h3 {
+  color: rgb(180, 180, 180);
+  }
+  a {
+  color: black;
+  }
+	
+}
 
+
+#user-info-column {
+	/*background-color: rgb(45, 82, 100);*/
+	border-radius: 30px;
 }
 
 .glyphicon-trash {
@@ -151,9 +179,17 @@
 	height: 10px;
 }
 
+
 #bookmarked-sources {
-	width: 45%;
-	float: left;
+	color: rgb(22, 47, 61);
+	display: block;
+	border-radius: 30px;
+	padding: 10px;
+	float: right;
+	font-size: 150%;
+	a{
+	 color: black;
+	}
 }
 
 

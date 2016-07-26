@@ -46,7 +46,7 @@
 
                       <div class="panel-collapse collapse" id="collapseOne">
                         <ul class="list-group">
-                          <li class="list-group-item"><a href="/#secondPage">Om</a></li>
+                          <li class="list-group-item"><a href="/#secondPage/">Om</a></li>
                           <li class="list-group-item"><a href="/#secondPage/1">Shema Yisrael! Yhwh Eloheinu, Yhwh Echad</a></li>
                           <li class="list-group-item"><a href="/#secondPage/2">La Illaha Illallah</a></li>
                           <li class="list-group-item"><a href="/#secondPage/3">Om Namah Shiv'aya</a></li>
@@ -67,7 +67,7 @@
                       </div>
                       <div class="panel-collapse collapse" id="collapseTwo">
                         <ul class="list-group">
-                          <li class="list-group-item"><a href="/#thirdPage">Yoga Asana - Studio</a></li>
+                          <li class="list-group-item"><a href="/#thirdPage/">Yoga Asana - Studio</a></li>
                           <li class="list-group-item"><a href="/#thirdPage/1">Yoga Asana - Self Study</a></li>
                           <li class="list-group-item"><a href="/#thirdPage/2">QiGong - Studio</a></li>
                           <li class="list-group-item"><a href="/#thirdPage/3">QiGong - Self Study</a></li>
@@ -86,7 +86,7 @@
                       </div>
                       <div class="panel-collapse collapse" id="collapseThree">
                         <ul class="list-group">
-                          <li class="list-group-item"><a href="/#fourthPage">Stillness/Source</a></li>
+                          <li class="list-group-item"><a href="/#fourthPage/">Stillness/Source</a></li>
                           <li class="list-group-item"><a href="/#fourthPage/1">Breath Control</a></li>
                           <li class="list-group-item"><a href="/#fourthPage/2">Devotional Visualization</a></li>
                           <li class="list-group-item"><a href="/#fourthPage/3">Abstract Visualization Pt. I</a></li>
@@ -107,7 +107,7 @@
                       </div>
                       <div class="panel-collapse collapse" id="collapseFour">
                         <ul class="list-group">
-                          <li class="list-group-item"><a href="/#fifthPage">Food</a></li>
+                          <li class="list-group-item"><a href="/#fifthPage/">Food</a></li>
                           <li class="list-group-item"><a href="/#fifthPage/1">Companionship</a></li>
                           <li class="list-group-item"><a href="/#fifthPage/2">Assistance</a></li>
                           <li class="list-group-item"><a href="/#fifthPage/3">Environmental Care</a></li>
@@ -152,8 +152,10 @@
                       </div>
                       <div class="panel-collapse collapse" id="collapseSix">
                         <ul class="list-group">
-                          <li class="list-group-item"><a href="/#seventhPage">Lifestyle Pt. I</a></li>
+                          <li class="list-group-item"><a href="/#seventhPage/">Lifestyle Pt. I</a></li>
                           <li class="list-group-item"><a href="/#seventhPage/1">Lifestyle Pt. II</a></li>
+                          <li class="list-group-item"><a href="/#seventhPage/2">Lifestyle Pt. III</a></li>
+                          <li class="list-group-item"><a href="/#seventhPage/3">Lifestyle Pt. IV</a></li>
                         </ul>
                       </div>
                     </div>
@@ -162,17 +164,25 @@
                     <div class="panel panel-default">
                       <div class="panel-heading">
                         <h5 class="panel-title">
-                          <a href="/#eighthPage">Resources</a>
+                          <a href="#collapseSeven" data-toggle="collapse" data-parent="#accordion1">Getting Started Guide</a>
                         </h5>
+                      </div>
+                      <div class="panel-collapse collapse" id="collapseSeven">
+                        <ul class="list-group">
+                          <li class="list-group-item"><a href="/#eighthPage/">Lifestyle Pt. I</a></li>
+                          <li class="list-group-item"><a href="/#eighthPage/1">Lifestyle Pt. II</a></li>
+                          <li class="list-group-item"><a href="/#eighthPage/2">Lifestyle Pt. III</a></li>
+                          <li class="list-group-item"><a href="/#eighthPage/3">Lifestyle Pt. IV</a></li>
+                        </ul>
                       </div>
                     </div>
                     <!-- //Close Panel Seven -->    
-                    </div>
+                  </div>
                 </li>
               </ul>
             </div>
           </li>
-          <li><a href="/#ninthPage" class="btn">Getting Started</a></li>
+          <li><a href="/resources">Resources</a></li>
 
         <% if @current_user %>
           <li><%= link_to "Sangha", users_path, :class => "btn" %></li>

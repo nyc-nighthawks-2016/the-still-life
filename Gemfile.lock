@@ -429,6 +429,7 @@ DEPENDENCIES
   carrierwave (= 0.11.2)
   daemons
   database_cleaner
+  delayed_job
   delayed_job_active_record
   faker
   fog (= 1.38.0)

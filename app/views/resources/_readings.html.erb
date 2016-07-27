@@ -2,11 +2,26 @@
     <% @resources.readings.each do |reading| %>
         <p><%= link_to reading.name, reading.url %></p>
         <p><%= reading.description %></p>
-        <div class='bookmark-form'>
-          <%= form_for @bookmarks do |f| %>
-            <%= f.submit "Bookmark", class: "btn btn-primary" %>
-            <%= hidden_field_tag 'resource_id', reading.id %>
+
+        <% if @current_user %>
+
+          <% if @current_user.bookmarks.where(resource: @resources.find_by(name: reading.name ) ).length == 0 %>
+
+              <div class ='bookmark-form' id="resource-<%=reading.id %>">
+                <%= form_for @bookmark, :class => "form-heart" do |f|%>
+                  <%= f.button :submit, class: "submit-with-icon" do %>
+                    <i class="glyphicon glyphicon-heart-empty" aria-hidden="true"></i>
+                  <% end %>
+                <%= hidden_field_tag 'resource_id', reading.id %>
+                <% end %>
+              </div>
+
+          <% else %>
+
+            <i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+
           <% end %>
-        </div>
-        <br></br>
+
+        <% end %>
+
     <% end %>

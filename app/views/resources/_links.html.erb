@@ -4,12 +4,27 @@
   <h3> Yoga Asana </h3><br>
     <% @yoga_res.each do |res| %>
     <p><%= link_to res.description, res.url %></p>
-    <div class='bookmark-form'>
-        <%= form_for @bookmarks do |f| %>
-          <%= f.submit "Bookmark", class: "btn btn-primary" %>
-          <%= hidden_field_tag 'resource_id', res.id %>
-        <% end %>
-    </div>
+    <% if @current_user %>
+
+      <% if @current_user.bookmarks.where(resource: @resources.find_by(name: res.name ) ).length == 0 %>
+
+          <div class ='bookmark-form' id="resource-<%=res.id %>">
+            <%= form_for @bookmark, :class => "form-heart" do |f|%>
+              <%= f.button :submit, class: "submit-with-icon" do %>
+                <i class="glyphicon glyphicon-heart-empty" aria-hidden="true"></i>
+              <% end %>
+            <%= hidden_field_tag 'resource_id', res.id %>
+            <% end %>
+          </div>
+
+      <% else %>
+
+        <i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+
+      <% end %>
+
+    <% end %>
+
     <br></br>
     <% end %>
 </div>
@@ -18,13 +33,26 @@
   <h3> QiGong </h3><br>
     <% @qigong_res.each do |res| %>
     <p><%= link_to res.description, res.url %></p>
-        <div class='bookmark-form'>
-        <%= form_for @bookmarks do |f| %>
-          <%= f.submit "Bookmark", class: "btn btn-primary" %>
-          <%= hidden_field_tag 'resource_id', res.id %>
-        <% end %>
-    </div>
-    <br></br>
+    <% if @current_user %>
+
+      <% if @current_user.bookmarks.where(resource: @resources.find_by(name: res.name ) ).length == 0 %>
+
+          <div class ='bookmark-form' id="resource-<%=res.id %>">
+            <%= form_for @bookmark, :class => "form-heart" do |f|%>
+              <%= f.button :submit, class: "submit-with-icon" do %>
+                <i class="glyphicon glyphicon-heart-empty" aria-hidden="true"></i>
+              <% end %>
+            <%= hidden_field_tag 'resource_id', res.id %>
+            <% end %>
+          </div>
+
+      <% else %>
+
+        <i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+
+      <% end %>
+
+    <% end %>
     <% end %>
 </div>
 
@@ -32,13 +60,26 @@
   <h3> Service: Food </h3><br>
     <% @food_res.each do |res| %>
     <p><%= link_to res.description, res.url %></p>
-        <div class='bookmark-form'>
-        <%= form_for @bookmarks do |f| %>
-          <%= f.submit "Bookmark", class: "btn btn-primary" %>
-          <%= hidden_field_tag 'resource_id', res.id %>
-        <% end %>
-    </div>
-    <br></br>
+    <% if @current_user %>
+
+      <% if @current_user.bookmarks.where(resource: @resources.find_by(name: res.name ) ).length == 0 %>
+
+          <div class ='bookmark-form' id="resource-<%=res.id %>">
+            <%= form_for @bookmark, :class => "form-heart" do |f|%>
+              <%= f.button :submit, class: "submit-with-icon" do %>
+                <i class="glyphicon glyphicon-heart-empty" aria-hidden="true"></i>
+              <% end %>
+            <%= hidden_field_tag 'resource_id', res.id %>
+            <% end %>
+          </div>
+
+      <% else %>
+
+        <i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+
+      <% end %>
+
+    <% end %>
     <% end %>
 </div>
 
@@ -46,13 +87,26 @@
   <h3> Service: Companionship </h3><br>
     <% @companionship_res.each do |res| %>
     <p><%= link_to res.description, res.url %></p>
-        <div class='bookmark-form'>
-        <%= form_for @bookmarks do |f| %>
-          <%= f.submit "Bookmark", class: "btn btn-primary" %>
-          <%= hidden_field_tag 'resource_id', res.id %>
-        <% end %>
-    </div>
-    <br></br>
+    <% if @current_user %>
+
+      <% if @current_user.bookmarks.where(resource: @resources.find_by(name: res.name ) ).length == 0 %>
+
+          <div class ='bookmark-form' id="resource-<%=res.id %>">
+            <%= form_for @bookmark, :class => "form-heart" do |f|%>
+              <%= f.button :submit, class: "submit-with-icon" do %>
+                <i class="glyphicon glyphicon-heart-empty" aria-hidden="true"></i>
+              <% end %>
+            <%= hidden_field_tag 'resource_id', res.id %>
+            <% end %>
+          </div>
+
+      <% else %>
+
+        <i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+
+      <% end %>
+
+    <% end %>
     <% end %>
 </div>
 
@@ -60,13 +114,26 @@
   <h3> Service: Assistance </h3><br>
     <% @assistance_res.each do |res| %>
     <p><%= link_to res.description, res.url %></p>
-        <div class='bookmark-form'>
-        <%= form_for @bookmarks do |f| %>
-          <%= f.submit "Bookmark", class: "btn btn-primary" %>
-          <%= hidden_field_tag 'resource_id', res.id %>
-        <% end %>
-    </div>
-    <br></br>
+    <% if @current_user %>
+
+      <% if @current_user.bookmarks.where(resource: @resources.find_by(name: res.name ) ).length == 0 %>
+
+          <div class ='bookmark-form' id="resource-<%=res.id %>">
+            <%= form_for @bookmark, :class => "form-heart" do |f|%>
+              <%= f.button :submit, class: "submit-with-icon" do %>
+                <i class="glyphicon glyphicon-heart-empty" aria-hidden="true"></i>
+              <% end %>
+            <%= hidden_field_tag 'resource_id', res.id %>
+            <% end %>
+          </div>
+
+      <% else %>
+
+        <i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+
+      <% end %>
+
+    <% end %>
     <% end %>
 </div>
 
@@ -74,13 +141,26 @@
   <h3> Service: Environment </h3><br>
     <% @env_res.each do |res| %>
     <p><%= link_to res.description, res.url %></p>
-        <div class='bookmark-form'>
-        <%= form_for @bookmarks do |f| %>
-          <%= f.submit "Bookmark", class: "btn btn-primary" %>
-          <%= hidden_field_tag 'resource_id', res.id %>
-        <% end %>
-    </div>
-    <br></br>
+    <% if @current_user %>
+
+      <% if @current_user.bookmarks.where(resource: @resources.find_by(name: res.name ) ).length == 0 %>
+
+          <div class ='bookmark-form' id="resource-<%=res.id %>">
+            <%= form_for @bookmark, :class => "form-heart" do |f|%>
+              <%= f.button :submit, class: "submit-with-icon" do %>
+                <i class="glyphicon glyphicon-heart-empty" aria-hidden="true"></i>
+              <% end %>
+            <%= hidden_field_tag 'resource_id', res.id %>
+            <% end %>
+          </div>
+
+      <% else %>
+
+        <i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+
+      <% end %>
+
+    <% end %>
     <% end %>
 </div>
 
@@ -88,12 +168,25 @@
   <h3> Service: Animals </h3><br>
     <% @animals_res.each do |res| %>
     <p><%= link_to res.description, res.url %></p>
-        <div class='bookmark-form'>
-        <%= form_for @bookmarks do |f| %>
-          <%= f.submit "Bookmark", class: "btn btn-primary" %>
-          <%= hidden_field_tag 'resource_id', res.id %>
-        <% end %>
-    </div>
-    <br></br>
+    <% if @current_user %>
+
+      <% if @current_user.bookmarks.where(resource: @resources.find_by(name: res.name ) ).length == 0 %>
+
+          <div class ='bookmark-form' id="resource-<%=res.id %>">
+            <%= form_for @bookmark, :class => "form-heart" do |f|%>
+              <%= f.button :submit, class: "submit-with-icon" do %>
+                <i class="glyphicon glyphicon-heart-empty" aria-hidden="true"></i>
+              <% end %>
+            <%= hidden_field_tag 'resource_id', res.id %>
+            <% end %>
+          </div>
+
+      <% else %>
+
+        <i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+
+      <% end %>
+
+    <% end %>
     <% end %>
 </div>

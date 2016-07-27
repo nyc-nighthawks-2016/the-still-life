@@ -6,10 +6,10 @@
   	  Method: <p><%= @practice.method %></p><br>
 	 </div>
    <% if @practice.category == "Chant" %>
-     <audio controls="controls">
-       <source src= <%= @chant_recording.url %> type="audio/mpeg">
+    <audio controls="controls">
+      <source src= <%= @chant_recording.url %> type="audio/mpeg">
         Your browser does not support the audio element.
-      </audio>
+    </audio>
     <% end %>
     <br><br>
     <h4 class="whitefont">Resources</h4>
@@ -23,9 +23,10 @@
           <% if @current_user.bookmarks.where(resource_id: resource.id).length == 0 %> 
 
             <%= form_for @bookmarks do |f|%>
-              <%= f.submit do %>
-                <span class=" glyphicon glyphicon-heart-empty"></span>
-              <% end %>
+              <span class=" glyphicon glyphicon-heart-empty">
+              <%= f.submit%>
+              </span>
+              
               <%= hidden_field_tag 'resource_id', resource.id %>
               <% end %>
           <% else %>

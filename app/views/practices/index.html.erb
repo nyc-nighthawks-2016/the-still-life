@@ -27,7 +27,7 @@
                   <% if current_user %>
                     <% if current_user.regimes.length == 0 %>
                       <button>
-                        <%= link_to "Choose this Practice", new_regime_path(practice_id: chant.id), :class => "whitefont" %>
+                        <%= link_to "Choose this Practice", new_regime_path(practice_id: chant.id), :class => "darkfont" %>
                       </button>
                     <% end %>
                   <% end %>
@@ -87,7 +87,7 @@
                   <% if current_user %>
                     <% if current_user.regimes.length == 0 %>
                       <button>
-                        <%= link_to "Choose this Practice", new_regime_path(practice_id: seated_practice.id) %>
+                        <%= link_to "Choose this Practice", new_regime_path(practice_id: seated_practice.id), :class => "darkfont" %>
                       </button>
                     <% end %>
                   <% end %>

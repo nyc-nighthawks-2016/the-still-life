@@ -5,7 +5,7 @@
         <div class="section" id="homepage" data-menuanchor="firstPage">
           <div class='container'>
             <p id="main-header" class="darkfont"> The Still Life </p>
-            <h4 class="darkfont">Here at The Still Life, strive to simplify....</h4>
+            <h4 class="darkfont">Give yourself a meditation retreat every day</h4>
           </div>
         </div>
 
@@ -16,7 +16,8 @@
             <div class="slide" id="chant<%=chant_id_counter%>"> 
               <div class='container'>
                 <div class="chants-style">
-                  <h1 style="text-decoration: underline" class="whitefont"> Chants </h1><br>
+                  <h1 style="text-decoration: underline" class="whitefont"> Chants </h1>
+                  <h4 class="whitefont"><em><%= chant.suggestion %></em></h4><br>
                   <h2 class="whitefont"><%= link_to chant.name, practice_path(chant) %></h2>
                   <h3 class="whitefont">Method: <%= chant.method %></h3>
                   <br>
@@ -46,7 +47,7 @@
             <div class="slide" id="body<%=body_id_counter%>">
               <div class='container'>
                 <div class="body-style">
-                  <h1 style="text-decoration: underline" class="darkfont"> Body Practices </h1><br>
+                  <h1 style="text-decoration: underline" class="darkfont"> Body Practices </h1><h4 class="darkfont"><em><%= body_practice.suggestion %></em></h4><br>
                   <h2 class="darkfont"><%=link_to body_practice.name, practice_path(body_practice) %></h2>
                   <h3 class="darkfont">Method: <%= body_practice.method %></h3>
                   <br>
@@ -76,7 +77,8 @@
             <div class='slide' id="seated<%=seated_id_counter%>">
               <div class='container'>
                 <div class="seated-style">
-                  <h1 style="text-decoration: underline" class="darkfont"> Seated Practices </h1><br>
+                  <h1 style="text-decoration: underline" class="darkfont"> Seated Practices </h1>
+                  <h4 class="darkfont"><em><%= seated_practice.suggestion %></em></h4><br>
                   <h2 class="darkfont"><%= link_to seated_practice.name, practice_path(seated_practice) %></h2>
                   <h3 class="darkfont">Method: <%= seated_practice.method %></h3>
                   <br>
@@ -107,7 +109,8 @@
             <div class='slide' id="service<%= service_id_counter%>">
               <div class='container'>
                 <div class="service-style">
-                  <h1 style="text-decoration: underline" class="darkfont"> Services </h1><br>
+                  <h1 style="text-decoration: underline" class="darkfont"> Services </h1>
+                  <h4 class="darkfont"><em><%= service.suggestion %></em></h4><br>
                   <h2 class="darkfont"><%= link_to service.name, practice_path(service)%></h2>
                   <h3 class="darkfont">Method: <%= service.method %></h3>
                   <br>

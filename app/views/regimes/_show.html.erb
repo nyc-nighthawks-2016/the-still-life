@@ -7,7 +7,7 @@
     <h4 class="whitefont"> Browse <%= "#{@regimen.practice.name}" %> resources and find an activity to do this week.<br><br>Incorporate your activity once or twice each week. </h4>
   <% else %>
     <h3 class="whitefont">Practice Description</h3>
-    <h4 class="whitefont"><%=@regimen.practice.description %></h4>
+    <h4 class="whitefont" id="regimen-desc"><%=@regimen.practice.description %></h4>
     <h3 class="whitefont">Your duration goal for this practice is <%= @regimen.duration %> minutes </h3>
   <% end %>
 

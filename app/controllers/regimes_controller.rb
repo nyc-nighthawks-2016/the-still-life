@@ -29,10 +29,10 @@ class RegimesController < ApplicationController
 		if logged_in?
 			@regimen = generate_regime(params)
 			current_user.update_attribute(:practice, Practice.find(params[:practice_id]))
-			# Do this stuff (copied and pasted from Seth)
 			respond_to do |format|
 		    if @regimen.save
-		      format.html { redirect_to current_user, notice: 'Regimen was successfully created.' }
+		    	flash[:success] = 'Regimen was successfully created.'
+		      format.html { redirect_to current_user }
 		      format.json { redirect_to current_user, status: :created, location: @regimen }
 
 		    else
@@ -40,9 +40,7 @@ class RegimesController < ApplicationController
 		      format.json { render json: @regimen.errors, status: :unprocessable_entity }
 		    end
 		  end
-		 # else (if not logged in)...
 		else
-			# ...take a hike
 			redirect_to login_url
 		end
 	end

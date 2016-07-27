@@ -1,46 +1,47 @@
 <div id="pageshift">
 	<center>
-	  <h1 class="whitefont"><%= @practice.name %></h1><br>
-    <div class="single-practice whitefont">
-  	  Description:<p><%= @practice.description %></p><br>
-  	  Method: <p><%= @practice.method %></p><br>
-	 </div>
-   <% if @practice.category == "Chant" %>
-    <audio controls="controls">
-      <source src= <%= @chant_recording.url %> type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    <% end %>
-    <br><br>
-    <h4 class="whitefont">Resources</h4>
-    <br>
-    <div class="practice-resources">
+    <div class="practice-style">
+	    <h1 class="whitefont"><%= @practice.name %></h1><br>
+      <div class="single-practice whitefont">
+    	  Description:<p><%= @practice.description %></p><br>
+    	  Method: <p><%= @practice.method %></p><br>
+  	  </div>
+      <% if @practice.category == "Chant" %>
+        <audio controls="controls">
+          <source src= <%= @chant_recording.url %> type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+      <% end %>
+
+      <br><br>
+
+      <h4 class="whitefont">Resources</h4>
+
+      <br>
+    
+      <div class="practice-resources">
       <% @practice.resources.each do |resource| %>
-        <h5 class="whitefont"><%= resource.name %> | <%= resource.description %> | <%= resource.category %>
-
+        <h5 class="whitefont"><%= resource.name %> | <%= resource.description %> | <%= resource.category %></h5>
         <% if @current_user %>
-
           <% if @current_user.bookmarks.where(resource_id: resource.id).length == 0 %> 
             <%= form_for @bookmarks, :class => "form-heart" do |f|%>
               <%= f.button :submit, class: "submit-with-icon" do %>
-                <i class="glyphicon glyphicon-heart-empty" aria-hidden="true"></i>
+                <h3><i class="glyphicon glyphicon-heart-empty" aria-hidden="true"></i></h3>
               <% end %>
               <%= hidden_field_tag 'resource_id', resource.id %>
             <% end %>
-            </div>
-
-            <link
+            
           <% else %>
+
             <%= link_to bookmark_path(@current_user.bookmarks.find_by(resource_id: resource.id)), method: :delete, data: { confirm: "Are you sure you want to unbookmark this resource?" } do %>
-              <i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+              <h3><i class="glyphicon glyphicon-heart" aria-hidden="true"></i></h3>
             <% end %>
 
           <% end %>
 
         <% end %>
-
-      <% end %>
-      </h5>
+      <% end %> 
+     
     </div>
   </center>
 </div>

@@ -1,72 +1,70 @@
 <div class='profile-backdrop'>
-<div id="pageshift">
-  <% provide(:title, @user.username) %>
-<div class="container-fluid col-md-4" id='user-info-column'>
-        <div  id="user-avatar">
-          <%= gravatar_for @user %>
-          <div id="profile-header">
-            <h2><%= @user.username %>'s Page</h2> 
+  <div id="pageshift">
+    <% provide(:title, @user.username) %>
+    <div class="container-fluid col-md-4" id='user-info-column'>
+      <div  id="user-avatar">
+        <%= gravatar_for @user %>
+        <div id="profile-header">
+          <h2><%= @user.username %>'s Page</h2> 
+        </div>
+      </div>
+      <br>
+      <div class="users-info">
+
+        <div id="main-info">
+          <p>
+            <% if @current_user == @user %>
+              <%= link_to "Edit Information", edit_user_path(@user) %>
+            <% end %>
+          </p>
+          <!-- <p>
+          First Name:
+          <%= @user.first_name %>
+          </p>
+          <p>
+          Last Name:
+          <%= @user.last_name %>
+          </p> -->
+          <!-- <p>
+          <a href="mailto:<%= @user.email %>?Subject=Hello%20friend">message me</a>
+          </p> -->
+          <!-- <p>
+          Gender:
+          <%= @user.gender %>
+          </p>
+          <p>
+          Age:
+          <%= @user.age %>
+          </p> -->
+          <div id="about-me">
+            <p>
+            About me:<br>
+            <%= @user.about_me %>
+            </p>
           </div>
         </div>
-      <br>
-<div class="users-info">
-
-    <div id="main-info">
-        <p>
-          <% if @current_user == @user %>
-            <%= link_to "Edit Information", edit_user_path(@user) %>
-          <% end %>
-        </p>
-        <!-- <p>
-        First Name:
-        <%= @user.first_name %>
-        </p>
-        <p>
-        Last Name:
-        <%= @user.last_name %>
-        </p> -->
-        <p>
-        <a href="mailto:<%= @user.email %>?Subject=Hello%20friend">message me</a>
-        </p>
-        <!-- <p>
-        Gender:
-        <%= @user.gender %>
-        </p>
-        <p>
-        Age:
-        <%= @user.age %>
-        </p> -->
-        <div id="about-me">
-          <p>
-          About me:<br>
-          <%= @user.about_me %>
-          </p>
-        </div>
+      </div>
     </div>
-    
-</div>
-</div>
-
-  <div class='container-fluid col-md-8' id='regimen-card'>
-      <h3>Your Meditation Retreat</h3><br>
-        <% if @user.regimes != nil %>
+    <% if @user.regimes != nil %>
+      <div class='container-fluid col-md-8' id='regimen-card'>
+        <h3 class="darkfont">Your Meditation Retreat</h3><br>
         <div id='complete-button'>
           <%= render 'regimes/show' %><br>
         </div>
-  </div> 
-  <div class="sub-info container-fluid">
-    <div class= 'col-md-8' id="regimen-info">   
-          <% if @completed_regimens %>
-            <div class="session-count">
-              <%= render 'sessions' %>
-            </div>
-    <div class='glyph-div'>
+      </div> 
+      <div class="sub-info container-fluid">
+      <div class= 'col-md-8' id="regimen-info">   
+        <% if @completed_regimens %>
+          <div class="session-count">
+            <%= render 'sessions' %>
+          </div>
+          <div class='glyph-div'>
             <%= render 'tracker' %>
-    </div>
-           <% end %>
+          </div>
+        <% end %>
       <% end %>
-  </div>
-  </div>
+      </div>
+    </div>
 
   <div class="container-fluid col-md-8" id="bookmarked-sources">
       <h2>Bookmarked Resources</h2>

@@ -1,6 +1,6 @@
 <div id="pageshift">
   <% provide(:title, "Log in") %>
-  <h1 id="styled-heading">Log in</h1><br>
+  <h1 class="whitefont" id="styled-heading">Log in</h1><br>
   <div id="login-errors">
     <% if flash[:notice] %>
       <%= flash[:notice] %>
@@ -13,23 +13,23 @@
     
       <%= form_for(:session, url: login_path, :html => {:id => "form"}) do |f| %>
       
-        <%= f.label :email %>
+        <h4 class="whitefont"><%= f.label :email %></h4>
         <%= f.email_field :email, class: 'form-control' %><br>
      
       
-        <%= f.label :password %>
-        <%= link_to "(forgot password)", new_password_reset_path %>
+        <h4 class="whitefont"><%= f.label :password %></h4>
+        <%= link_to "(forgot password)", new_password_reset_path, :class => "whitefont" %><br>
         <%= f.password_field :password, class: 'form-control' %><br>
 
         <%= f.label :remember_me, class: "checkbox inline" do %>
           <%= f.check_box :remember_me %>
-          <span>Remember me</span>
+          <span class="whitefont">Remember me</span>
         <% end %>
      
         <%= f.submit "Log in", class: "btn btn-primary" %>
       <% end %>
 
-      <p id="styled-heading">New user? <%= link_to "Sign up now!", new_user_path %></p>
+      <p class="whitefont" id="styled-heading">New user? <%= link_to "Sign up now!", new_user_path, :class => "whitefont" %></p>
     </div>
   </div>
 </div>

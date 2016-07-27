@@ -1,6 +1,6 @@
 <div id="pageshift">
     <% provide(:title, "Register") %>
-    <h1 id="styled-heading">Register User</h1><br>
+    <h1 class="whitefont" id="styled-heading">Register User</h1><br>
 
     <br>
     <div class="row">
@@ -9,28 +9,28 @@
         <%= form_for(@user, :html => {:id => "form"}) do |f| %>
              <%= render 'shared/error_messages' %>
 
-            <%= f.label :first_name %>
+            <h4 class="whitefont"><%= f.label :first_name %></h4>
             <%= f.text_field :first_name, class: 'form-control' %><br>
           
-            <%= f.label :last_name %>
+            <h4 class="whitefont"><%= f.label :last_name %></h4>
             <%= f.text_field :last_name, class: 'form-control' %><br>
           
-            <%= f.label :username %>
+            <h4 class="whitefont"><%= f.label :username %></h4>
             <%= f.text_field :username, class: 'form-control' %><br>
 
-            <%= f.label :age %>
+            <h4 class="whitefont"><%= f.label :age %></h4>
             <%= f.number_field :age, min: 5, class: 'form-control' %><br>
 
-            <%= f.label :gender %>
+            <h4 class="whitefont"><%= f.label :gender %></h4>
             <%= f.text_field :gender, class: 'form-control' %><br>
           
-            <%= f.label :email %>
+            <h4 class="whitefont"><%= f.label :email %></h4>
             <%= f.email_field :email, class: 'form-control' %><br>
           
-            <%= f.label :password %>
+            <h4 class="whitefont"><%= f.label :password %></h4>
             <%= f.password_field :password, class: 'form-control' %><br>
           
-            <%= f.label :about_me %>
+            <h4 class="whitefont"><%= f.label :about_me %></h4>
             <%= f.text_area :about_me, class: 'form-control', rows: '10' %><br>
           
             <%= f.submit "Create User", class: "btn btn-primary" %>

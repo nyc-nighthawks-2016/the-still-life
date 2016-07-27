@@ -11,14 +11,24 @@
         Your browser does not support the audio element.
       </audio>
     <% end %>
-    <button>
-    </button>
-  </center>
-  <div class="practice-resources">
-    <ul>
-      <% @resources.each do |resource| %>
-        <li><%= resource.name %></li>
+    <br><br>
+    <h4 class="whitefont">Resources</h4>
+    <br>
+    <div class="practice-resources">
+      <% @practice.resources.each do |resource| %>
+        <h5 class="whitefont"><%= resource.name %> | <%= resource.description %> | <%= resource.category %>
+
+        <% if @current_user %>
+
+          <%= form_for @bookmarks do |f| %>
+            <%= f.submit "Bookmark", class: "btn btn-primary" %>
+            <%= hidden_field_tag 'resource_id', resource.id %>
+          <% end %>
+
+        <% end %>
       <% end %>
-    </ul>
+      </h5>
   </div>
+  </center>
 </div>
+

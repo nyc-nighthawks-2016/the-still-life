@@ -1,1 +1,1 @@
-<p> <h2>You have completed <%= pluralize(current_user.regimes.where(completion: true).count,'session') %>. </h2></p> 
+<p> <h2>You have completed <%= pluralize(@completed_regimens.length,'session') %>. </h2></p> 

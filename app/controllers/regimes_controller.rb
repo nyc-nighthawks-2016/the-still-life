@@ -59,7 +59,7 @@ class RegimesController < ApplicationController
 
 	def update
 		@regimen = Regime.find(params[:id])
-
+		@completed_regimens = current_user.regimes.where(completion: true)
 
 		if logged_in? && @regimen.user == current_user
 			if !params[:regimen]

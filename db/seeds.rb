@@ -199,25 +199,3 @@ regimens = []
 #                         user: users.sample
 
 #       })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

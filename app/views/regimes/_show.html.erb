@@ -12,8 +12,8 @@
 
   <h3><%= link_to "Edit", edit_regime_path(@regimen) %></h3>
   <% if !@regimen.completion %>
-    <%= form_for @regimen do |f| %>
-      <%=f.submit "Complete", class:"btn btn-primary col-md-2 col-md-offset-5" %>
+    <%= form_for @regimen, remote: true do |f| %>
+      <%=f.submit "Complete", class:"complete-button btn btn-primary col-md-2 col-md-offset-5" %>
     <% end %>
    <% end %>
   <% end %>

@@ -1,4 +1,5 @@
 class RegimesController < ApplicationController
+	before_action :current_regimen
 
 	def index
 	end
@@ -31,8 +32,9 @@ class RegimesController < ApplicationController
 			# Do this stuff (copied and pasted from Seth)
 			respond_to do |format|
 		    if @regimen.save
-		      format.html { redirect_to @regimen, notice: 'Regimen was successfully created.' }
-		      format.json { render :show, status: :created, location: @regimen }
+		      format.html { redirect_to current_user, notice: 'Regimen was successfully created.' }
+		      format.json { redirect_to current_user, status: :created, location: @regimen }
+
 		    else
 		      format.html { render :new }
 		      format.json { render json: @regimen.errors, status: :unprocessable_entity }
@@ -62,7 +64,10 @@ class RegimesController < ApplicationController
 		if logged_in? && @regimen.user == current_user
 			if !params[:regimen]
 				@regimen.update_attribute(:completion, true)
-				redirect_to regime_path(@regimen)
+					respond_to do |format| 
+						format.js
+		 	      format.html { redirect_to current_user }
+	 			  end
 			elsif params[:regimen]
 				time = generate_time(params)
 				@regimen.update_attribute(:daily_practice_time, time)
@@ -98,6 +103,10 @@ class RegimesController < ApplicationController
 		t = DateTime.now
 		time = DateTime.new(t.year, t.month, t.day, hour.to_i, minute.to_i, 0) 
 		time.change(:offset => "-0400")
+	end
+
+	def current_regimen 
+		current_user.regimes.last
 	end
 
 end

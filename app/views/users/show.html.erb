@@ -50,19 +50,19 @@
  <div class='container-fluid col-md-8' id='regimen-card'>
       <h3>Your Practice</h3><br>
         <% if @user.regimes != nil %>
+        <div id='complete-button'>
         <%= render 'regimes/show' %><br>
+        </div>
   </div> 
   <div class="sub-info container-fluid">
     <div class= 'col-md-8' id="regimen-info">   
           <% if @completed_regimens %>
-            <p> <h2>You have completed <%= pluralize(@completed_regimens.length,'session') %>. </h2></p> 
-              <% @completed_regimens.each do |regimen| %>
-                  <div id="single-regimen">
-                    <center>
-                      <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
-                    </center>
-                  </div>
-              <% end %>
+            <div class="session-count">
+              <%= render 'sessions' %>
+            </div>
+<div class='glyph-div'>
+              <%= render 'tracker' %>
+</div>
            <% end %>
       <% end %>
   </div>

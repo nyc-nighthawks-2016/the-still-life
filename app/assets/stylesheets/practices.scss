@@ -71,7 +71,7 @@
 	background-image: url("birds_sunset.jpg");
 	background-size: contain;
 	background-attachment: fixed;
-	background-size: 100%;
+	background-size: cover;
 	
 }
 
@@ -79,7 +79,7 @@
 	background-image: url("perfect_crash.jpg");
 	background-size: contain;
 	background-attachment: fixed;
-	background-size: 100%;
+	background-size: cover;
 	
 }
 
@@ -93,7 +93,7 @@
 	background-image: url("mountain_lookout.jpg");
 	background-size: contain;
 	background-attachment: fixed;
-	background-size: 100%;
+	background-size: cover;
 }
 
 .body-style {
@@ -106,7 +106,7 @@
 	background-image: url("centered_mountain.jpg");
 	background-size: contain;
 	background-attachment: fixed;
-	background-size: 100%;
+	background-size: cover;
 }	
 
 .seated-style {
@@ -119,7 +119,7 @@
 	background-image: url("ideal_splash.jpg");
 	background-size: contain;
 	background-attachment: fixed;
-	background-size: 100%;
+	background-size: cover;
 }
 
 .service-style {
@@ -132,23 +132,24 @@
 	background-image: url("perfect_pier.jpg");
 	background-size: contain;
 	background-attachment: fixed;
-	background-size: 100%;	
+	background-size: cover;	
 }
 
 .guide-style {
-	background-color: rgba(255, 250, 250, 0.35);
+	background-color: rgba(255, 250, 250, 0.45);
   	border: 2px solid #000000;
+    top: 20px;
 }
 
 #lifestyle0, #lifestyle1, #lifestyle2, #lifestyle3 {
 	background-image: url("snow_green_lake.jpg");
 	background-size: contain;
 	background-attachment: fixed;
-	background-size: 100%;
+	background-size: cover;
 }
 
 .life-style {
-	background-color: rgba(51, 51, 51, 0.45);
+	background-color: rgba(51, 51, 51, 0.65);
   	width: 85%;
   	border: 2px solid #fffafa; 
 }
@@ -157,7 +158,7 @@
 	background-image: url("kayak_lake.jpg");
 	background-size: contain;
 	background-attachment: fixed;
-	background-size: 100%;	
+	background-size: cover;	
 }
 
 .started-style {

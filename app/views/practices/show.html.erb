@@ -1,9 +1,9 @@
 <div id="pageshift">
 	<center>
-	  <h1><%= @practice.name %></h1>
-    <div class="single-practice">
-  	  Description:<p><%= @practice.description %></p>
-  	  Method: <p><%= @practice.method %></p>
+	  <h1 class="whitefont"><%= @practice.name %></h1><br>
+    <div class="single-practice whitefont">
+  	  Description:<p><%= @practice.description %></p><br>
+  	  Method: <p><%= @practice.method %></p><br>
 	 </div>
    <% if @practice.category == "Chant" %>
      <audio controls="controls">
@@ -11,7 +11,24 @@
         Your browser does not support the audio element.
       </audio>
     <% end %>
-    <button>
-    </button>
+    <br><br>
+    <h4 class="whitefont">Resources</h4>
+    <br>
+    <div class="practice-resources">
+      <% @practice.resources.each do |resource| %>
+        <h5 class="whitefont"><%= resource.name %> | <%= resource.description %> | <%= resource.category %>
+
+        <% if @current_user %>
+
+          <%= form_for @bookmarks do |f| %>
+            <%= f.submit "Bookmark", class: "btn btn-primary" %>
+            <%= hidden_field_tag 'resource_id', resource.id %>
+          <% end %>
+
+        <% end %>
+      <% end %>
+      </h5>
+  </div>
   </center>
 </div>
+

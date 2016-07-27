@@ -6,10 +6,10 @@
   	  Method: <p><%= @practice.method %></p><br>
 	 </div>
    <% if @practice.category == "Chant" %>
-     <audio controls="controls">
-       <source src= <%= @chant_recording.url %> type="audio/mpeg">
+    <audio controls="controls">
+      <source src= <%= @chant_recording.url %> type="audio/mpeg">
         Your browser does not support the audio element.
-      </audio>
+    </audio>
     <% end %>
     <br><br>
     <h4 class="whitefont">Resources</h4>
@@ -20,15 +20,27 @@
 
         <% if @current_user %>
 
-          <%= form_for @bookmarks do |f| %>
-            <%= f.submit "Bookmark", class: "btn btn-primary" %>
-            <%= hidden_field_tag 'resource_id', resource.id %>
+          <% if @current_user.bookmarks.where(resource_id: resource.id).length == 0 %> 
+
+            <%= form_for @bookmarks do |f|%>
+              <span class=" glyphicon glyphicon-heart-empty">
+              <%= f.submit%>
+              </span>
+              
+              <%= hidden_field_tag 'resource_id', resource.id %>
+              <% end %>
+          <% else %>
+            <%= link_to bookmark_path(@current_user.bookmarks.find_by(resource_id: resource.id)), method: :delete, data: { confirm: "You sure?" } do %>
+              <i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
+            <% end %>
+
           <% end %>
 
         <% end %>
+
       <% end %>
       </h5>
-  </div>
+    </div>
   </center>
 </div>
 

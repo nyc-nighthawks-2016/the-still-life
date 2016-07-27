@@ -1,40 +1,38 @@
 <div id="pageshift">
-  <h1> Resources </h1>
-    <center>
-      <div class='resource-container'>
+  <center>
+    <h1> Resources </h1>
+    <div class='resource-container'>
+      <section class='recordings-container'>
+        <div class='audios'>
+          <%= render 'audios' %>
+        </div>
+      </section>
 
-        <section class='recordings-container'>
-          <div class='audios'>
-            <%= render 'audios' %>
-          </div>
-        </section>
+      <section class='readings-container'>
+        <div class='readings'>
+          <%= render 'readings' %>
+        </div><br>
+      </section>
 
-        <section class='readings-container'>
-          <div class='readings'>
-            <%= render 'readings' %>
-          </div><br>
-        </section>
+      <section class='links-container'>
+        <div class='links'>
+            <%= render 'links' %>
+        </div><br>
+      </section>
 
-        <section class='links-container'>
-          <div class='links'>
-              <%= render 'links' %>
-          </div><br>
-        </section>
+      <section class='images-container'>
+        <div class='images'>
+          <%#= render 'images' %>
+        </div><br>
+      </section>
 
-        <section class='images-container'>
-          <div class='images'>
-            <%#= render 'images' %>
-          </div><br>
-        </section>
+      <section class='videos-container'>
+        <div class='services'>
+          <%#= render 'services' %>
+        </div><br>
+      </section>
 
-        <section class='videos-container'>
-          <div class='services'>
-            <%#= render 'services' %>
-          </div><br>
-        </section>
-
-      </div>
-    </center>
-
+    </div>
+  </center>
   <% #commented out resources will be added later %>
 </div>

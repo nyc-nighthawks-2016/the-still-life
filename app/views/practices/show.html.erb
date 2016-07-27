@@ -21,16 +21,17 @@
         <% if @current_user %>
 
           <% if @current_user.bookmarks.where(resource_id: resource.id).length == 0 %> 
-
-            <%= form_for @bookmarks do |f|%>
-              <span class=" glyphicon glyphicon-heart-empty">
-              <%= f.submit%>
-              </span>
-              
-              <%= hidden_field_tag 'resource_id', resource.id %>
+            <%= form_for @bookmarks, :class => "form-heart" do |f|%>
+              <%= f.button :submit, class: "submit-with-icon" do %>
+                <i class="glyphicon glyphicon-heart-empty" aria-hidden="true"></i>
               <% end %>
+              <%= hidden_field_tag 'resource_id', resource.id %>
+            <% end %>
+            </div>
+
+            <link
           <% else %>
-            <%= link_to bookmark_path(@current_user.bookmarks.find_by(resource_id: resource.id)), method: :delete, data: { confirm: "You sure?" } do %>
+            <%= link_to bookmark_path(@current_user.bookmarks.find_by(resource_id: resource.id)), method: :delete, data: { confirm: "Are you sure you want to unbookmark this resource?" } do %>
               <i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
             <% end %>
 

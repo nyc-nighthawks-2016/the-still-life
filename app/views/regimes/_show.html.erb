@@ -1,20 +1,20 @@
 <%if @regimen != nil %>
-  <h1><%= @regimen.practice.name %></h1>
-  <h4><em><%=@regimen.practice.suggestion%></em></h4>
-  <h3><%= display_time(@regimen) %></h3>
+  <h1 class="whitefont"><%= @regimen.practice.name %></h1>
+  <h4 class="whitefont"><em><%=@regimen.practice.suggestion%></em></h4>
+  <h3 class="whitefont"><%= display_time(@regimen) %></h3>
 
   <% if @regimen.practice.category == "Body" || @regimen.practice.category == "Service"%>
-    <h4> Browse <%= "#{@regimen.practice.name}" %> resources and find an activity to do this week.<br><br>Incorporate your activity once or twice each week. </h4>
+    <h4 class="whitefont"> Browse <%= "#{@regimen.practice.name}" %> resources and find an activity to do this week.<br><br>Incorporate your activity once or twice each week. </h4>
   <% else %>
-    <h3>Practice Description</h3>
-    <h4><%=@regimen.practice.description %></h4>
-    <h3>Your duration goal for this practice is <%= @regimen.duration %> minutes </h3>
+    <h3 class="whitefont">Practice Description</h3>
+    <h4 class="whitefont"><%=@regimen.practice.description %></h4>
+    <h3 class="whitefont">Your duration goal for this practice is <%= @regimen.duration %> minutes </h3>
   <% end %>
 
-  <h3><%= link_to "Edit", edit_regime_path(@regimen) %></h3>
+  <h3 class="whitefont"><%= link_to "Edit", edit_regime_path(@regimen) %></h3>
   <% if !@regimen.completion %>
     <%= form_for @regimen, remote: true do |f| %>
-      <%=f.submit "Complete", class:"complete-button btn btn-primary col-md-2 col-md-offset-5" %>
+      <%=f.submit "Complete", class:"complete-button btn btn-primary col-md-2 col-md-offset-5 whitefont" %>
     <% end %>
   <% end %>
   

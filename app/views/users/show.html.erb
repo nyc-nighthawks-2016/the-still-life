@@ -45,26 +45,25 @@
         </div>
       </div>
     </div>
-
-    <div class='container-fluid col-md-8' id='regimen-card'>
-      <h3>Your Meditation Retreat</h3><br>
-      <% if @user.regimes != nil %>
+    <% if @user.regimes != nil %>
+      <div class='container-fluid col-md-8' id='regimen-card'>
+        <h3 class="darkfont">Your Meditation Retreat</h3><br>
         <div id='complete-button'>
           <%= render 'regimes/show' %><br>
         </div>
-    </div> 
-    <div class="sub-info container-fluid">
+      </div> 
+      <div class="sub-info container-fluid">
       <div class= 'col-md-8' id="regimen-info">   
         <% if @completed_regimens %>
           <div class="session-count">
             <%= render 'sessions' %>
           </div>
-        <div class='glyph-div'>
-                <%= render 'tracker' %>
-        </div>
+          <div class='glyph-div'>
+            <%= render 'tracker' %>
+          </div>
         <% end %>
       <% end %>
-    </div>
+      </div>
     </div>
 
   <div class="container-fluid col-md-8" id="bookmarked-sources">

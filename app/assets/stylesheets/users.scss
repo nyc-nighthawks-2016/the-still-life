@@ -15,6 +15,9 @@
 	color: #fffafa;
 }
 
+.darkfont {
+	color: #000000;
+}
 
 #styled-heading {
 	text-align: center;
@@ -73,9 +76,8 @@
 
 body {
 	background-image: url('distant_mountain_sky.jpeg');
-	background-size: contain;
+	background-size: cover;
 	background-attachment: fixed;
-	background-size: 100%;
 }
 
 
@@ -123,7 +125,7 @@ body {
 
 #profile-header {
 	padding-top: 5px;
-	color: white;
+	color: #000000;
 }
 
 #user-avatar {
@@ -170,9 +172,7 @@ body {
 	content-align: center;
 	float: right;
   color: rgb(22, 47, 61);
-  h3 {
-  color: rgb(180, 180, 180);
-  }
+  
   a {
   color: black;
   }

@@ -200,6 +200,9 @@ section:first-of-type {
 
 .show-regime {
   margin: 95px;
+  background-color: rgba(51, 51, 51, 0.45);
+  
+  border: 2px solid #fffafa; 
 }
 
 .complete-button {
@@ -209,6 +212,10 @@ section:first-of-type {
 
 .edit-regime-form {
   margin: 95px;
+}
+
+#regimen-desc {
+  width: 75%;
 }
 
 audio {
@@ -275,3 +282,4 @@ input {
     color: $state-danger-text;
   }
 }
+

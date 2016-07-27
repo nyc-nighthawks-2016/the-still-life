@@ -16,7 +16,7 @@ require "sprockets/railtie"
 Bundler.require(*Rails.groups)
 
 
-ENV.update YAML.load(File.read(File.expand_path('../application.yml', __FILE__ )))
+ENV.update YAML.load(File.read(File.expand_path('../application.yml', __FILE__ )))[Rails.env] rescue {}
 
 module TheStillLife
   class Application < Rails::Application

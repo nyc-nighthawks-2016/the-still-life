@@ -1,16 +1,29 @@
 class BookmarksController < ApplicationController
 
   def new
-    @bookmarks = Bookmark.new
+    @user = current_user
+    @bookmark = Bookmark.new
   end
 
   def create
     @user = current_user
-    bookmark = @user.bookmarks.build(resource_id: params[:resource_id])
-    if bookmark.save
-      flash[:success] = "Added to your bookmarks"
-      redirect_to '/resources'
+    @bookmark = @user.bookmarks.build(resource_id: params[:resource_id])
+
+    if @bookmark.save
+      if request.xhr?
+        render '_bookmark_form', layout: false, locals: { }
+      else
+        redirect_to resources_path
+      end
+    else
+      redirect_to resources_path
     end
+
+    #unajaxed version
+    # if bookmark.save
+    #   flash[:success] = "Added to your bookmarks"
+    #   redirect_to '/resources'
+    # end
   end
 
   def destroy
@@ -21,6 +34,11 @@ class BookmarksController < ApplicationController
   end
 
   def update
+
   end
+<<<<<<< e5e06ce5ae3f1939f656bce7c8b9d9286dfa4beb
+=======
+
+>>>>>>> ajaxing resources index in progress
 
 end

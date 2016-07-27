@@ -6,7 +6,7 @@
             Your browser does not support the audio element.
         </audio>
         <p><%= recording.description %></p>
-        <div class='bookmarks-form'>
+        <div class='bookmark-form' id= "resource-<%=recording.id %>" >
           <%= form_for @bookmarks do |f| %>
             <%= f.submit "Bookmark", class: "btn btn-primary bookmark-res" %>
             <%= hidden_field_tag 'resource_id', recording.id %>

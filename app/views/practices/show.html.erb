@@ -23,8 +23,8 @@
           <% if @current_user.bookmarks.where(resource_id: resource.id).length == 0 %> 
 
             <%= form_for @bookmarks do |f|%>
-              <%= button_tag(type: 'submit') do %>
-               <span class=" glyphicon glyphicon-heart-empty"></span>
+              <%= f.submit do %>
+                <span class=" glyphicon glyphicon-heart-empty"></span>
               <% end %>
               <%= hidden_field_tag 'resource_id', resource.id %>
               <% end %>

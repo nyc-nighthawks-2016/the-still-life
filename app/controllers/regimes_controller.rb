@@ -105,8 +105,12 @@ class RegimesController < ApplicationController
 		time.change(:offset => "-0400")
 	end
 
-	def current_regimen 
-		current_user.regimes.last
+	def current_regimen
+		if logged_in?  
+			current_user.regimes.last
+		else
+			redirect_to root_url
+		end
 	end
 
 end

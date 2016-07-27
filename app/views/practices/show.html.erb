@@ -20,23 +20,23 @@
 
         <% if @current_user %>
 
-          <% if @current_user.bookmarks %> 
+          <% if @current_user.bookmarks.where(resource_id: resource.id).length == 0 %> 
 
-            <%= form_for @bookmarks do |f| %>
-              <%= f.submit "Bookmark", class: "btn btn-primary" do %>
-                <span class="glyphicon glyphicon-heart-empty"></span> 
+            <%= form_for @bookmarks do |f|%>
+              <%= button_tag(type: 'submit') do %>
+               <span class=" glyphicon glyphicon-heart-empty"></span>
               <% end %>
               <%= hidden_field_tag 'resource_id', resource.id %>
-            <% end %>
+              <% end %>
           <% else %>
-            <%= link_to @bookmarks, method: :delete, data: { confirm: "You sure?" } do %>
+            <%= link_to bookmark_path(@current_user.bookmarks.find_by(resource_id: resource.id)), method: :delete, data: { confirm: "You sure?" } do %>
               <i class="glyphicon glyphicon-heart" aria-hidden="true"></i>
             <% end %>
 
           <% end %>
 
         <% end %>
-        
+
       <% end %>
       </h5>
     </div>

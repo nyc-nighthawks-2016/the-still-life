@@ -14,10 +14,10 @@ class BookmarksController < ApplicationController
   end
 
   def destroy
-    binding.pry
-    Bookmark.find(params[:resource_id]).destroy
+    deleted_bookmark = Bookmark.find(params[:id])
+    Bookmark.find(params[:id]).destroy
     flash[:success] = "Bookmark removed"
-    redirect_to practice_path()
+    redirect_to practice_path(deleted_bookmark.resource.practice_id)
   end
 
 end

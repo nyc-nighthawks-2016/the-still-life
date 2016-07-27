@@ -1,9 +1,9 @@
 <div id="pageshift">
 	<center>
-	  <h1><%= @practice.name %></h1>
-    <div class="single-practice">
-  	  Description:<p><%= @practice.description %></p>
-  	  Method: <p><%= @practice.method %></p>
+	  <h1 class="whitefont"><%= @practice.name %></h1><br>
+    <div class="single-practice whitefont">
+  	  Description:<p><%= @practice.description %></p><br>
+  	  Method: <p><%= @practice.method %></p><br>
 	 </div>
    <% if @practice.category == "Chant" %>
      <audio controls="controls">
@@ -14,4 +14,11 @@
     <button>
     </button>
   </center>
+  <div class="practice-resources">
+    <ul>
+      <% @resources.each do |resource| %>
+        <li><%= resource.name %></li>
+      <% end %>
+    </ul>
+  </div>
 </div>

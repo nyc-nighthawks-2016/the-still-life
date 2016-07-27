@@ -35,9 +35,9 @@ class Regime < ActiveRecord::Base
     puts message.to
   end
 
-  def email_reminder
-    ReminderMailer.delay(run_at: 5.seconds.from_now).email_reminder(self.user, self)
-  end
+  # def email_reminder
+  #   ReminderMailer.delay(run_at: 5.seconds.from_now).email_reminder(self.user, self)
+  # end
 
   def when_to_run
     daily_practice_time - @@REMINDER_TIME

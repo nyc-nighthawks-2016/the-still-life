@@ -4,8 +4,8 @@
         <p><%= image.category %></p>
         <p><%= image.description %></p>
         <p><%= image.url %></p>
-        <div class='bookmarks-form'>
-          <%= form_for @bookmarks do |f| %>
+        <div class='bookmark-form'>
+          <%= form_for @bookmark do |f| %>
             <%= f.submit "Bookmark", class: "btn btn-primary" %>
             <%= hidden_field_tag 'resource_id', image.id %>
           <% end %>

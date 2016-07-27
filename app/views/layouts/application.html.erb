@@ -3,8 +3,8 @@
 <head>
   <title>TheStillLife</title>
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
@@ -56,11 +56,11 @@
                         </ul>
                       </div>
                     </div>
-                    <!-- //Close Panel One -->    
+                    <!-- //Close Panel One -->
                     <!-- Open Panel Two -->
                     <div class="panel panel-default">
                       <div class="panel-heading">
-                        <h5 class="panel-title">           
+                        <h5 class="panel-title">
                           <a href="#collapseTwo" data-toggle="collapse" data-parent="#accordion">Body
                           </a>
                         </h5>
@@ -75,11 +75,11 @@
                         </ul>
                       </div>
                     </div>
-                    <!-- //Close Panel Two -->    
+                    <!-- //Close Panel Two -->
                     <!-- Open Panel Three -->
                     <div class="panel panel-default">
                       <div class="panel-heading">
-                        <h5 class="panel-title">            
+                        <h5 class="panel-title">
                           <a href="#collapseThree" data-toggle="collapse" data-parent="#accordion">Seated
                           </a>
                         </h5>
@@ -96,7 +96,7 @@
                         </ul>
                       </div>
                     </div>
-                    <!-- //Close Panel Three -->    
+                    <!-- //Close Panel Three -->
                     <!-- Open Panel Four -->
                     <div class="panel panel-default">
                       <div class="panel-heading">
@@ -142,7 +142,7 @@
                         </ul>
                       </div>
                     </div>
-                    <!-- //Close Panel Five -->    
+                    <!-- //Close Panel Five -->
                     <!-- Open Panel Six -->
                     <div class="panel panel-default">
                       <div class="panel-heading">
@@ -159,7 +159,7 @@
                         </ul>
                       </div>
                     </div>
-                    <!-- //Close Panel Six -->    
+                    <!-- //Close Panel Six -->
                     <!-- Open Panel Seven -->
                     <div class="panel panel-default">
                       <div class="panel-heading">
@@ -178,7 +178,7 @@
                         </ul>
                       </div>
                     </div>
-                    <!-- //Close Panel Seven -->    
+                    <!-- //Close Panel Seven -->
                   </div>
                 </li>
               </ul>
@@ -188,7 +188,7 @@
 
         <% if @current_user %>
           <!-- <li><%= link_to "Sangha", users_path, :class => "btn" %></li> -->
-          
+
           <li><%= link_to @current_user.username, user_path(@current_user), :class => "btn" %></li>
           <li><%= link_to '/logout', method: :delete, :class => "btn" do %>
             <i class="glyphicon glyphicon-log-out"></i>
@@ -197,18 +197,18 @@
         <% else %>
           <li><%= link_to "Register", new_user_path, :class => "btn" %></li>
           <li><a href="/login" class="btn"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></a></li>
-          
+
         <% end %>
         </ul>
       </div>
     </div>
   </nav>
 </header>
- 
+
   <% flash.each do |message_type, message| %>
     <div class="alert alert-<%= message_type %>"><%= message %></div>
   <% end %>
   <%= yield %>
-  
+
 </body>
 </html>

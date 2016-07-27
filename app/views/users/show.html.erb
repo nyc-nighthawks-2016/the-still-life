@@ -47,11 +47,11 @@
 </div>
 </div>
 
- <div class='container-fluid col-md-8' id='regimen-card'>
-      <h3>Your Practice</h3><br>
+  <div class='container-fluid col-md-8' id='regimen-card'>
+      <h3>Your Meditation Retreat</h3><br>
         <% if @user.regimes != nil %>
         <div id='complete-button'>
-        <%= render 'regimes/show' %><br>
+          <%= render 'regimes/show' %><br>
         </div>
   </div> 
   <div class="sub-info container-fluid">
@@ -61,7 +61,7 @@
               <%= render 'sessions' %>
             </div>
     <div class='glyph-div'>
-              <%= render 'tracker' %>
+            <%= render 'tracker' %>
     </div>
            <% end %>
       <% end %>

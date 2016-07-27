@@ -1,6 +1,6 @@
 <%if @regimen != nil %>
-<h1><%= @regimen.practice.name %></h1>
-<h4><em><%=@regimen.practice.suggestion%></em></h4>
+  <h1><%= @regimen.practice.name %></h1>
+  <h4><em><%=@regimen.practice.suggestion%></em></h4>
   <h3><%= display_time(@regimen) %></h3>
 
   <% if @regimen.practice.category == "Body" || @regimen.practice.category == "Service"%>
@@ -16,5 +16,6 @@
     <%= form_for @regimen, remote: true do |f| %>
       <%=f.submit "Complete", class:"complete-button btn btn-primary col-md-2 col-md-offset-5" %>
     <% end %>
-   <% end %>
   <% end %>
+  
+<% end %>

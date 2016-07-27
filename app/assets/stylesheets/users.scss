@@ -72,8 +72,13 @@
 }
 
 body {
-	background-image: url('misty_mountains.jpeg')
+	background-image: url('distant_mountain_sky.jpeg');
+	background-size: contain;
+	background-attachment: fixed;
+	background-size: 100%;
 }
+
+
 
 .user-header {
 	margin-left: 30px;
@@ -136,6 +141,7 @@ body {
 		p {
 	 font-size: 150%;
 	}
+
 
 }
 

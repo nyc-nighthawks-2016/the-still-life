@@ -6,13 +6,13 @@ class ResourcesController < ApplicationController
     @bookmarks = Bookmark.new
 
     #For Future Resource Organization
-    @yoga_res = media_type_class.where(practice_id: 15)
-    @qigong_res = media_type_class.where(practice_id: 17)
-    @food_res = media_type_class.where(practice_id: 20)
-    @companionship_res = media_type_class.where(practice_id: 21)
-    @assistance_res = media_type_class.where(practice_id: 22)
-    @env_res = media_type_class.where(practice_id: 23)
-    @animals_res = media_type_class.where(practice_id: 24)
+    @yoga_res = media_type_class.where(practice: Practice.find_by(name: "Yoga Asana (Studio)"))
+    @qigong_res = media_type_class.where(practice: Practice.find_by(name: "QiGong (Studio)"))
+    @food_res = media_type_class.where(practice: Practice.find_by(name: "Food"))
+    @companionship_res = media_type_class.where(practice: Practice.find_by(name: "Companionship"))
+    @assistance_res = media_type_class.where(practice: Practice.find_by(name: "Assistance"))
+    @env_res = media_type_class.where(practice: Practice.find_by(name: "Environmental Care"))
+    @animals_res = media_type_class.where(practice: Practice.find_by(name: "Animals"))
   end
 
   def show

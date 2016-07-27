@@ -1,8 +1,10 @@
 
 <center>
-Set Regimen Time
+<h4 class="whitefont">Set Regimen Time</h4>
 <%= form_for @regimen do |f| %>
+	<h4 class="whitefont">
 	<%= f.label :practice_time %>
+	</h4><br>
 	<!-- <input type='time' class='timepicker'> -->
 	<%= time_select :regimen, :daily_practice_time, { ampm: true, minute_step: 15 }, :class => 'timepicker form-control col-sm-10'  %><br>
 	<% # f.label :start_date %>

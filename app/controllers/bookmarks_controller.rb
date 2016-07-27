@@ -36,9 +36,5 @@ class BookmarksController < ApplicationController
   def update
 
   end
-<<<<<<< e5e06ce5ae3f1939f656bce7c8b9d9286dfa4beb
-=======
-
->>>>>>> ajaxing resources index in progress
 
 end

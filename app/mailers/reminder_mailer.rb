@@ -1,10 +1,10 @@
 class ReminderMailer < ApplicationMailer
 
 
-	def email_reminder(user, regime)
-    @user = user
+	def email_reminder(regime)
+    @user = regime.user
     @regime = regime
-    mail to: user.email, subject: regime.practice.name
+    mail to: user.email, subject: "Practice Reminder"
   end
 
 

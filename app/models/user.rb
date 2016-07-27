@@ -51,6 +51,12 @@ class User < ActiveRecord::Base
     update_columns(activated: true, activated_at: Time.zone.now)
   end
 
+  def send_reminder_email
+    if self.regimes.last
+      UserMailer.email_reminder(self).deliver_now
+    end
+  end
+
   def send_activation_email
     UserMailer.account_activation(self).deliver_now
   end
@@ -78,4 +84,5 @@ class User < ActiveRecord::Base
     self.activation_token  = User.new_token
     self.activation_digest = User.digest(activation_token)
   end
+
 end

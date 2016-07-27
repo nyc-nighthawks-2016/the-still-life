@@ -1,5 +1,6 @@
 <%if @regimen != nil %>
 <h1><%= @regimen.practice.name %></h1>
+<h4><em><%=@regimen.practice.suggestion%></em></h4>
   <h3><%= display_time(@regimen) %></h3>
 
   <% if @regimen.practice.category == "Body" || @regimen.practice.category == "Service"%>

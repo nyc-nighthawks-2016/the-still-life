@@ -1,5 +1,5 @@
 
-<% current_user.regimes.where(completion: true).to_a.each do |regimen| %>
+<% @completed_regimens.to_a.each do |regimen| %>
     <div id="single-regimen">
       <center>
         <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>

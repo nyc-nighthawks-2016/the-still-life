@@ -50,9 +50,9 @@ body {
     margin-top: -100px;
     left:0;
     width:100%;
-    height: 100px;
+    height: 1px;
     z-index:999;
-    
+
 }
 
 #header.fixed{
@@ -73,7 +73,7 @@ body {
 
 // Wrapps all accordion dropdown elements
 .dropdown-accordion {
-  
+
   // Selects the toggle button in the nav
   .dropdown-toggle {
     // Padding is used to center vertically in the nav
@@ -86,7 +86,7 @@ body {
       color: #333;
     }
   }
-  
+
   // Selects the main dropdown element
   .dropdown-menu {
     padding: 0px;
@@ -99,30 +99,30 @@ body {
       background: #333;
     }
   }
-  
+
   // Selects the headings for each collapse group
   .panel-heading {
     padding: 0;
     background: #eeeeee;
-    
+
     // Selects the link inside the heading wrapper
     a {
       display: block;
       padding: 10px 15px;
     }
   }
-  
+
   // Selects the wrapper of your panels
   .panel-group {
     margin: 0;
   }
-  
+
   // Selects the panels inside your panel group
   .panel-default {
     padding: 0;
     border: none;
   }
-  
+
   // Removes the fugly random margin bottom on the list group
   .list-group-item {
     margin: 0;
@@ -130,12 +130,12 @@ body {
       transition-duration: 0.6s;
     }
   }
-  
+
   // Selects the active list item link for propper heighlighting
   .list-group-item.active > a {
     color: #fff;
   }
-  
+
 }
 
 .page-heading {
@@ -174,12 +174,12 @@ section:first-of-type {
 ====================================================*/
 #topPos:before,
 .container h3:before,
-.container h4:before { 
-  display: block; 
-  content: " "; 
-  margin-top: -80px; 
-  height: 80px; 
-  visibility: hidden; 
+.container h4:before {
+  display: block;
+  content: " ";
+  margin-top: -80px;
+  height: 80px;
+  visibility: hidden;
 }
 
 //Drop Down CSS Section END
@@ -196,17 +196,17 @@ section:first-of-type {
 
 .show-regime {
   margin: 95px;
- 
+
 }
 
 .edit-regime {
   margin: 95px;
-  
+
 }
 
 .dark-grey-background {
   background-color: rgba(51, 51, 51, 0.45);
-  border: 2px solid #fffafa; 
+  border: 2px solid #fffafa;
 }
 
 .complete-button {
@@ -282,4 +282,3 @@ input {
     color: $state-danger-text;
   }
 }
-

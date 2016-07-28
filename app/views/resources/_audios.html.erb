@@ -1,6 +1,6 @@
 <h2> Recordings </h2>
     <% @resources.recordings.each do |recording| %>
-        <h3> <%= link_to recording.name, practice_path(recording.practice) %> </h3>
+        <h3> <%= link_to recording.name, practice_path(recording.practice), class:'resource-link' %> </h3>
         <audio controls="controls">
           <source src= <%= recording.url %> type="audio/mpeg">
             Your browser does not support the audio element.

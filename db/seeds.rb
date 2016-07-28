@@ -118,7 +118,7 @@ resources << Resource.create(name:"Om Mani Padme Hum", category:"Recordings" , u
 
 resources << Resource.create(name:"La Illaha Illallah", category:"Recordings" , url:"https://s3.amazonaws.com/the-still-life/Audio/La+Illaha+Ilallah.mp3", type:"Audio", description:"Traditional Islamic Chant", practice: Practice.find_by(name: "La Illaha Illallah"))
 
-resources << Resource.create(name:"Gate Gate Paragate", category:"Recordings" , url:"https://s3.amazonaws.com/the-still-life/Audio/Gate+Gate+Paragate.mp3", type:"Audio", description:"Non-traditional Chant", practice: Practice.find_by(name: "Gate, Gate, Para Gate, Parasamgate, Bodhi Svaha"))
+resources << Resource.create(name:"Gate Gate Paragate", category:"Recordings" , url:"https://s3.amazonaws.com/the-still-life/Audio/Gate+Gate+Paragate.mp3", type:"Audio", description:"Buddhist Chant", practice: Practice.find_by(name: "Gate, Gate, Para Gate, Parasamgate, Bodhi Svaha"))
 
 resources << Resource.create(name:"Om", category:"Recordings" , url:"https://s3.amazonaws.com/the-still-life/Audio/Om.mp3", type:"Audio", description:"Classical Chant", practice: Practice.find_by(name: "Om"))
 

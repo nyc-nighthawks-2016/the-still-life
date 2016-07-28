@@ -14,7 +14,7 @@ class UsersController < ApplicationController
       if @practice.regimes.length > 0
 
         @regimen = @user.regimes.last
-        @completed_regimens = @practice.regimes.where(completion: true).to_a
+        @completed_regimens = current_user.regimes.where(completion: true).to_a
       end
     end
     redirect_to root_url and return unless true

@@ -133,7 +133,7 @@ body {
 	margin-top: 10px;
 	margin-left: 10px;
 	vertical-align: middle;
-	
+
 }
 
 #regimen-info {
@@ -168,7 +168,7 @@ body {
 	border-left: 1px solid rgb(93, 125, 133);
 	border-radius: 50px;
   background-color: rgba(65, 140, 155, 0.75);
-	padding: 15px; 
+	padding: 15px;
 	content-align: center;
 	float: right;
   color: black;
@@ -193,15 +193,14 @@ body {
 
 
 #bookmarked-sources {
-	color: rgb(22, 47, 61);
+	color: #fffafa;
+
 	display: block;
 	border-radius: 30px;
 	padding: 10px;
 	float: right;
 	font-size: 150%;
 	a{
-	 color: black;
+	 color: #fffafa; ;
 	}
 }
-
-

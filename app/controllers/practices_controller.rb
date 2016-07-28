@@ -9,7 +9,7 @@ class PracticesController < ApplicationController
   def show
     @practice = Practice.find(params[:id])
     @chant_recording = Resource.recordings.find_by(practice_id: @practice.id)
-    @bookmarks = Bookmark.new
+    @bookmark = Bookmark.new
     @resources = Resource.where(practice_id: params[:id])
   end
 

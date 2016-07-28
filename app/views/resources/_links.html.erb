@@ -3,7 +3,7 @@
 <div class="yoga-resources">
   <h3> Yoga Asana </h3><br>
     <% @yoga_res.each do |res| %>
-    <p><%= link_to res.description, res.url %></p>
+    <p><%= link_to res.description, res.url, class:'resource-link' %></p>
     <% if @current_user %>
 
       <% if @current_user.bookmarks.where(resource: @resources.find_by(name: res.name ) ).length == 0 %>
@@ -32,7 +32,7 @@
 <div class="qigong-resources">
   <h3> QiGong </h3><br>
     <% @qigong_res.each do |res| %>
-    <p><%= link_to res.description, res.url %></p>
+    <p><%= link_to res.description, res.url, class:'resource-link' %></p>
     <% if @current_user %>
 
       <% if @current_user.bookmarks.where(resource: @resources.find_by(name: res.name ) ).length == 0 %>
@@ -59,7 +59,7 @@
 <div class="food-resources">
   <h3> Service: Food </h3><br>
     <% @food_res.each do |res| %>
-    <p><%= link_to res.description, res.url %></p>
+    <p><%= link_to res.description, res.url, class:'resource-link' %></p>
     <% if @current_user %>
 
       <% if @current_user.bookmarks.where(resource: @resources.find_by(name: res.name ) ).length == 0 %>
@@ -86,7 +86,7 @@
 <div class="companionship-resources">
   <h3> Service: Companionship </h3><br>
     <% @companionship_res.each do |res| %>
-    <p><%= link_to res.description, res.url %></p>
+    <p><%= link_to res.description, res.url, class:'resource-link' %></p>
     <% if @current_user %>
 
       <% if @current_user.bookmarks.where(resource: @resources.find_by(name: res.name ) ).length == 0 %>
@@ -113,7 +113,7 @@
 <div class="assistance-resources">
   <h3> Service: Assistance </h3><br>
     <% @assistance_res.each do |res| %>
-    <p><%= link_to res.description, res.url %></p>
+    <p><%= link_to res.description, res.url, class:'resource-link' %></p>
     <% if @current_user %>
 
       <% if @current_user.bookmarks.where(resource: @resources.find_by(name: res.name ) ).length == 0 %>
@@ -140,7 +140,7 @@
 <div class="environment-resources">
   <h3> Service: Environment </h3><br>
     <% @env_res.each do |res| %>
-    <p><%= link_to res.description, res.url %></p>
+    <p><%= link_to res.description, res.url, class:'resource-link' %></p>
     <% if @current_user %>
 
       <% if @current_user.bookmarks.where(resource: @resources.find_by(name: res.name ) ).length == 0 %>
@@ -167,7 +167,7 @@
 <div class="animals-resources">
   <h3> Service: Animals </h3><br>
     <% @animals_res.each do |res| %>
-    <p><%= link_to res.description, res.url %></p>
+    <p><%= link_to res.description, res.url, class:'resource-link' %></p>
     <% if @current_user %>
 
       <% if @current_user.bookmarks.where(resource: @resources.find_by(name: res.name ) ).length == 0 %>

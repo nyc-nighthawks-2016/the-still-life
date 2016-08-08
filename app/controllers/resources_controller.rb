@@ -19,6 +19,20 @@ class ResourcesController < ApplicationController
     @resource = media_type_class.find(params[:id])
   end
 
+  def new
+    @resource = Resource.new
+  end
+
+  def create
+    redirect_to current_user if logged_in?
+    @resource = Resource.new(resource_params)
+      if @resource.save
+        redirect_to current_user
+      else
+        render 'new'
+      end
+  end
+
 
 private
 
@@ -32,6 +46,10 @@ private
 
  def media_type_class
      media_type.constantize
+ end
+
+ def resource_params
+   params.require(:resource).permit(:name, :type, :url, :description, :practice_id)
  end
 
 end

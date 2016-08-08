@@ -40,6 +40,10 @@ gem 'better_errors', '~> 2.1', '>= 2.1.1'
 gem 'delayed_job_active_record'
 gem 'delayed_job'
 
+#File Uploading
+gem 'paperclip', '~> 5.0'
+gem 'aws-s3', '~> 0.6.3'
+
 
 # Need daemons to start delayed_job
 gem 'daemons'
@@ -73,4 +77,3 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160724214742) do
+ActiveRecord::Schema.define(version: 20160810190725) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -82,14 +82,18 @@ ActiveRecord::Schema.define(version: 20160724214742) do
   add_index "regimes", ["user_id"], name: "index_regimes_on_user_id", using: :btree
 
   create_table "resources", force: :cascade do |t|
-    t.string   "name",                         null: false
-    t.string   "category",                     null: false
-    t.string   "url",                          null: false
-    t.string   "description",                  null: false
+    t.string   "name",                                 null: false
+    t.string   "category",                             null: false
+    t.string   "url",                                  null: false
+    t.string   "description",                          null: false
     t.integer  "practice_id"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
-    t.string   "type",        default: "Link"
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+    t.string   "type",                default: "Link"
+    t.string   "upload_file_name"
+    t.string   "upload_content_type"
+    t.integer  "upload_file_size"
+    t.datetime "upload_updated_at"
   end
 
   add_index "resources", ["practice_id"], name: "index_resources_on_practice_id", using: :btree

@@ -43,6 +43,10 @@ GEM
     arel (6.0.3)
     autoprefixer-rails (6.3.7)
       execjs
+    aws-s3 (0.6.3)
+      builder
+      mime-types
+      xml-simple
     babel-source (5.8.35)
     babel-transpiler (0.7.0)
       babel-source (>= 4.0, < 6)
@@ -279,12 +283,12 @@ GEM
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
-    paperclip (4.3.7)
-      activemodel (>= 3.2.0)
-      activesupport (>= 3.2.0)
+    paperclip (5.0.0)
+      activemodel (>= 4.2.0)
+      activesupport (>= 4.2.0)
       cocaine (~> 0.5.5)
       mime-types
-      mimemagic (= 0.3.0)
+      mimemagic (~> 0.3.0)
     pg (0.18.4)
     pg_search (1.0.6)
       activerecord (>= 3.1)
@@ -419,6 +423,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aws-s3 (~> 0.6.3)
   bcrypt (~> 3.1.7)
   better_errors (~> 2.1, >= 2.1.1)
   bootstrap-sass
@@ -439,7 +444,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   mini_magick (= 4.5.1)
-  paperclip (~> 4.1)
+  paperclip (~> 5.0)
   pg (~> 0.15)
   pg_search
   pry

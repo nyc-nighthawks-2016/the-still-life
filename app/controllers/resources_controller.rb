@@ -49,7 +49,7 @@ private
  end
 
  def resource_params
-   params.require(:resource).permit(:name, :type, :url, :description, :practice_id)
+   params.require(:resource).permit(:name, :type, :url, :description)
  end
 
 end

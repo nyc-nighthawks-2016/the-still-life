@@ -49,7 +49,7 @@ private
  end
 
  def resource_params
-   params.require(:resource).permit(:name, :type, :url, :description)
+   params.require(:resource).permit(:name, :category, :description, :upload)
  end
 
 end

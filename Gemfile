@@ -42,6 +42,7 @@ gem 'delayed_job'
 #File Uploading
 gem 'paperclip', '~> 5.0'
 gem 'aws-s3', '~> 0.6.3'
+gem 'aws-sdk', '~> 2.5', '>= 2.5.1'
 
 
 # Need daemons to start delayed_job

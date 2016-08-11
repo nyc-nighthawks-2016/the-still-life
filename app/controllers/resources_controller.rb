@@ -27,7 +27,7 @@ class ResourcesController < ApplicationController
     redirect_to current_user if logged_in?
     @resource = Resource.new(resource_params)
       if @resource.save
-        redirect_to current_user
+        redirect_to root_path
       else
         render 'new'
       end
@@ -49,7 +49,7 @@ private
  end
 
  def resource_params
-   params.require(:resource).permit(:name, :category, :description, :upload)
+   params.require(:resource).permit(:name, :category, :description, :url, :upload)
  end
 
 end

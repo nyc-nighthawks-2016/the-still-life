@@ -11,7 +11,7 @@ class Resource < ActiveRecord::Base
 	has_attached_file :upload
 
 	validates_attachment :upload,
-                     content_type: { content_type: ["image/jpeg", "image/gif", "image/png", "audio/mpeg3", "application/pdf"] }
+                     content_type: { content_type: ["image/jpeg", "image/gif", "image/png", "audio/mpeg3", "application/pdf", "text/plain"] }
 
 
   def self.types

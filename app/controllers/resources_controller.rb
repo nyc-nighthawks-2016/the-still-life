@@ -9,8 +9,8 @@ class ResourcesController < ApplicationController
     @bookmark = Bookmark.new
 
     #For Future Resource Organization
-    @yoga_res = media_type_class.where(practice: Practice.find_by(name: "Yoga Asana (Studio)"))
-    @qigong_res = media_type_class.where(practice: Practice.find_by(name: "QiGong (Studio)"))
+    @yoga_res = media_type_class.where(practice: Practice.find_by(name: "Yoga Asana"))
+    @qigong_res = media_type_class.where(practice: Practice.find_by(name: "QiGong"))
     @food_res = media_type_class.where(practice: Practice.find_by(name: "Food"))
     @companionship_res = media_type_class.where(practice: Practice.find_by(name: "Companionship"))
     @assistance_res = media_type_class.where(practice: Practice.find_by(name: "Assistance"))

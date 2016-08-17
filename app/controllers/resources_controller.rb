@@ -4,6 +4,10 @@ class ResourcesController < ApplicationController
   def index
     @resources = media_type_class.all
 
+    #Is this right? Having a random Bookmark.new as a placeholder so that
+    #bookmark form works?
+    @bookmark = Bookmark.new
+
     #For Future Resource Organization
     @yoga_res = media_type_class.where(practice: Practice.find_by(name: "Yoga Asana (Studio)"))
     @qigong_res = media_type_class.where(practice: Practice.find_by(name: "QiGong (Studio)"))
@@ -19,14 +23,20 @@ class ResourcesController < ApplicationController
   end
 
   def new
-    @resource = Resource.new
+    if logged_in?
+      @resource = Resource.new
+    else
+      redirect_to root_path
+    end
   end
 
   def create
-    redirect_to current_user if logged_in?
+    @user = current_user
     @resource = Resource.new(resource_params)
       if @resource.save
-        redirect_to root_path
+        @bookmark = @user.bookmarks.build(resource_id: @resource.id)
+        @bookmark.save
+        redirect_to current_user
       else
         render 'new'
       end

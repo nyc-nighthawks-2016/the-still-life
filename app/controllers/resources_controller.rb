@@ -4,11 +4,13 @@ class ResourcesController < ApplicationController
   def index
     @resources = media_type_class.all
 
-    #Is this right? Having a random Bookmark.new as a placeholder so that
-    #bookmark form works?
+    #Could this be refactored? Having a random Bookmark.new as a placeholder so that
+    #the bookmark form works?
     @bookmark = Bookmark.new
 
     #For Future Resource Organization
+    #WEIRD: find_by "Yoga Asana" works even though in seed file it is "Yoga Asana (Studio)"
+    #same is true for Qigong
     @yoga_res = media_type_class.where(practice: Practice.find_by(name: "Yoga Asana"))
     @qigong_res = media_type_class.where(practice: Practice.find_by(name: "QiGong"))
     @food_res = media_type_class.where(practice: Practice.find_by(name: "Food"))

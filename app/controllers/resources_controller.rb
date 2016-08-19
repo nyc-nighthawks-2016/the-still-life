@@ -35,7 +35,11 @@ class ResourcesController < ApplicationController
   def create
     @user = current_user
     @resource = Resource.new(resource_params)
+    #Is there a way to set url in the form??
       if @resource.save
+        @resource.url = @resource.upload.url
+        @resource.save
+        #I am treating uploaded resources like a bookmark
         @bookmark = @user.bookmarks.build(resource_id: @resource.id)
         @bookmark.save
         redirect_to current_user

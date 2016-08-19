@@ -48,6 +48,18 @@ class ResourcesController < ApplicationController
       end
   end
 
+  def destroy
+    @resource = Resource.find(params[:id])
+    #I know that this is a janky solution, this is functional but will revisit
+    #selecting the url at the following positions enables me to have the proper
+    #'object key' which you need when selecting objects in your s3 bucket
+    aws_delete_object(@resource.url[39..-12])
+    @bookmark = Bookmark.find_by(resource_id: @resource.id)
+    @bookmark.destroy
+    @resource.destroy
+    redirect_to current_user
+  end
+
 
 private
 

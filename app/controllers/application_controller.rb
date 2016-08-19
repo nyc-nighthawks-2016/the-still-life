@@ -60,4 +60,16 @@ class ApplicationController < ActionController::Base
   def is_current_user
     @current_user = current_user if logged_in?
   end
+
+  #Helpers for talking with s3 storage
+
+  def aws_delete_object(object_name)
+    s3 = Aws::S3::Resource.new
+    bucket = s3.bucket('the-still-life')
+    obj = bucket.object(object_name)
+    obj.delete
+  end
+
+#resources/uploads/000/000/066/original/Ciacci__Resume.pdf
+
 end

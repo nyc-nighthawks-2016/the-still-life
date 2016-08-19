@@ -5,7 +5,7 @@
       <div  id="user-avatar">
         <%= gravatar_for @user %>
         <div id="profile-header">
-          <h2><%= @user.username %>'s Page</h2> 
+          <h2><%= @user.username %>'s Page</h2>
         </div>
       </div>
       <br>
@@ -51,11 +51,11 @@
         <div id='complete-button'>
           <%= render 'regimes/show' %><br>
         </div>
-      </div> 
+      </div>
       <div class="sub-info container-fluid">
-      <div class= 'col-md-8' id="regimen-info">   
+      <div class= 'col-md-8' id="regimen-info">
         <% if @completed_regimens %>
-          <div class="session-count"><!-- 
+          <div class="session-count"><!--
             #<%=  render 'sessions' %>  -->
           </div>
           <div class='glyph-div'>
@@ -71,8 +71,10 @@
       <% if @user.bookmarks %>
         <% @user.bookmarks.each do |bookmark| %>
         <p><%= link_to bookmark.resource.name, bookmark.resource.url %></p>
+        <% if bookmark.resource.category == "Upload" %>
+          <%=link_to 'Delete', resource_path(bookmark.resource), data:{confirm: 'Delete this Resource?'}, method: :delete %>
+        <% end %>
       <% end %>
     <% end %>
   </div>
 </div>
-

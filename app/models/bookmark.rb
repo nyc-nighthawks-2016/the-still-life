@@ -1,4 +1,4 @@
- class Bookmark < ActiveRecord::Base
+class Bookmark < ActiveRecord::Base
   belongs_to :user
   belongs_to :resource
 end

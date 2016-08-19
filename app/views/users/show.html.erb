@@ -17,25 +17,7 @@
               <%= link_to "Edit Information", edit_user_path(@user) %>
             <% end %>
           </p>
-          <!-- <p>
-          First Name:
-          <%= @user.first_name %>
-          </p>
-          <p>
-          Last Name:
-          <%= @user.last_name %>
-          </p> -->
-          <!-- <p>
-          <a href="mailto:<%= @user.email %>?Subject=Hello%20friend">message me</a>
-          </p> -->
-          <!-- <p>
-          Gender:
-          <%= @user.gender %>
-          </p>
-          <p>
-          Age:
-          <%= @user.age %>
-          </p> -->
+
           <div id="about-me">
             <p>
             About me:<br>
@@ -76,5 +58,9 @@
         <% end %>
       <% end %>
     <% end %>
+    <div id="upload">
+      <% #Is this a place to pass current user in? Need user id for bookmark(uploaded resource) down the road  %>
+      <%= link_to "Upload Resource", new_resource_path %>
+    </div>
   </div>
 </div>

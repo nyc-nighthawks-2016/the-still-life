@@ -11,7 +11,6 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 gem 'puma', group: :production
-gem 'paperclip', '~> 4.1'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'pg_search'
@@ -39,6 +38,11 @@ gem 'better_errors', '~> 2.1', '>= 2.1.1'
 # Use delayed job for running background jobs
 gem 'delayed_job_active_record'
 gem 'delayed_job'
+
+#File Uploading
+gem 'paperclip', '~> 5.0'
+gem 'aws-s3', '~> 0.6.3'
+gem 'aws-sdk', '~> 2.5', '>= 2.5.1'
 
 
 # Need daemons to start delayed_job
@@ -73,4 +77,3 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-

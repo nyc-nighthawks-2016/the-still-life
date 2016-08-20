@@ -87,6 +87,24 @@ Rails.application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
+  #File Uploading
+  config.paperclip_defaults = {
+    storage: :s3,
+    s3_region: ENV["AWS_REGION"],
+    path: ":class/:attachment/:id_partition/:style/:filename",
+    s3_credentials: {
+      bucket: ENV["AWS_S3_BUCKET"],
+      access_key_id: ENV["AWS_ACCESS_KEY_ID"],
+      secret_access_key: ENV["AWS_SECRET_ACCESS_KEY"]
+      }
+    }
+
+  Aws.config.update({
+    region: 'us-east-1',
+    credentials: Aws::Credentials.new(ENV["AWS_ACCESS_KEY_ID"], ENV["AWS_SECRET_ACCESS_KEY"])
+    })
+
+
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 

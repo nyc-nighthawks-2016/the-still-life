@@ -9,16 +9,20 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    if @user.practice != nil
-      @practice = @user.practice
-      if @practice.regimes.length > 0
+    if current_user?(@user)
+      if @user.practice != nil
+        @practice = @user.practice
+        if @practice.regimes.length > 0
 
-        @regimen = @user.regimes.last
-        @completed_regimens = current_user.regimes.where(completion: true).to_a
+          @regimen = @user.regimes.last
+          @completed_regimens = current_user.regimes.where(completion: true).to_a
+        end
       end
+      redirect_to root_url and return unless true
+      not_found if !@user
+    else
+      redirect_to root_path
     end
-    redirect_to root_url and return unless true
-    not_found if !@user
   end
 
   def new
@@ -35,7 +39,7 @@ class UsersController < ApplicationController
         @user.send_activation_email
         flash[:info] = "Please check your email to activate your account."
         # log_in @user
-        
+
         # flash[:success] = "User was successfully created."
         format.html { redirect_to @user }
         format.json { render :show, status: :created, location: @user }

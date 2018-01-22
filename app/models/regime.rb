@@ -35,17 +35,16 @@ class Regime < ActiveRecord::Base
     puts message.to
   end
 
-  # def email_reminder
-  #   ReminderMailer.delay(run_at: 5.seconds.from_now).email_reminder(self.user, self)
-  # end
-
-  def when_to_run
+  def when_to_run_reminder
     daily_practice_time - @@REMINDER_TIME
   end
 
+  def when_to_run_new_regimen
+    daily_practice_time.beginning_of_day + 1.days
+  end
 
-  handle_asynchronously :text_reminder, :run_at => Proc.new { |i| i.when_to_run }
-  # handle_asynchronously :email_reminder, :run_at => Proc.new { |i| i.when_to_run }
-  handle_asynchronously :create_new_regime, :run_at => Proc.new {  DateTime.now.beginning_of_day + 1.days }
+
+  handle_asynchronously :text_reminder, :run_at => Proc.new { |i| i.when_to_run_reminder }
+  handle_asynchronously :create_new_regime, :run_at => Proc.new { |i| i.when_to_run_new_regimen }
 
 end

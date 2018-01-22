@@ -40,7 +40,7 @@ gem 'delayed_job_active_record'
 gem 'delayed_job'
 
 #File Uploading
-gem 'paperclip', '~> 5.0'
+gem 'paperclip'
 gem 'aws-s3', '~> 0.6.3'
 gem 'aws-sdk', '~> 2.5', '>= 2.5.1'
 
